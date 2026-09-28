@@ -1,0 +1,82 @@
+{
+    "topicName": "Indexing",
+    "cards": [
+        {
+            "id": "indexing-1",
+            "question": "What is a database index?",
+            "answer": "A data structure that speeds up query performance.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "indexing-2",
+            "question": "What are B-tree indexes?",
+            "answer": "Balanced tree structures used for efficient range queries.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "indexing-3",
+            "question": "What is a hash index?",
+            "answer": "An index optimized for exact match lookups.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "indexing-4",
+            "question": "What is a composite index?",
+            "answer": "An index built on multiple columns.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "indexing-5",
+            "question": "What is a primary index?",
+            "answer": "Index built on the primary key of a table.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "indexing-6",
+            "question": "What are the downsides of indexes?",
+            "answer": "They increase storage and slow down writes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "indexing-7",
+            "question": "When should you avoid indexing?",
+            "answer": "When tables have frequent writes and few reads.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "indexing-8",
+            "question": "What is a clustered index?",
+            "answer": "An index that determines the physical order of data.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "indexing-9",
+            "question": "What is a secondary index?",
+            "answer": "An index that references data without affecting physical order.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "indexing-10",
+            "question": "How does indexing improve query performance?",
+            "answer": "It reduces the number of rows scanned during queries.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "indexing-11",
+            "question": "What is a covering index?",
+            "answer": "An index containing every column needed by a query, allowing the database to answer it without reading the base table. It improves reads at the cost of storage and write overhead.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "topicName": "Load Balancing",
+    "cards": [
+        {
+            "id": "loadbalancing-1",
+            "question": "What is load balancing?",
+            "answer": "Distributing traffic across multiple servers to improve performance and reliability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "loadbalancing-2",
+            "question": "What are common load balancing algorithms?",
+            "answer": "Round robin, least connections, and IP hash.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "loadbalancing-3",
+            "question": "What is a reverse proxy?",
+            "answer": "A server that forwards client requests to backend servers.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "loadbalancing-4",
+            "question": "What is sticky session?",
+            "answer": "A technique where a user is consistently routed to the same server.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "loadbalancing-5",
+            "question": "What is health check in load balancers?",
+            "answer": "A mechanism to check if backend servers are healthy before routing traffic.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "loadbalancing-6",
+            "question": "What is L4 vs L7 load balancing?",
+            "answer": "L4 works at transport layer, L7 works at application layer with HTTP awareness.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "loadbalancing-7",
+            "question": "Why is load balancing important?",
+            "answer": "It improves availability, scalability, and fault tolerance.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "loadbalancing-8",
+            "question": "What happens when a server fails in a load balanced system?",
+            "answer": "Traffic is redirected to healthy servers.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "loadbalancing-9",
+            "question": "What is DNS-based load balancing?",
+            "answer": "Using DNS to distribute traffic across multiple IP addresses.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "loadbalancing-10",
+            "question": "What is global load balancing?",
+            "answer": "Distributing traffic across multiple geographic regions.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

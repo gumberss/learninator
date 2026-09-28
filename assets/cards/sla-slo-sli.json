@@ -1,0 +1,82 @@
+{
+    "topicName": "SLA SLO SLI",
+    "cards": [
+        {
+            "id": "slo-1",
+            "question": "What is an SLI?",
+            "answer": "A Service Level Indicator, a metric that measures system performance (e.g., latency, error rate).",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "slo-2",
+            "question": "What is an SLO?",
+            "answer": "A Service Level Objective, a target value for an SLI.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "slo-3",
+            "question": "What is an SLA?",
+            "answer": "A Service Level Agreement between provider and customer with penalties for violations.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "slo-4",
+            "question": "How are SLI, SLO, and SLA related?",
+            "answer": "SLI measures performance, SLO defines targets, and SLA is a contractual agreement.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "slo-5",
+            "question": "What is error budget?",
+            "answer": "Allowed amount of failure before violating SLO.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "slo-6",
+            "question": "Why are SLOs important?",
+            "answer": "They help balance reliability and development speed.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "slo-7",
+            "question": "What is latency SLI?",
+            "answer": "A metric measuring response time of requests.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "slo-8",
+            "question": "What is availability SLI?",
+            "answer": "A metric measuring system uptime percentage.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "slo-9",
+            "question": "What happens when SLA is violated?",
+            "answer": "Penalties or compensation may be applied based on contract terms.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "slo-10",
+            "question": "What is reliability engineering?",
+            "answer": "Designing systems to meet SLOs consistently under real-world conditions.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "slo-11",
+            "question": "What is error-budget burn rate?",
+            "answer": "The speed at which a service consumes its allowed error budget. Burn-rate alerts detect both fast outages and slower reliability regressions relative to the SLO.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

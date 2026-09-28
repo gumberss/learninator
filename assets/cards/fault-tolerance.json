@@ -1,0 +1,82 @@
+{
+    "topicName": "Fault Tolerance",
+    "cards": [
+        {
+            "id": "fault-1",
+            "question": "What is fault tolerance?",
+            "answer": "The ability of a system to continue operating correctly even when some components fail.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "fault-2",
+            "question": "What is redundancy in fault tolerance?",
+            "answer": "Duplicating critical components to avoid single points of failure.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "fault-3",
+            "question": "What is failover?",
+            "answer": "Switching to a backup system when the primary system fails.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "fault-4",
+            "question": "What is graceful degradation?",
+            "answer": "A system continues to function with reduced capabilities under failure conditions.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "fault-5",
+            "question": "What is retry strategy?",
+            "answer": "Automatically retrying failed operations to handle transient errors.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "fault-6",
+            "question": "What is circuit breaker pattern?",
+            "answer": "A pattern that stops requests to a failing service to prevent cascading failures.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "fault-7",
+            "question": "What is bulkhead pattern?",
+            "answer": "Isolating system components so one failure does not bring down the entire system.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "fault-8",
+            "question": "What is timeout handling?",
+            "answer": "Limiting how long a system waits for a response before failing.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "fault-9",
+            "question": "Why is observability important for fault tolerance?",
+            "answer": "It helps detect, diagnose, and respond to failures quickly.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "fault-10",
+            "question": "What is multi-region deployment?",
+            "answer": "Deploying systems across multiple geographic regions for resilience.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "fault-11",
+            "question": "What are RTO and RPO?",
+            "answer": "Recovery Time Objective is the maximum acceptable restoration time. Recovery Point Objective is the maximum acceptable amount of data loss measured in time.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

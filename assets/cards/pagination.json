@@ -1,0 +1,82 @@
+{
+    "topicName": "Pagination",
+    "cards": [
+        {
+            "id": "pagination-1",
+            "question": "What is pagination?",
+            "answer": "Splitting large datasets into smaller pages of results.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pagination-2",
+            "question": "What is offset pagination?",
+            "answer": "Using offset and limit to fetch a specific page of results.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pagination-3",
+            "question": "What is cursor-based pagination?",
+            "answer": "Using a cursor to fetch the next set of results efficiently.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pagination-4",
+            "question": "Why is cursor pagination preferred at scale?",
+            "answer": "It avoids performance issues of large offsets.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pagination-5",
+            "question": "What is page size?",
+            "answer": "The number of items returned per page.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pagination-6",
+            "question": "What is infinite scrolling?",
+            "answer": "A UI pattern that loads data continuously as the user scrolls.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pagination-7",
+            "question": "What are issues with offset pagination?",
+            "answer": "Slow performance and inconsistent results on large datasets.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pagination-8",
+            "question": "What is keyset pagination?",
+            "answer": "A form of cursor pagination using indexed columns.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pagination-9",
+            "question": "What is stable pagination?",
+            "answer": "Ensuring results don’t change between page requests.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pagination-10",
+            "question": "Why is pagination important?",
+            "answer": "It improves performance and usability when dealing with large datasets.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pagination-11",
+            "question": "Why can offset pagination skip or duplicate records when data changes?",
+            "answer": "Inserts and deletes shift row positions between requests. Cursor pagination based on a stable, unique ordering avoids most of this drift.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

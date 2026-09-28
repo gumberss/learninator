@@ -1,0 +1,82 @@
+{
+    "topicName": "Rate Limiting",
+    "cards": [
+        {
+            "id": "ratelimit-1",
+            "question": "What is rate limiting?",
+            "answer": "A technique to limit the number of requests a client can make in a given time window.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "ratelimit-2",
+            "question": "What is a token bucket algorithm?",
+            "answer": "A rate limiting algorithm where tokens are added at a fixed rate and consumed per request.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "ratelimit-3",
+            "question": "What is a leaky bucket algorithm?",
+            "answer": "Requests are processed at a constant rate, smoothing traffic bursts.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "ratelimit-4",
+            "question": "What is fixed window rate limiting?",
+            "answer": "Limits requests within a fixed time interval.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "ratelimit-5",
+            "question": "What is sliding window rate limiting?",
+            "answer": "A more accurate rate limiting method using rolling time windows.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "ratelimit-6",
+            "question": "Why is rate limiting important?",
+            "answer": "It protects systems from overload and abuse.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "ratelimit-7",
+            "question": "Where is rate limiting implemented?",
+            "answer": "At API gateway, load balancer, or application layer.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "ratelimit-8",
+            "question": "What happens when rate limit is exceeded?",
+            "answer": "Requests are rejected or delayed, usually with HTTP 429.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "ratelimit-9",
+            "question": "What is distributed rate limiting?",
+            "answer": "Rate limiting across multiple servers using shared state like Redis.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "ratelimit-10",
+            "question": "What is per-user vs global rate limiting?",
+            "answer": "Per-user limits individual clients; global limits total system traffic.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "ratelimit-11",
+            "question": "How does a quota differ from a rate limit?",
+            "answer": "A rate limit bounds usage over a short interval, while a quota bounds total usage over a longer period such as a day or month.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

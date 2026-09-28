@@ -1,0 +1,82 @@
+{
+    "topicName": "ACID vs BASE",
+    "cards": [
+        {
+            "id": "acid-base-1",
+            "question": "What is ACID?",
+            "answer": "A set of properties: Atomicity, Consistency, Isolation, Durability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "acid-base-2",
+            "question": "What is BASE?",
+            "answer": "Basically Available, Soft state, Eventual consistency.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "acid-base-3",
+            "question": "Where is ACID used?",
+            "answer": "In relational databases requiring strong consistency.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "acid-base-4",
+            "question": "Where is BASE used?",
+            "answer": "In distributed NoSQL systems prioritizing availability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "acid-base-5",
+            "question": "What is atomicity?",
+            "answer": "A transaction is fully completed or not executed at all.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "acid-base-6",
+            "question": "What is durability?",
+            "answer": "Committed data persists even after system failure.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "acid-base-7",
+            "question": "What is soft state?",
+            "answer": "System state may change over time even without input.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "acid-base-8",
+            "question": "Why do distributed systems use BASE?",
+            "answer": "To achieve high availability and scalability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "acid-base-9",
+            "question": "What is consistency in ACID?",
+            "answer": "Database transitions from one valid state to another.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "acid-base-10",
+            "question": "What is isolation?",
+            "answer": "Transactions do not interfere with each other.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "acid-base-11",
+            "question": "What anomalies do stronger transaction isolation levels prevent?",
+            "answer": "They progressively prevent dirty reads, non-repeatable reads, and phantom reads. Serializable isolation provides the strongest standard guarantee but may reduce concurrency.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

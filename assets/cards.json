@@ -1,0 +1,3362 @@
+[
+    {
+        "id": "scalability-1",
+        "topicName": "Scalability",
+        "question": "What is vertical scaling?",
+        "answer": "Increasing the resources (CPU, RAM) of a single machine.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "scalability-2",
+        "topicName": "Scalability",
+        "question": "What is horizontal scaling?",
+        "answer": "Adding more machines to distribute the load.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "scalability-3",
+        "topicName": "Scalability",
+        "question": "Why is horizontal scaling preferred in distributed systems?",
+        "answer": "It allows near-infinite scaling and better fault tolerance.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "scalability-4",
+        "topicName": "Scalability",
+        "question": "What is scalability bottleneck?",
+        "answer": "A component that prevents the system from scaling further.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "scalability-5",
+        "topicName": "Scalability",
+        "question": "What is load distribution in scalable systems?",
+        "answer": "Evenly distributing requests across resources to avoid overload.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "scalability-6",
+        "topicName": "Scalability",
+        "question": "What is stateless architecture?",
+        "answer": "A system where each request is independent and does not rely on stored server state.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "scalability-7",
+        "topicName": "Scalability",
+        "question": "What is autoscaling?",
+        "answer": "Automatically adjusting compute resources based on load.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "scalability-8",
+        "topicName": "Scalability",
+        "question": "What is elasticity in cloud systems?",
+        "answer": "The ability to scale resources up and down dynamically.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "scalability-9",
+        "topicName": "Scalability",
+        "question": "What is throughput?",
+        "answer": "The number of requests a system can handle per unit of time.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "scalability-10",
+        "topicName": "Scalability",
+        "question": "What is latency in distributed systems?",
+        "answer": "The time taken to process and respond to a request.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "loadbalancing-1",
+        "topicName": "Load Balancing",
+        "question": "What is load balancing?",
+        "answer": "Distributing traffic across multiple servers to improve performance and reliability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "loadbalancing-2",
+        "topicName": "Load Balancing",
+        "question": "What are common load balancing algorithms?",
+        "answer": "Round robin, least connections, and IP hash.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "loadbalancing-3",
+        "topicName": "Load Balancing",
+        "question": "What is a reverse proxy?",
+        "answer": "A server that forwards client requests to backend servers.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "loadbalancing-4",
+        "topicName": "Load Balancing",
+        "question": "What is sticky session?",
+        "answer": "A technique where a user is consistently routed to the same server.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "loadbalancing-5",
+        "topicName": "Load Balancing",
+        "question": "What is health check in load balancers?",
+        "answer": "A mechanism to check if backend servers are healthy before routing traffic.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "loadbalancing-6",
+        "topicName": "Load Balancing",
+        "question": "What is L4 vs L7 load balancing?",
+        "answer": "L4 works at transport layer, L7 works at application layer with HTTP awareness.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "loadbalancing-7",
+        "topicName": "Load Balancing",
+        "question": "Why is load balancing important?",
+        "answer": "It improves availability, scalability, and fault tolerance.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "loadbalancing-8",
+        "topicName": "Load Balancing",
+        "question": "What happens when a server fails in a load balanced system?",
+        "answer": "Traffic is redirected to healthy servers.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "loadbalancing-9",
+        "topicName": "Load Balancing",
+        "question": "What is DNS-based load balancing?",
+        "answer": "Using DNS to distribute traffic across multiple IP addresses.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "loadbalancing-10",
+        "topicName": "Load Balancing",
+        "question": "What is global load balancing?",
+        "answer": "Distributing traffic across multiple geographic regions.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "caching-1",
+        "topicName": "Caching",
+        "question": "What is caching?",
+        "answer": "Storing frequently accessed data in a faster storage layer.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "caching-2",
+        "topicName": "Caching",
+        "question": "What is cache-aside pattern?",
+        "answer": "Application loads data into cache on demand.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "caching-3",
+        "topicName": "Caching",
+        "question": "What is write-through caching?",
+        "answer": "Data is written to cache and database simultaneously.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "caching-4",
+        "topicName": "Caching",
+        "question": "What is write-back caching?",
+        "answer": "Data is written to cache first and persisted later.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "caching-5",
+        "topicName": "Caching",
+        "question": "What is cache invalidation?",
+        "answer": "Removing or updating stale cached data.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "caching-6",
+        "topicName": "Caching",
+        "question": "What is TTL?",
+        "answer": "Time-to-live before cached data expires.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "caching-7",
+        "topicName": "Caching",
+        "question": "What is cache hit?",
+        "answer": "When data is found in cache.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "caching-8",
+        "topicName": "Caching",
+        "question": "What is cache miss?",
+        "answer": "When data is not found in cache.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "caching-9",
+        "topicName": "Caching",
+        "question": "What are eviction policies?",
+        "answer": "Rules like LRU, LFU, FIFO to remove cache entries.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "caching-10",
+        "topicName": "Caching",
+        "question": "What is cache stampede?",
+        "answer": "When many requests rebuild an expired cache simultaneously.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dbdesign-1",
+        "topicName": "Database Design",
+        "question": "What is normalization?",
+        "answer": "Organizing data to reduce redundancy.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dbdesign-2",
+        "topicName": "Database Design",
+        "question": "What is denormalization?",
+        "answer": "Adding redundancy to improve read performance.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dbdesign-3",
+        "topicName": "Database Design",
+        "question": "What is a relational database?",
+        "answer": "A database structured in tables with relationships.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dbdesign-4",
+        "topicName": "Database Design",
+        "question": "What is a NoSQL database?",
+        "answer": "A non-relational database designed for scalability and flexibility.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dbdesign-5",
+        "topicName": "Database Design",
+        "question": "What is a schema?",
+        "answer": "The structure of a database defining tables and fields.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dbdesign-6",
+        "topicName": "Database Design",
+        "question": "What is indexing in databases?",
+        "answer": "A technique to speed up data retrieval.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dbdesign-7",
+        "topicName": "Database Design",
+        "question": "What is a primary key?",
+        "answer": "A unique identifier for a record in a table.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dbdesign-8",
+        "topicName": "Database Design",
+        "question": "What is a foreign key?",
+        "answer": "A field that links one table to another.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dbdesign-9",
+        "topicName": "Database Design",
+        "question": "What is data consistency?",
+        "answer": "Ensuring data remains accurate and reliable across systems.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dbdesign-10",
+        "topicName": "Database Design",
+        "question": "What is ACID compliance?",
+        "answer": "A set of properties ensuring reliable database transactions.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "partitioning-1",
+        "topicName": "Data Partitioning",
+        "question": "What is data partitioning?",
+        "answer": "Splitting a large dataset into smaller parts to improve scalability and performance.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "partitioning-2",
+        "topicName": "Data Partitioning",
+        "question": "What is horizontal partitioning (sharding)?",
+        "answer": "Dividing rows of a table across multiple databases.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "partitioning-3",
+        "topicName": "Data Partitioning",
+        "question": "What is vertical partitioning?",
+        "answer": "Splitting a table by columns into separate tables.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "partitioning-4",
+        "topicName": "Data Partitioning",
+        "question": "What is a shard key?",
+        "answer": "A key used to determine how data is distributed across shards.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "partitioning-5",
+        "topicName": "Data Partitioning",
+        "question": "What are common sharding strategies?",
+        "answer": "Hash-based, range-based, and directory-based sharding.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "partitioning-6",
+        "topicName": "Data Partitioning",
+        "question": "What is rebalancing in sharding?",
+        "answer": "Redistributing data across shards when load becomes uneven.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "partitioning-7",
+        "topicName": "Data Partitioning",
+        "question": "What is hotspotting in partitioning?",
+        "answer": "When one shard receives significantly more traffic than others.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "partitioning-8",
+        "topicName": "Data Partitioning",
+        "question": "What is consistent hashing?",
+        "answer": "A hashing technique that minimizes data movement when nodes change.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "partitioning-9",
+        "topicName": "Data Partitioning",
+        "question": "Why is partitioning important?",
+        "answer": "It improves scalability, performance, and manageability of large datasets.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "partitioning-10",
+        "topicName": "Data Partitioning",
+        "question": "What problems does partitioning introduce?",
+        "answer": "Increased complexity, cross-shard queries, and consistency challenges.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "replication-1",
+        "topicName": "Replication",
+        "question": "What is database replication?",
+        "answer": "Copying data across multiple machines to improve availability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "replication-2",
+        "topicName": "Replication",
+        "question": "What is master-slave replication?",
+        "answer": "One primary node handles writes and replicas handle reads.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "replication-3",
+        "topicName": "Replication",
+        "question": "What is multi-master replication?",
+        "answer": "Multiple nodes can accept writes simultaneously.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "replication-4",
+        "topicName": "Replication",
+        "question": "What is synchronous replication?",
+        "answer": "Data is replicated before confirming a write.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "replication-5",
+        "topicName": "Replication",
+        "question": "What is asynchronous replication?",
+        "answer": "Data is replicated after confirming a write.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "replication-6",
+        "topicName": "Replication",
+        "question": "What is replication lag?",
+        "answer": "The delay between writing data and it appearing on replicas.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "replication-7",
+        "topicName": "Replication",
+        "question": "Why is replication important?",
+        "answer": "It improves fault tolerance and read scalability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "replication-8",
+        "topicName": "Replication",
+        "question": "What happens when a primary node fails?",
+        "answer": "A replica is promoted to become the new primary.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "replication-9",
+        "topicName": "Replication",
+        "question": "What is read replica?",
+        "answer": "A replica used specifically to handle read traffic.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "replication-10",
+        "topicName": "Replication",
+        "question": "What is data consistency in replication?",
+        "answer": "Ensuring all replicas eventually reflect the same data.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "consistency-1",
+        "topicName": "Consistency Models",
+        "question": "What is strong consistency?",
+        "answer": "All reads return the most recent write.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "consistency-2",
+        "topicName": "Consistency Models",
+        "question": "What is eventual consistency?",
+        "answer": "System becomes consistent over time.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "consistency-3",
+        "topicName": "Consistency Models",
+        "question": "What is causal consistency?",
+        "answer": "Operations that are causally related are seen in order.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "consistency-4",
+        "topicName": "Consistency Models",
+        "question": "What is read-after-write consistency?",
+        "answer": "A user can immediately read their own writes.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "consistency-5",
+        "topicName": "Consistency Models",
+        "question": "What is session consistency?",
+        "answer": "Consistency guarantees within a user session.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "consistency-6",
+        "topicName": "Consistency Models",
+        "question": "What is monotonic reads?",
+        "answer": "Once a value is read, older values will never be seen again.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "consistency-7",
+        "topicName": "Consistency Models",
+        "question": "What is consistency vs availability tradeoff?",
+        "answer": "Systems often trade strict consistency for higher availability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "consistency-8",
+        "topicName": "Consistency Models",
+        "question": "Where is eventual consistency commonly used?",
+        "answer": "In distributed systems like social media feeds and caches.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "consistency-9",
+        "topicName": "Consistency Models",
+        "question": "Why is strong consistency harder in distributed systems?",
+        "answer": "Because it requires coordination across nodes, increasing latency.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "consistency-10",
+        "topicName": "Consistency Models",
+        "question": "What is consistency model selection based on?",
+        "answer": "Use case requirements for latency, availability, and correctness.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cap-1",
+        "topicName": "CAP Theorem",
+        "question": "What is the CAP theorem?",
+        "answer": "A distributed system can only guarantee two of Consistency, Availability, and Partition tolerance at the same time.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cap-2",
+        "topicName": "CAP Theorem",
+        "question": "What is consistency in CAP?",
+        "answer": "All nodes see the same data at the same time.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cap-3",
+        "topicName": "CAP Theorem",
+        "question": "What is availability in CAP?",
+        "answer": "Every request receives a response, even if not the latest data.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cap-4",
+        "topicName": "CAP Theorem",
+        "question": "What is partition tolerance?",
+        "answer": "System continues operating despite network failures.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cap-5",
+        "topicName": "CAP Theorem",
+        "question": "Can a system avoid partition tolerance?",
+        "answer": "No, network partitions are inevitable in distributed systems.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cap-6",
+        "topicName": "CAP Theorem",
+        "question": "What does CP system mean?",
+        "answer": "A system that prioritizes consistency and partition tolerance over availability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cap-7",
+        "topicName": "CAP Theorem",
+        "question": "What does AP system mean?",
+        "answer": "A system that prioritizes availability and partition tolerance over consistency.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cap-8",
+        "topicName": "CAP Theorem",
+        "question": "What is trade-off in CAP theorem?",
+        "answer": "You must sacrifice one guarantee during a network partition.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cap-9",
+        "topicName": "CAP Theorem",
+        "question": "Why is CAP theorem important?",
+        "answer": "It helps design distributed systems with clear trade-offs.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cap-10",
+        "topicName": "CAP Theorem",
+        "question": "Is CAP theorem always strict?",
+        "answer": "In practice, systems often balance trade-offs rather than strictly choose two.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "acid-base-1",
+        "topicName": "ACID vs BASE",
+        "question": "What is ACID?",
+        "answer": "A set of properties: Atomicity, Consistency, Isolation, Durability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "acid-base-2",
+        "topicName": "ACID vs BASE",
+        "question": "What is BASE?",
+        "answer": "Basically Available, Soft state, Eventual consistency.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "acid-base-3",
+        "topicName": "ACID vs BASE",
+        "question": "Where is ACID used?",
+        "answer": "In relational databases requiring strong consistency.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "acid-base-4",
+        "topicName": "ACID vs BASE",
+        "question": "Where is BASE used?",
+        "answer": "In distributed NoSQL systems prioritizing availability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "acid-base-5",
+        "topicName": "ACID vs BASE",
+        "question": "What is atomicity?",
+        "answer": "A transaction is fully completed or not executed at all.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "acid-base-6",
+        "topicName": "ACID vs BASE",
+        "question": "What is durability?",
+        "answer": "Committed data persists even after system failure.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "acid-base-7",
+        "topicName": "ACID vs BASE",
+        "question": "What is soft state?",
+        "answer": "System state may change over time even without input.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "acid-base-8",
+        "topicName": "ACID vs BASE",
+        "question": "Why do distributed systems use BASE?",
+        "answer": "To achieve high availability and scalability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "acid-base-9",
+        "topicName": "ACID vs BASE",
+        "question": "What is consistency in ACID?",
+        "answer": "Database transitions from one valid state to another.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "acid-base-10",
+        "topicName": "ACID vs BASE",
+        "question": "What is isolation?",
+        "answer": "Transactions do not interfere with each other.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "indexing-1",
+        "topicName": "Indexing",
+        "question": "What is a database index?",
+        "answer": "A data structure that speeds up query performance.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "indexing-2",
+        "topicName": "Indexing",
+        "question": "What are B-tree indexes?",
+        "answer": "Balanced tree structures used for efficient range queries.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "indexing-3",
+        "topicName": "Indexing",
+        "question": "What is a hash index?",
+        "answer": "An index optimized for exact match lookups.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "indexing-4",
+        "topicName": "Indexing",
+        "question": "What is a composite index?",
+        "answer": "An index built on multiple columns.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "indexing-5",
+        "topicName": "Indexing",
+        "question": "What is a primary index?",
+        "answer": "Index built on the primary key of a table.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "indexing-6",
+        "topicName": "Indexing",
+        "question": "What are the downsides of indexes?",
+        "answer": "They increase storage and slow down writes.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "indexing-7",
+        "topicName": "Indexing",
+        "question": "When should you avoid indexing?",
+        "answer": "When tables have frequent writes and few reads.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "indexing-8",
+        "topicName": "Indexing",
+        "question": "What is a clustered index?",
+        "answer": "An index that determines the physical order of data.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "indexing-9",
+        "topicName": "Indexing",
+        "question": "What is a secondary index?",
+        "answer": "An index that references data without affecting physical order.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "indexing-10",
+        "topicName": "Indexing",
+        "question": "How does indexing improve query performance?",
+        "answer": "It reduces the number of rows scanned during queries.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "ratelimit-1",
+        "topicName": "Rate Limiting",
+        "question": "What is rate limiting?",
+        "answer": "A technique to limit the number of requests a client can make in a given time window.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "ratelimit-2",
+        "topicName": "Rate Limiting",
+        "question": "What is a token bucket algorithm?",
+        "answer": "A rate limiting algorithm where tokens are added at a fixed rate and consumed per request.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "ratelimit-3",
+        "topicName": "Rate Limiting",
+        "question": "What is a leaky bucket algorithm?",
+        "answer": "Requests are processed at a constant rate, smoothing traffic bursts.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "ratelimit-4",
+        "topicName": "Rate Limiting",
+        "question": "What is fixed window rate limiting?",
+        "answer": "Limits requests within a fixed time interval.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "ratelimit-5",
+        "topicName": "Rate Limiting",
+        "question": "What is sliding window rate limiting?",
+        "answer": "A more accurate rate limiting method using rolling time windows.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "ratelimit-6",
+        "topicName": "Rate Limiting",
+        "question": "Why is rate limiting important?",
+        "answer": "It protects systems from overload and abuse.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "ratelimit-7",
+        "topicName": "Rate Limiting",
+        "question": "Where is rate limiting implemented?",
+        "answer": "At API gateway, load balancer, or application layer.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "ratelimit-8",
+        "topicName": "Rate Limiting",
+        "question": "What happens when rate limit is exceeded?",
+        "answer": "Requests are rejected or delayed, usually with HTTP 429.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "ratelimit-9",
+        "topicName": "Rate Limiting",
+        "question": "What is distributed rate limiting?",
+        "answer": "Rate limiting across multiple servers using shared state like Redis.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "ratelimit-10",
+        "topicName": "Rate Limiting",
+        "question": "What is per-user vs global rate limiting?",
+        "answer": "Per-user limits individual clients; global limits total system traffic.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "api-design-1",
+        "topicName": "API Design",
+        "question": "What is REST API?",
+        "answer": "An architectural style using HTTP methods for resource-based communication.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "api-design-2",
+        "topicName": "API Design",
+        "question": "What are HTTP methods used in APIs?",
+        "answer": "GET, POST, PUT, PATCH, DELETE.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "api-design-3",
+        "topicName": "API Design",
+        "question": "What is RESTful design principle?",
+        "answer": "Resources are identified by URLs and manipulated via standard HTTP methods.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "api-design-4",
+        "topicName": "API Design",
+        "question": "What is GraphQL?",
+        "answer": "A query language for APIs allowing clients to request specific data.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "api-design-5",
+        "topicName": "API Design",
+        "question": "What is API versioning?",
+        "answer": "Maintaining multiple versions of an API to avoid breaking changes.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "api-design-6",
+        "topicName": "API Design",
+        "question": "What is pagination in APIs?",
+        "answer": "Breaking large datasets into smaller chunks for efficient retrieval.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "api-design-7",
+        "topicName": "API Design",
+        "question": "What is idempotency in APIs?",
+        "answer": "Repeated requests produce the same result without side effects.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "api-design-8",
+        "topicName": "API Design",
+        "question": "What is API gateway?",
+        "answer": "A server that acts as an entry point for routing API requests.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "api-design-9",
+        "topicName": "API Design",
+        "question": "What is HATEOAS?",
+        "answer": "A REST constraint where responses include links to related actions.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "api-design-10",
+        "topicName": "API Design",
+        "question": "What is backward compatibility in APIs?",
+        "answer": "Ensuring old clients continue to work after API changes.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "idempotency-1",
+        "topicName": "Idempotency",
+        "question": "What is idempotency?",
+        "answer": "An operation that produces the same result even if executed multiple times.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "idempotency-2",
+        "topicName": "Idempotency",
+        "question": "Why is idempotency important in APIs?",
+        "answer": "It prevents duplicate side effects from retries.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "idempotency-3",
+        "topicName": "Idempotency",
+        "question": "Which HTTP methods are idempotent?",
+        "answer": "GET, PUT, DELETE are idempotent; POST is not by default.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "idempotency-4",
+        "topicName": "Idempotency",
+        "question": "What is an idempotency key?",
+        "answer": "A unique key used to ensure repeated requests are not duplicated.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "idempotency-5",
+        "topicName": "Idempotency",
+        "question": "Where is idempotency commonly used?",
+        "answer": "Payment systems and order processing systems.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "idempotency-6",
+        "topicName": "Idempotency",
+        "question": "What problems does idempotency solve?",
+        "answer": "It avoids duplicate transactions caused by retries or network failures.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "idempotency-7",
+        "topicName": "Idempotency",
+        "question": "How do you implement idempotency?",
+        "answer": "By storing request identifiers and responses.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "idempotency-8",
+        "topicName": "Idempotency",
+        "question": "Is DELETE always idempotent?",
+        "answer": "Yes, deleting an already deleted resource has the same effect.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "idempotency-9",
+        "topicName": "Idempotency",
+        "question": "What is retry safety?",
+        "answer": "Ensuring retries do not create duplicate effects.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "idempotency-10",
+        "topicName": "Idempotency",
+        "question": "Why is POST non-idempotent by default?",
+        "answer": "Because it usually creates new resources each time it is called.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "pagination-1",
+        "topicName": "Pagination",
+        "question": "What is pagination?",
+        "answer": "Splitting large datasets into smaller pages of results.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "pagination-2",
+        "topicName": "Pagination",
+        "question": "What is offset pagination?",
+        "answer": "Using offset and limit to fetch a specific page of results.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "pagination-3",
+        "topicName": "Pagination",
+        "question": "What is cursor-based pagination?",
+        "answer": "Using a cursor to fetch the next set of results efficiently.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "pagination-4",
+        "topicName": "Pagination",
+        "question": "Why is cursor pagination preferred at scale?",
+        "answer": "It avoids performance issues of large offsets.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "pagination-5",
+        "topicName": "Pagination",
+        "question": "What is page size?",
+        "answer": "The number of items returned per page.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "pagination-6",
+        "topicName": "Pagination",
+        "question": "What is infinite scrolling?",
+        "answer": "A UI pattern that loads data continuously as the user scrolls.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "pagination-7",
+        "topicName": "Pagination",
+        "question": "What are issues with offset pagination?",
+        "answer": "Slow performance and inconsistent results on large datasets.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "pagination-8",
+        "topicName": "Pagination",
+        "question": "What is keyset pagination?",
+        "answer": "A form of cursor pagination using indexed columns.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "pagination-9",
+        "topicName": "Pagination",
+        "question": "What is stable pagination?",
+        "answer": "Ensuring results don’t change between page requests.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "pagination-10",
+        "topicName": "Pagination",
+        "question": "Why is pagination important?",
+        "answer": "It improves performance and usability when dealing with large datasets.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "mq-1",
+        "topicName": "Message Queues",
+        "question": "What is a message queue?",
+        "answer": "A system that allows asynchronous communication between services.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "mq-2",
+        "topicName": "Message Queues",
+        "question": "What is a producer?",
+        "answer": "A service that sends messages to a queue.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "mq-3",
+        "topicName": "Message Queues",
+        "question": "What is a consumer?",
+        "answer": "A service that processes messages from a queue.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "mq-4",
+        "topicName": "Message Queues",
+        "question": "What is message durability?",
+        "answer": "Ensuring messages are not lost even if system fails.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "mq-5",
+        "topicName": "Message Queues",
+        "question": "What is at-least-once delivery?",
+        "answer": "Messages may be delivered more than once but never lost.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "mq-6",
+        "topicName": "Message Queues",
+        "question": "What is at-most-once delivery?",
+        "answer": "Messages are delivered once or not at all.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "mq-7",
+        "topicName": "Message Queues",
+        "question": "What is exactly-once delivery?",
+        "answer": "Each message is processed exactly once (hard to achieve).",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "mq-8",
+        "topicName": "Message Queues",
+        "question": "What is queue backlog?",
+        "answer": "Accumulation of unprocessed messages in a queue.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "mq-9",
+        "topicName": "Message Queues",
+        "question": "Why use message queues?",
+        "answer": "To decouple services and improve scalability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "mq-10",
+        "topicName": "Message Queues",
+        "question": "What is retry mechanism in queues?",
+        "answer": "Reprocessing failed messages automatically.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "stream-1",
+        "topicName": "Stream Processing",
+        "question": "What is stream processing?",
+        "answer": "Stream processing is a paradigm where data is processed continuously as it is generated, rather than in batches. It enables real-time analytics and low-latency processing for event-driven systems.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "stream-2",
+        "topicName": "Stream Processing",
+        "question": "What is the difference between stream processing and batch processing?",
+        "answer": "Batch processing handles large volumes of stored data at intervals, while stream processing handles data in real time as events arrive.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "stream-3",
+        "topicName": "Stream Processing",
+        "question": "What are common stream processing systems?",
+        "answer": "Examples include Apache Kafka Streams, Apache Flink, and Apache Spark Streaming, which are used for processing real-time data pipelines.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "stream-4",
+        "topicName": "Stream Processing",
+        "question": "What is event time vs processing time?",
+        "answer": "Event time refers to when the event actually occurred, while processing time is when the system processes it. Event time is important for correctness in distributed systems.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "stream-5",
+        "topicName": "Stream Processing",
+        "question": "What is windowing in stream processing?",
+        "answer": "Windowing groups events into time-based or count-based windows so computations like aggregations can be performed over finite subsets of an infinite stream.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "stream-6",
+        "topicName": "Stream Processing",
+        "question": "What is stateful stream processing?",
+        "answer": "Stateful stream processing maintains intermediate state across events, allowing computations like running totals, session tracking, and joins over streams.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "stream-7",
+        "topicName": "Stream Processing",
+        "question": "What is stateless stream processing?",
+        "answer": "Stateless processing handles each event independently without storing any context between events.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "stream-8",
+        "topicName": "Stream Processing",
+        "question": "What is exactly-once processing in streams?",
+        "answer": "Exactly-once processing ensures that each event is processed only once, even in the presence of retries or failures, often requiring coordination between storage and processing layers.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "stream-9",
+        "topicName": "Stream Processing",
+        "question": "What is late data in stream processing?",
+        "answer": "Late data refers to events that arrive after their expected time window, requiring mechanisms like watermarks or buffering to handle them correctly.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "stream-10",
+        "topicName": "Stream Processing",
+        "question": "Why is stream processing important?",
+        "answer": "It enables real-time decision making, fraud detection, monitoring systems, and low-latency analytics in modern distributed architectures.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "backpressure-1",
+        "topicName": "Backpressure",
+        "question": "What is backpressure in distributed systems?",
+        "answer": "Backpressure is a mechanism that signals upstream components to slow down when downstream systems cannot handle the current load.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "backpressure-2",
+        "topicName": "Backpressure",
+        "question": "Why is backpressure important?",
+        "answer": "It prevents system overload, memory exhaustion, and cascading failures by controlling data flow rates.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "backpressure-3",
+        "topicName": "Backpressure",
+        "question": "Where is backpressure commonly used?",
+        "answer": "It is used in streaming systems, message queues, and reactive programming frameworks.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "backpressure-4",
+        "topicName": "Backpressure",
+        "question": "What happens without backpressure?",
+        "answer": "Systems can become overwhelmed, leading to high latency, crashes, or data loss due to resource exhaustion.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "backpressure-5",
+        "topicName": "Backpressure",
+        "question": "How is backpressure implemented?",
+        "answer": "It can be implemented using buffering limits, flow control protocols, or acknowledgment-based systems.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "backpressure-6",
+        "topicName": "Backpressure",
+        "question": "What is reactive backpressure?",
+        "answer": "Reactive backpressure is a model where consumers explicitly request data at a rate they can handle.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "backpressure-7",
+        "topicName": "Backpressure",
+        "question": "What is queue-based backpressure?",
+        "answer": "When queues grow beyond a threshold, producers are slowed down or blocked.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "backpressure-8",
+        "topicName": "Backpressure",
+        "question": "What is TCP backpressure analogy?",
+        "answer": "TCP flow control is similar to backpressure, where the receiver window limits sender speed.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "backpressure-9",
+        "topicName": "Backpressure",
+        "question": "How does backpressure improve reliability?",
+        "answer": "It ensures systems degrade gracefully instead of failing under high load.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "backpressure-10",
+        "topicName": "Backpressure",
+        "question": "What is the tradeoff of backpressure?",
+        "answer": "It may increase latency but improves stability and prevents overload.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "concurrency-1",
+        "topicName": "Concurrency",
+        "question": "What is concurrency?",
+        "answer": "Concurrency is the ability of a system to handle multiple tasks at the same time, interleaving execution to improve efficiency.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "concurrency-2",
+        "topicName": "Concurrency",
+        "question": "What is the difference between concurrency and parallelism?",
+        "answer": "Concurrency is dealing with multiple tasks at once, while parallelism is executing multiple tasks literally at the same time using multiple cores.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "concurrency-3",
+        "topicName": "Concurrency",
+        "question": "What is a race condition?",
+        "answer": "A race condition occurs when multiple threads access shared data simultaneously and the result depends on execution order.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "concurrency-4",
+        "topicName": "Concurrency",
+        "question": "What is a deadlock?",
+        "answer": "A deadlock happens when two or more processes wait indefinitely for resources held by each other.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "concurrency-5",
+        "topicName": "Concurrency",
+        "question": "What is a mutex?",
+        "answer": "A mutex is a locking mechanism that ensures only one thread can access a critical section at a time.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "concurrency-6",
+        "topicName": "Concurrency",
+        "question": "What is a semaphore?",
+        "answer": "A semaphore controls access to a shared resource by maintaining a counter for available permits.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "concurrency-7",
+        "topicName": "Concurrency",
+        "question": "What is thread safety?",
+        "answer": "Thread safety ensures that shared data structures behave correctly when accessed by multiple threads.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "concurrency-8",
+        "topicName": "Concurrency",
+        "question": "What is context switching?",
+        "answer": "Context switching is the process of storing and restoring CPU state when switching between threads.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "concurrency-9",
+        "topicName": "Concurrency",
+        "question": "What is a thread pool?",
+        "answer": "A thread pool is a group of pre-created threads used to execute tasks efficiently without constant thread creation overhead.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "concurrency-10",
+        "topicName": "Concurrency",
+        "question": "What is lock contention?",
+        "answer": "Lock contention happens when multiple threads compete for the same lock, reducing performance.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dist-tx-1",
+        "topicName": "Distributed Transactions",
+        "question": "What is a distributed transaction?",
+        "answer": "A transaction that spans multiple services or databases and must maintain consistency across them.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dist-tx-2",
+        "topicName": "Distributed Transactions",
+        "question": "What is the two-phase commit (2PC)?",
+        "answer": "A protocol where a coordinator ensures all participants agree before committing a transaction.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dist-tx-3",
+        "topicName": "Distributed Transactions",
+        "question": "What is the problem with 2PC?",
+        "answer": "It is slow and can block if the coordinator fails.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dist-tx-4",
+        "topicName": "Distributed Transactions",
+        "question": "What is saga pattern?",
+        "answer": "A pattern where long-running transactions are split into steps with compensating actions.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dist-tx-5",
+        "topicName": "Distributed Transactions",
+        "question": "What is a compensating transaction?",
+        "answer": "An operation that undoes the effect of a previous step in a saga.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dist-tx-6",
+        "topicName": "Distributed Transactions",
+        "question": "Why are distributed transactions hard?",
+        "answer": "Because network failures, latency, and partial failures make coordination difficult.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dist-tx-7",
+        "topicName": "Distributed Transactions",
+        "question": "What is eventual consistency in distributed transactions?",
+        "answer": "Systems eventually converge to a consistent state instead of being instantly consistent.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dist-tx-8",
+        "topicName": "Distributed Transactions",
+        "question": "What is idempotency in distributed transactions?",
+        "answer": "Ensuring repeated execution of a transaction step does not cause incorrect results.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dist-tx-9",
+        "topicName": "Distributed Transactions",
+        "question": "Where are distributed transactions used?",
+        "answer": "In payment systems, booking systems, and multi-service workflows.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dist-tx-10",
+        "topicName": "Distributed Transactions",
+        "question": "What is consistency vs availability tradeoff in transactions?",
+        "answer": "Strong consistency requires coordination, while availability favors responsiveness even with partial data.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "fault-1",
+        "topicName": "Fault Tolerance",
+        "question": "What is fault tolerance?",
+        "answer": "The ability of a system to continue operating correctly even when some components fail.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "fault-2",
+        "topicName": "Fault Tolerance",
+        "question": "What is redundancy in fault tolerance?",
+        "answer": "Duplicating critical components to avoid single points of failure.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "fault-3",
+        "topicName": "Fault Tolerance",
+        "question": "What is failover?",
+        "answer": "Switching to a backup system when the primary system fails.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "fault-4",
+        "topicName": "Fault Tolerance",
+        "question": "What is graceful degradation?",
+        "answer": "A system continues to function with reduced capabilities under failure conditions.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "fault-5",
+        "topicName": "Fault Tolerance",
+        "question": "What is retry strategy?",
+        "answer": "Automatically retrying failed operations to handle transient errors.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "fault-6",
+        "topicName": "Fault Tolerance",
+        "question": "What is circuit breaker pattern?",
+        "answer": "A pattern that stops requests to a failing service to prevent cascading failures.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "fault-7",
+        "topicName": "Fault Tolerance",
+        "question": "What is bulkhead pattern?",
+        "answer": "Isolating system components so one failure does not bring down the entire system.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "fault-8",
+        "topicName": "Fault Tolerance",
+        "question": "What is timeout handling?",
+        "answer": "Limiting how long a system waits for a response before failing.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "fault-9",
+        "topicName": "Fault Tolerance",
+        "question": "Why is observability important for fault tolerance?",
+        "answer": "It helps detect, diagnose, and respond to failures quickly.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "fault-10",
+        "topicName": "Fault Tolerance",
+        "question": "What is multi-region deployment?",
+        "answer": "Deploying systems across multiple geographic regions for resilience.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "observability-1",
+        "topicName": "Observability",
+        "question": "What is observability in system design?",
+        "answer": "Observability is the ability to understand the internal state of a system based on external outputs such as logs, metrics, and traces.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "observability-2",
+        "topicName": "Observability",
+        "question": "What are the three pillars of observability?",
+        "answer": "Logs, metrics, and traces.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "observability-3",
+        "topicName": "Observability",
+        "question": "What are logs used for?",
+        "answer": "Logs provide detailed event records for debugging and auditing system behavior.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "observability-4",
+        "topicName": "Observability",
+        "question": "What are metrics in observability?",
+        "answer": "Metrics are numerical measurements over time, such as latency, throughput, and error rates.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "observability-5",
+        "topicName": "Observability",
+        "question": "What is distributed tracing?",
+        "answer": "Tracing tracks requests across multiple services to understand system behavior end-to-end.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "observability-6",
+        "topicName": "Observability",
+        "question": "Why is observability important?",
+        "answer": "It helps detect, diagnose, and resolve system issues quickly in complex distributed systems.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "observability-7",
+        "topicName": "Observability",
+        "question": "What is a monitoring system?",
+        "answer": "A system that continuously collects and analyzes metrics and logs to detect anomalies.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "observability-8",
+        "topicName": "Observability",
+        "question": "What is alerting in observability?",
+        "answer": "Alerting notifies engineers when system metrics exceed predefined thresholds.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "observability-9",
+        "topicName": "Observability",
+        "question": "What is correlation between logs and traces?",
+        "answer": "It allows linking specific logs to trace spans for better debugging.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "observability-10",
+        "topicName": "Observability",
+        "question": "What is telemetry data?",
+        "answer": "Telemetry is automatically collected data about system performance and behavior.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "security-1",
+        "topicName": "Security",
+        "question": "What is authentication?",
+        "answer": "Authentication verifies the identity of a user or system.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "security-2",
+        "topicName": "Security",
+        "question": "What is authorization?",
+        "answer": "Authorization determines what actions an authenticated user is allowed to perform.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "security-3",
+        "topicName": "Security",
+        "question": "What is encryption?",
+        "answer": "Encryption is the process of converting data into a secure format that only authorized parties can read.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "security-4",
+        "topicName": "Security",
+        "question": "What is TLS?",
+        "answer": "TLS is a protocol that provides secure communication over a network.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "security-5",
+        "topicName": "Security",
+        "question": "What is OAuth?",
+        "answer": "OAuth is an authorization framework that allows third-party applications limited access to user resources.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "security-6",
+        "topicName": "Security",
+        "question": "What is JWT?",
+        "answer": "JWT (JSON Web Token) is a compact token format used for authentication and authorization.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "security-7",
+        "topicName": "Security",
+        "question": "What is hashing?",
+        "answer": "Hashing converts input data into a fixed-size string, typically used for password storage.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "security-8",
+        "topicName": "Security",
+        "question": "What is rate limiting in security?",
+        "answer": "It prevents abuse by limiting the number of requests a user can make.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "security-9",
+        "topicName": "Security",
+        "question": "What is SQL injection?",
+        "answer": "A security attack where malicious SQL code is injected into queries.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "security-10",
+        "topicName": "Security",
+        "question": "Why is security important in system design?",
+        "answer": "It protects data integrity, privacy, and prevents unauthorized access.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cdn-1",
+        "topicName": "CDN / Edge Computing",
+        "question": "What is a CDN?",
+        "answer": "A Content Delivery Network caches content closer to users to reduce latency.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cdn-2",
+        "topicName": "CDN / Edge Computing",
+        "question": "How does a CDN work?",
+        "answer": "It stores cached copies of content in edge locations around the world.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cdn-3",
+        "topicName": "CDN / Edge Computing",
+        "question": "What is edge computing?",
+        "answer": "Processing data closer to the source of generation rather than a central server.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cdn-4",
+        "topicName": "CDN / Edge Computing",
+        "question": "Why use a CDN?",
+        "answer": "To reduce latency, improve performance, and reduce backend load.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cdn-5",
+        "topicName": "CDN / Edge Computing",
+        "question": "What is cache invalidation in CDNs?",
+        "answer": "Updating or removing outdated content from edge servers.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cdn-6",
+        "topicName": "CDN / Edge Computing",
+        "question": "What are edge nodes?",
+        "answer": "Servers located geographically closer to users for faster response.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cdn-7",
+        "topicName": "CDN / Edge Computing",
+        "question": "What content is best for CDN caching?",
+        "answer": "Static assets like images, videos, and CSS files.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cdn-8",
+        "topicName": "CDN / Edge Computing",
+        "question": "What is origin server?",
+        "answer": "The main server where original content is stored.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cdn-9",
+        "topicName": "CDN / Edge Computing",
+        "question": "What is geo-routing?",
+        "answer": "Directing users to the nearest edge location based on geography.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cdn-10",
+        "topicName": "CDN / Edge Computing",
+        "question": "What is latency improvement in CDNs?",
+        "answer": "Reducing distance data travels between user and server.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "microservices-1",
+        "topicName": "Microservices vs Monolith",
+        "question": "What is a monolithic architecture?",
+        "answer": "A system where all components are built and deployed as a single unit.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "microservices-2",
+        "topicName": "Microservices vs Monolith",
+        "question": "What are microservices?",
+        "answer": "An architecture where services are broken into independent deployable components.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "microservices-3",
+        "topicName": "Microservices vs Monolith",
+        "question": "Advantages of microservices?",
+        "answer": "Scalability, independent deployment, and better fault isolation.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "microservices-4",
+        "topicName": "Microservices vs Monolith",
+        "question": "Disadvantages of microservices?",
+        "answer": "Increased complexity, network overhead, and distributed debugging challenges.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "microservices-5",
+        "topicName": "Microservices vs Monolith",
+        "question": "When should you use monolith?",
+        "answer": "For small teams or simple applications with limited scaling needs.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "microservices-6",
+        "topicName": "Microservices vs Monolith",
+        "question": "What is service decomposition?",
+        "answer": "Splitting a system into independent services based on business capabilities.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "microservices-7",
+        "topicName": "Microservices vs Monolith",
+        "question": "What is inter-service communication?",
+        "answer": "Communication between services via HTTP, gRPC, or messaging systems.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "microservices-8",
+        "topicName": "Microservices vs Monolith",
+        "question": "What is data ownership in microservices?",
+        "answer": "Each service owns its own database.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "microservices-9",
+        "topicName": "Microservices vs Monolith",
+        "question": "What is monolith decomposition strategy?",
+        "answer": "Gradually splitting a monolith into services.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "microservices-10",
+        "topicName": "Microservices vs Monolith",
+        "question": "Why is microservices debugging harder?",
+        "answer": "Because failures span multiple distributed services.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "service-discovery-1",
+        "topicName": "Service Discovery",
+        "question": "What is service discovery?",
+        "answer": "A mechanism for automatically finding network locations of services.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "service-discovery-2",
+        "topicName": "Service Discovery",
+        "question": "What is client-side service discovery?",
+        "answer": "Clients determine which service instance to call.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "service-discovery-3",
+        "topicName": "Service Discovery",
+        "question": "What is server-side service discovery?",
+        "answer": "A load balancer routes requests to service instances.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "service-discovery-4",
+        "topicName": "Service Discovery",
+        "question": "What is a service registry?",
+        "answer": "A database of available service instances and their locations.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "service-discovery-5",
+        "topicName": "Service Discovery",
+        "question": "Why is service discovery needed?",
+        "answer": "Because services dynamically scale and change IPs.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "service-discovery-6",
+        "topicName": "Service Discovery",
+        "question": "What is health checking in service discovery?",
+        "answer": "Removing unhealthy services from routing decisions.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "service-discovery-7",
+        "topicName": "Service Discovery",
+        "question": "What is DNS-based service discovery?",
+        "answer": "Using DNS to map service names to IP addresses.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "service-discovery-8",
+        "topicName": "Service Discovery",
+        "question": "What is dynamic service registration?",
+        "answer": "Services automatically register and deregister themselves.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "service-discovery-9",
+        "topicName": "Service Discovery",
+        "question": "What is eventual consistency in service discovery?",
+        "answer": "Registry updates may take time to propagate.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "service-discovery-10",
+        "topicName": "Service Discovery",
+        "question": "What is the main challenge of service discovery?",
+        "answer": "Keeping service registry accurate and up to date.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "config-1",
+        "topicName": "Configuration Management",
+        "question": "What is configuration management?",
+        "answer": "Managing application settings separately from code.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "config-2",
+        "topicName": "Configuration Management",
+        "question": "Why separate config from code?",
+        "answer": "To allow changes without redeploying applications.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "config-3",
+        "topicName": "Configuration Management",
+        "question": "What is environment-based configuration?",
+        "answer": "Different configs for dev, staging, and production.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "config-4",
+        "topicName": "Configuration Management",
+        "question": "What is a config server?",
+        "answer": "A centralized service for managing application configurations.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "config-5",
+        "topicName": "Configuration Management",
+        "question": "What is feature flagging?",
+        "answer": "Toggling features on or off without redeploying code.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "config-6",
+        "topicName": "Configuration Management",
+        "question": "What is secret management?",
+        "answer": "Securely storing sensitive data like API keys and passwords.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "config-7",
+        "topicName": "Configuration Management",
+        "question": "What is configuration drift?",
+        "answer": "When system configuration becomes inconsistent across environments.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "config-8",
+        "topicName": "Configuration Management",
+        "question": "What is immutable configuration?",
+        "answer": "Configuration that cannot be changed after deployment.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "config-9",
+        "topicName": "Configuration Management",
+        "question": "Why use centralized config systems?",
+        "answer": "To ensure consistency and easier management across services.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "config-10",
+        "topicName": "Configuration Management",
+        "question": "What is versioned configuration?",
+        "answer": "Tracking changes to configuration over time for rollback.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "deploy-1",
+        "topicName": "Deployment Strategies",
+        "question": "What is blue-green deployment?",
+        "answer": "Two identical environments where traffic switches from old to new version.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "deploy-2",
+        "topicName": "Deployment Strategies",
+        "question": "What is canary deployment?",
+        "answer": "Gradually rolling out a new version to a small subset of users first.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "deploy-3",
+        "topicName": "Deployment Strategies",
+        "question": "What is rolling deployment?",
+        "answer": "Updating instances one by one instead of all at once.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "deploy-4",
+        "topicName": "Deployment Strategies",
+        "question": "What is shadow deployment?",
+        "answer": "New version receives live traffic but responses are not returned to users.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "deploy-5",
+        "topicName": "Deployment Strategies",
+        "question": "What is rollback strategy?",
+        "answer": "Reverting to a previous stable version after a failed deployment.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "deploy-6",
+        "topicName": "Deployment Strategies",
+        "question": "Why are deployment strategies important?",
+        "answer": "They reduce risk during releases and ensure system stability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "deploy-7",
+        "topicName": "Deployment Strategies",
+        "question": "What is zero downtime deployment?",
+        "answer": "Deploying updates without interrupting service availability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "deploy-8",
+        "topicName": "Deployment Strategies",
+        "question": "What is feature toggle deployment?",
+        "answer": "Releasing code with features turned off until ready.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "deploy-9",
+        "topicName": "Deployment Strategies",
+        "question": "What is A/B testing in deployments?",
+        "answer": "Comparing two versions of a system by exposing them to different user groups.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "deploy-10",
+        "topicName": "Deployment Strategies",
+        "question": "What is deployment pipeline?",
+        "answer": "A series of automated steps to build, test, and deploy software.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "autoscale-1",
+        "topicName": "Autoscaling",
+        "question": "What is autoscaling?",
+        "answer": "Automatically adjusting compute resources based on demand.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "autoscale-2",
+        "topicName": "Autoscaling",
+        "question": "What is horizontal autoscaling?",
+        "answer": "Adding or removing instances based on load.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "autoscale-3",
+        "topicName": "Autoscaling",
+        "question": "What is vertical autoscaling?",
+        "answer": "Increasing or decreasing resources of a single machine.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "autoscale-4",
+        "topicName": "Autoscaling",
+        "question": "What triggers autoscaling?",
+        "answer": "CPU usage, memory usage, request rate, or custom metrics.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "autoscale-5",
+        "topicName": "Autoscaling",
+        "question": "What is scale-out vs scale-in?",
+        "answer": "Scale-out adds resources, scale-in removes them.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "autoscale-6",
+        "topicName": "Autoscaling",
+        "question": "What is predictive autoscaling?",
+        "answer": "Scaling based on predicted future load patterns.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "autoscale-7",
+        "topicName": "Autoscaling",
+        "question": "What is reactive autoscaling?",
+        "answer": "Scaling in response to current load metrics.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "autoscale-8",
+        "topicName": "Autoscaling",
+        "question": "What is cooldown period?",
+        "answer": "Time delay before another scaling action can occur.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "autoscale-9",
+        "topicName": "Autoscaling",
+        "question": "Why is autoscaling important?",
+        "answer": "It optimizes cost and ensures performance under variable load.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "autoscale-10",
+        "topicName": "Autoscaling",
+        "question": "What is overprovisioning vs autoscaling?",
+        "answer": "Overprovisioning keeps excess capacity always, autoscaling adjusts dynamically.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "capacity-1",
+        "topicName": "Capacity Planning",
+        "question": "What is capacity planning?",
+        "answer": "Estimating the resources needed to handle expected system load.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "capacity-2",
+        "topicName": "Capacity Planning",
+        "question": "What metrics are used in capacity planning?",
+        "answer": "CPU usage, memory, throughput, latency, and request rate.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "capacity-3",
+        "topicName": "Capacity Planning",
+        "question": "Why is capacity planning important?",
+        "answer": "To avoid system overload and ensure performance under peak load.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "capacity-4",
+        "topicName": "Capacity Planning",
+        "question": "What is peak load estimation?",
+        "answer": "Predicting the maximum expected traffic on a system.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "capacity-5",
+        "topicName": "Capacity Planning",
+        "question": "What is headroom in capacity planning?",
+        "answer": "Extra capacity reserved for unexpected spikes in traffic.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "capacity-6",
+        "topicName": "Capacity Planning",
+        "question": "What is load testing?",
+        "answer": "Simulating traffic to evaluate system performance under stress.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "capacity-7",
+        "topicName": "Capacity Planning",
+        "question": "What is stress testing?",
+        "answer": "Testing system behavior beyond normal capacity limits.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "capacity-8",
+        "topicName": "Capacity Planning",
+        "question": "What is capacity saturation?",
+        "answer": "When a system reaches its maximum handling capability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "capacity-9",
+        "topicName": "Capacity Planning",
+        "question": "What is cost vs capacity tradeoff?",
+        "answer": "More capacity improves performance but increases infrastructure cost.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "capacity-10",
+        "topicName": "Capacity Planning",
+        "question": "What is capacity forecasting?",
+        "answer": "Predicting future resource needs based on historical trends.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "slo-1",
+        "topicName": "SLA SLO SLI",
+        "question": "What is an SLI?",
+        "answer": "A Service Level Indicator, a metric that measures system performance (e.g., latency, error rate).",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "slo-2",
+        "topicName": "SLA SLO SLI",
+        "question": "What is an SLO?",
+        "answer": "A Service Level Objective, a target value for an SLI.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "slo-3",
+        "topicName": "SLA SLO SLI",
+        "question": "What is an SLA?",
+        "answer": "A Service Level Agreement between provider and customer with penalties for violations.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "slo-4",
+        "topicName": "SLA SLO SLI",
+        "question": "How are SLI, SLO, and SLA related?",
+        "answer": "SLI measures performance, SLO defines targets, and SLA is a contractual agreement.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "slo-5",
+        "topicName": "SLA SLO SLI",
+        "question": "What is error budget?",
+        "answer": "Allowed amount of failure before violating SLO.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "slo-6",
+        "topicName": "SLA SLO SLI",
+        "question": "Why are SLOs important?",
+        "answer": "They help balance reliability and development speed.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "slo-7",
+        "topicName": "SLA SLO SLI",
+        "question": "What is latency SLI?",
+        "answer": "A metric measuring response time of requests.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "slo-8",
+        "topicName": "SLA SLO SLI",
+        "question": "What is availability SLI?",
+        "answer": "A metric measuring system uptime percentage.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "slo-9",
+        "topicName": "SLA SLO SLI",
+        "question": "What happens when SLA is violated?",
+        "answer": "Penalties or compensation may be applied based on contract terms.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "slo-10",
+        "topicName": "SLA SLO SLI",
+        "question": "What is reliability engineering?",
+        "answer": "Designing systems to meet SLOs consistently under real-world conditions.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "caching-11",
+        "topicName": "Caching",
+        "question": "What is cache coherency?",
+        "answer": "Keeping cached copies consistent with each other and with the source of truth. Common approaches include invalidation, versioning, and short TTLs.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "replication-11",
+        "topicName": "Replication",
+        "question": "How can a system provide read-your-writes consistency when replicas lag?",
+        "answer": "Route that user's reads to the leader or to a replica known to have applied the user's latest write.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "consistency-11",
+        "topicName": "Consistency Models",
+        "question": "How does linearizability differ from serializability?",
+        "answer": "Linearizability preserves the real-time order of individual operations. Serializability makes concurrent transactions equivalent to some serial order but does not necessarily preserve real-time order.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cap-11",
+        "topicName": "CAP Theorem",
+        "question": "What does PACELC add to the CAP theorem?",
+        "answer": "During a partition a system trades availability against consistency; otherwise it commonly trades latency against consistency.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "acid-base-11",
+        "topicName": "ACID vs BASE",
+        "question": "What anomalies do stronger transaction isolation levels prevent?",
+        "answer": "They progressively prevent dirty reads, non-repeatable reads, and phantom reads. Serializable isolation provides the strongest standard guarantee but may reduce concurrency.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "indexing-11",
+        "topicName": "Indexing",
+        "question": "What is a covering index?",
+        "answer": "An index containing every column needed by a query, allowing the database to answer it without reading the base table. It improves reads at the cost of storage and write overhead.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "ratelimit-11",
+        "topicName": "Rate Limiting",
+        "question": "How does a quota differ from a rate limit?",
+        "answer": "A rate limit bounds usage over a short interval, while a quota bounds total usage over a longer period such as a day or month.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "api-design-11",
+        "topicName": "API Design",
+        "question": "How can an API evolve without breaking existing clients?",
+        "answer": "Prefer additive changes, preserve existing semantics, version breaking changes, publish deprecation timelines, and monitor old-version usage before removal.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "pagination-11",
+        "topicName": "Pagination",
+        "question": "Why can offset pagination skip or duplicate records when data changes?",
+        "answer": "Inserts and deletes shift row positions between requests. Cursor pagination based on a stable, unique ordering avoids most of this drift.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "mq-11",
+        "topicName": "Message Queues",
+        "question": "What is a dead-letter queue?",
+        "answer": "A separate queue for messages that still fail after retry limits, preventing poison messages from blocking processing and allowing investigation or replay.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "stream-11",
+        "topicName": "Stream Processing",
+        "question": "How can a stateful stream processor recover after failure?",
+        "answer": "Restore a checkpoint or snapshot, then replay the durable event log from the recorded offset to rebuild current state.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "backpressure-11",
+        "topicName": "Backpressure",
+        "question": "When should a system shed load instead of buffering it?",
+        "answer": "Shed load when queues are full or delaying work would make it useless and threaten system stability. Buffer only within bounded capacity.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "dist-tx-11",
+        "topicName": "Distributed Transactions",
+        "question": "How do saga orchestration and choreography differ?",
+        "answer": "Orchestration uses a coordinator to direct each step. Choreography lets services react to events without a central coordinator, reducing coupling but making flows harder to trace.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "fault-11",
+        "topicName": "Fault Tolerance",
+        "question": "What are RTO and RPO?",
+        "answer": "Recovery Time Objective is the maximum acceptable restoration time. Recovery Point Objective is the maximum acceptable amount of data loss measured in time.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "security-11",
+        "topicName": "Security",
+        "question": "Why should production secrets be rotated?",
+        "answer": "Rotation limits how long leaked credentials remain useful. Safe rotation supports overlapping old and new credentials so clients can update without downtime.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "cdn-11",
+        "topicName": "CDN / Edge Computing",
+        "question": "What is an origin shield?",
+        "answer": "A shared cache layer between edge locations and the origin that consolidates cache misses, improves hit ratio, and protects the origin from request spikes.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "service-discovery-11",
+        "topicName": "Service Discovery",
+        "question": "How can health checks avoid removing healthy instances after brief failures?",
+        "answer": "Use realistic timeouts, distinguish readiness from liveness, and require multiple consecutive failures before removing an instance.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "config-11",
+        "topicName": "Configuration Management",
+        "question": "Why should configuration be validated before it is applied?",
+        "answer": "Schema, range, and dependency validation prevents invalid settings from causing startup failures, outages, or data loss. Risky changes should also support rollback.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "deploy-11",
+        "topicName": "Deployment Strategies",
+        "question": "How should an automated canary rollback be triggered?",
+        "answer": "Compare canary error rate, latency, saturation, and business metrics against the baseline, then roll back when predefined thresholds are exceeded for a sustained window.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "slo-11",
+        "topicName": "SLA SLO SLI",
+        "question": "What is error-budget burn rate?",
+        "answer": "The speed at which a service consumes its allowed error budget. Burn-rate alerts detect both fast outages and slower reliability regressions relative to the SLO.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-1",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is rate limiting?",
+        "answer": "A technique to control how many requests a system accepts over time to prevent overload and ensure fair usage.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-2",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is the Token Bucket algorithm?",
+        "answer": "A rate limiting algorithm where tokens are added at a fixed rate and consumed per request, allowing bursts up to the bucket size.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-3",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is the Leaky Bucket algorithm?",
+        "answer": "A rate limiting algorithm that processes requests at a constant rate, smoothing bursts into a steady flow.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-4",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is backpressure?",
+        "answer": "A mechanism where downstream systems signal upstream producers to slow down when they are overwhelmed.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-5",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is exponential backoff?",
+        "answer": "A retry strategy where the delay between retries increases exponentially to reduce load on failing systems.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-6",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is a circuit breaker?",
+        "answer": "A pattern that stops requests to a failing service temporarily to prevent cascading failures.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-7",
+        "topicName": "Flow Control & Resilience",
+        "question": "What are the states of a circuit breaker?",
+        "answer": "Closed (normal), Open (fail fast), and Half-open (test recovery).",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-8",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is a retry storm?",
+        "answer": "A situation where many clients retry simultaneously, amplifying load and worsening outages.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-9",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is jitter in retries?",
+        "answer": "Randomizing retry delays to avoid synchronized retry spikes.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-10",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is idempotency?",
+        "answer": "An operation that can be safely retried without causing unintended side effects.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-11",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is an idempotency key?",
+        "answer": "A unique identifier used to ensure duplicate requests are processed only once.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-12",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is a dead letter queue (DLQ)?",
+        "answer": "A queue where messages that cannot be processed successfully are sent for later inspection or retry.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-13",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is load shedding?",
+        "answer": "Dropping low-priority requests when the system is overloaded to preserve critical functionality.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-14",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is a timeout?",
+        "answer": "A limit on how long a system waits for a response before failing the request.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-15",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is bulkhead isolation?",
+        "answer": "A pattern that isolates components so failures in one part do not affect others.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-16",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is queue fairness?",
+        "answer": "Ensuring that all producers or consumers get a fair share of processing resources.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-17",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is priority queueing?",
+        "answer": "Processing requests based on priority levels instead of arrival order.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-18",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is graceful degradation?",
+        "answer": "Reducing functionality instead of failing completely when the system is under stress.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-19",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is throttling?",
+        "answer": "Deliberately slowing down request processing to keep the system stable.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-20",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is admission control?",
+        "answer": "Deciding whether to accept or reject incoming requests based on current system capacity.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-21",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is coordinated omission and why is it dangerous?",
+        "answer": "A measurement bias where latency during outages is underreported because no requests are sent, hiding true system degradation.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-22",
+        "topicName": "Flow Control & Resilience",
+        "question": "Why can retries make a system outage worse?",
+        "answer": "Retries increase load on an already failing system, potentially causing cascading failures or retry storms.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-23",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is hedged requests?",
+        "answer": "Sending duplicate requests after a delay to reduce tail latency, using the fastest response and cancelling others.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-24",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is tail latency and why does it matter?",
+        "answer": "The slowest responses (e.g., p99) which heavily impact user experience and system reliability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-25",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is retry budget?",
+        "answer": "A limit on how many retries are allowed relative to successful requests to prevent overload.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-26",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is adaptive concurrency control?",
+        "answer": "Dynamically adjusting concurrency limits based on system health signals like latency or error rate.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-27",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is load amplification?",
+        "answer": "When internal retries, fan-out, or cascading calls multiply the effective load beyond incoming traffic.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-28",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is request collapsing?",
+        "answer": "Combining identical concurrent requests into one to reduce duplicate work.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-29",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is admission control based on latency?",
+        "answer": "Rejecting new requests when latency exceeds thresholds to protect system stability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-30",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is queue spillover?",
+        "answer": "Redirecting excess traffic to secondary queues or systems when primary capacity is exceeded.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-31",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is brownout?",
+        "answer": "Dynamically disabling non-essential features to reduce load during high stress.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-32",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is overload collapse?",
+        "answer": "A state where excessive load causes throughput to drop drastically instead of increasing.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-33",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is retry jitter and why is it critical?",
+        "answer": "Randomizing retry timing to prevent synchronized retries that could overload systems.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-34",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is service mesh rate limiting?",
+        "answer": "Applying rate limits at the network proxy layer to control traffic before it reaches services.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-35",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is per-tenant rate limiting?",
+        "answer": "Applying limits individually to each customer to prevent noisy neighbor problems.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-36",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is cascading failure?",
+        "answer": "A failure that propagates through dependent services, causing widespread outages.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-37",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is priority inversion in queues?",
+        "answer": "A situation where low-priority tasks block higher-priority ones due to resource contention.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-38",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is dynamic throttling?",
+        "answer": "Adjusting request limits in real time based on system load or health metrics.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-39",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is fail-fast strategy?",
+        "answer": "Immediately rejecting requests when a dependency is known to be failing instead of waiting.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-40",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is overload protection at the edge?",
+        "answer": "Handling rate limiting and rejection at gateways or CDNs to prevent internal system overload.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-41",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is the difference between rate limiting and load shedding?",
+        "answer": "Rate limiting prevents excess requests from entering the system, while load shedding drops requests after they have entered when the system is already overloaded.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-42",
+        "topicName": "Flow Control & Resilience",
+        "question": "Why is rejecting requests sometimes better than queuing them?",
+        "answer": "Because excessive queuing increases latency and memory pressure, potentially leading to cascading failures.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-43",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is the difference between backpressure and throttling?",
+        "answer": "Backpressure is feedback from downstream systems, while throttling is an enforced limit applied by the system or gateway.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-44",
+        "topicName": "Flow Control & Resilience",
+        "question": "Why can naive retries lead to higher tail latency?",
+        "answer": "Because retries increase load and contention, amplifying delays under stress conditions.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-45",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is the difference between synchronous and asynchronous backpressure handling?",
+        "answer": "Synchronous blocks or slows the caller immediately, while asynchronous uses queues or buffers to absorb load.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-46",
+        "topicName": "Flow Control & Resilience",
+        "question": "Why is FIFO queueing not always ideal in distributed systems?",
+        "answer": "Because it can cause head-of-line blocking and prevent priority or critical requests from being processed first.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-47",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is the trade-off between latency and throughput in flow control?",
+        "answer": "Optimizing for throughput can increase latency, while optimizing for latency may reduce total system throughput.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-48",
+        "topicName": "Flow Control & Resilience",
+        "question": "Why is retry without idempotency dangerous?",
+        "answer": "It can cause duplicate side effects such as double payments or inconsistent state changes.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-49",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is the difference between fail-open and fail-closed behavior?",
+        "answer": "Fail-open allows requests through during failures, while fail-closed rejects them to protect system integrity.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-50",
+        "topicName": "Flow Control & Resilience",
+        "question": "Why is partial failure more dangerous than total failure?",
+        "answer": "Because it leads to inconsistent system states and harder-to-detect cascading issues.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-51",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is graceful degradation in API design?",
+        "answer": "Returning reduced functionality or partial responses when full processing is not possible.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-52",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is the difference between bounded and unbounded queues?",
+        "answer": "Bounded queues limit memory usage but may drop requests; unbounded queues risk memory exhaustion.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-53",
+        "topicName": "Flow Control & Resilience",
+        "question": "Why is circuit breaker state transition timing important?",
+        "answer": "Incorrect timing can either cause unnecessary outages or premature recovery attempts under unstable conditions.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-54",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is the difference between retry and replay in distributed systems?",
+        "answer": "Retry resubmits a request after failure, while replay reprocesses previously recorded events or logs.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-55",
+        "topicName": "Flow Control & Resilience",
+        "question": "Why can aggressive rate limiting hurt user experience?",
+        "answer": "It can unnecessarily reject valid traffic during short bursts, reducing perceived system availability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-56",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is head-of-line blocking and where does it commonly occur?",
+        "answer": "It happens when a slow request blocks others behind it, commonly in queues or single-threaded processing systems.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-57",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is adaptive retry strategy?",
+        "answer": "A retry approach that adjusts delay and retry count based on system health signals.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-58",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is the difference between client-side and server-side throttling?",
+        "answer": "Client-side throttling limits outgoing requests, while server-side throttling enforces limits on incoming traffic.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-59",
+        "topicName": "Flow Control & Resilience",
+        "question": "Why is observability critical in flow control systems?",
+        "answer": "Because without metrics like latency, error rate, and queue depth, it is impossible to tune or debug resilience mechanisms.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-60",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is the difference between saturation and overload in system design?",
+        "answer": "Saturation is when resources are fully utilized, while overload is when demand exceeds the system's ability to maintain acceptable performance.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-61",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is flow control in distributed systems?",
+        "answer": "A set of techniques used to regulate the rate of data or requests entering a system to prevent overload and ensure stability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-62",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is the goal of resilience in system design?",
+        "answer": "To ensure a system continues operating correctly even under partial failures or high load.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-63",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is a distributed system failure?",
+        "answer": "Any condition where one or more components in a distributed system stop working correctly or fail to communicate.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-64",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is latency in system performance?",
+        "answer": "The time it takes for a request to be processed and a response to be returned.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-65",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is throughput?",
+        "answer": "The number of requests or operations a system can process per unit of time.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-66",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is availability?",
+        "answer": "The percentage of time a system is operational and able to serve requests.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-67",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is reliability in system design?",
+        "answer": "The probability that a system performs correctly over a given period of time.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-68",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is scalability?",
+        "answer": "The ability of a system to handle increased load by adding resources or optimizing architecture.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-69",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is fault tolerance?",
+        "answer": "The ability of a system to continue operating even when some components fail.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-70",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is redundancy in distributed systems?",
+        "answer": "Duplicating critical components or data to prevent single points of failure.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-71",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is a single point of failure?",
+        "answer": "A component whose failure would cause the entire system or service to fail.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-72",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is consistency in distributed systems?",
+        "answer": "The guarantee that all nodes see the same data at the same time or within a defined delay.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-73",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is eventual consistency?",
+        "answer": "A model where all replicas will converge to the same state over time, but not immediately.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-74",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is availability vs consistency trade-off?",
+        "answer": "In distributed systems, improving availability can reduce consistency guarantees and vice versa.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-75",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is partition tolerance?",
+        "answer": "The ability of a system to continue operating despite network failures that split communication between nodes.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-76",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is the CAP theorem?",
+        "answer": "A theorem stating that a distributed system can only guarantee two of consistency, availability, and partition tolerance at the same time.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-77",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is a bottleneck in a system?",
+        "answer": "A component that limits overall system performance because it cannot handle the incoming load.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-78",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is graceful failure?",
+        "answer": "When a system degrades in a controlled way instead of crashing completely.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-79",
+        "topicName": "Flow Control & Resilience",
+        "question": "What is a retry mechanism?",
+        "answer": "A technique where a failed operation is attempted again automatically to handle transient failures.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-80",
+        "topicName": "Flow Control & Resilience",
+        "question": "Why do distributed systems require flow control?",
+        "answer": "Because uncontrolled traffic can overwhelm services, causing cascading failures and degraded performance.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-81",
+        "topicName": "Flow Control & Resilience",
+        "question": "How would you design rate limiting for a multi-tenant SaaS system?",
+        "answer": "You need per-tenant quotas, isolation, and possibly hierarchical limits (tenant + global) to prevent noisy neighbors.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-82",
+        "topicName": "Flow Control & Resilience",
+        "question": "What happens when your rate limiter becomes a bottleneck?",
+        "answer": "It can introduce latency, become a single point of failure, and require local caching or distributed implementations.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-83",
+        "topicName": "Flow Control & Resilience",
+        "question": "How would you handle traffic spikes during a flash sale or booking rush?",
+        "answer": "Use queueing, autoscaling, load shedding, and prioritization of critical flows.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-84",
+        "topicName": "Flow Control & Resilience",
+        "question": "How would you prevent cascading failures in a microservices architecture?",
+        "answer": "Use circuit breakers, timeouts, bulkheads, retries with limits, and graceful degradation.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-85",
+        "topicName": "Flow Control & Resilience",
+        "question": "How do you decide between synchronous and asynchronous processing?",
+        "answer": "Synchronous for user-critical low-latency operations, asynchronous for heavy or non-blocking workflows.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-86",
+        "topicName": "Flow Control & Resilience",
+        "question": "How would you design retries for a payment system?",
+        "answer": "Use idempotency keys, bounded retries, exponential backoff, and strict side-effect control.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-87",
+        "topicName": "Flow Control & Resilience",
+        "question": "What risks do retries introduce in distributed systems?",
+        "answer": "Duplicate processing, retry storms, increased load, and amplification of partial outages.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-88",
+        "topicName": "Flow Control & Resilience",
+        "question": "How would you design a system that prioritizes VIP users under load?",
+        "answer": "Use priority queues, weighted scheduling, and separate resource pools for VIP traffic.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-89",
+        "topicName": "Flow Control & Resilience",
+        "question": "How would you implement backpressure in a real-time API?",
+        "answer": "Use queue limits, 429 responses, adaptive concurrency, and upstream signaling to slow producers.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-90",
+        "topicName": "Flow Control & Resilience",
+        "question": "What trade-offs exist when using buffering queues in systems?",
+        "answer": "Buffers absorb spikes but increase latency and risk memory exhaustion.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-91",
+        "topicName": "Flow Control & Resilience",
+        "question": "How would you design a system to avoid retry storms during outages?",
+        "answer": "Use jitter, retry budgets, circuit breakers, and centralized coordination if needed.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-92",
+        "topicName": "Flow Control & Resilience",
+        "question": "How would you ensure fairness between tenants in a shared system?",
+        "answer": "Implement weighted scheduling, quotas, and per-tenant isolation to avoid noisy neighbor effects.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-93",
+        "topicName": "Flow Control & Resilience",
+        "question": "How would you design a fallback strategy for a critical service?",
+        "answer": "Use cached responses, degraded functionality, or alternative services when primary systems fail.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-94",
+        "topicName": "Flow Control & Resilience",
+        "question": "What signals would you use to trigger auto-scaling?",
+        "answer": "Latency, CPU usage, queue depth, error rate, and request throughput.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-95",
+        "topicName": "Flow Control & Resilience",
+        "question": "How would you handle partial outages in a distributed system?",
+        "answer": "Use circuit breakers, fallback paths, and isolate failing dependencies to prevent cascading failures.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-96",
+        "topicName": "Flow Control & Resilience",
+        "question": "How would you design a resilient booking system under high contention?",
+        "answer": "Use optimistic locking, queueing, idempotency, and careful inventory consistency strategies.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-97",
+        "topicName": "Flow Control & Resilience",
+        "question": "How do you decide when to drop traffic vs delay it?",
+        "answer": "Drop when latency sensitivity is high or system is saturated; delay when workload is bursty and can be buffered safely.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-98",
+        "topicName": "Flow Control & Resilience",
+        "question": "How would you design observability for flow control systems?",
+        "answer": "Track rate limits, rejections, queue depth, retry rates, latency percentiles, and saturation signals.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-99",
+        "topicName": "Flow Control & Resilience",
+        "question": "What happens when retries, queues, and rate limits interact badly?",
+        "answer": "They can amplify load, create hidden bottlenecks, and cause cascading system instability.",
+        "questionImage": "",
+        "answerImage": ""
+    },
+    {
+        "id": "flow-100",
+        "topicName": "Flow Control & Resilience",
+        "question": "How would you design graceful degradation for a high-traffic consumer app?",
+        "answer": "Disable non-critical features, serve cached data, reduce response richness, and prioritize core flows.",
+        "questionImage": "",
+        "answerImage": ""
+    }
+]

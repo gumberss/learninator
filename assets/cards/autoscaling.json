@@ -1,0 +1,75 @@
+{
+    "topicName": "Autoscaling",
+    "cards": [
+        {
+            "id": "autoscale-1",
+            "question": "What is autoscaling?",
+            "answer": "Automatically adjusting compute resources based on demand.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "autoscale-2",
+            "question": "What is horizontal autoscaling?",
+            "answer": "Adding or removing instances based on load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "autoscale-3",
+            "question": "What is vertical autoscaling?",
+            "answer": "Increasing or decreasing resources of a single machine.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "autoscale-4",
+            "question": "What triggers autoscaling?",
+            "answer": "CPU usage, memory usage, request rate, or custom metrics.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "autoscale-5",
+            "question": "What is scale-out vs scale-in?",
+            "answer": "Scale-out adds resources, scale-in removes them.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "autoscale-6",
+            "question": "What is predictive autoscaling?",
+            "answer": "Scaling based on predicted future load patterns.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "autoscale-7",
+            "question": "What is reactive autoscaling?",
+            "answer": "Scaling in response to current load metrics.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "autoscale-8",
+            "question": "What is cooldown period?",
+            "answer": "Time delay before another scaling action can occur.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "autoscale-9",
+            "question": "Why is autoscaling important?",
+            "answer": "It optimizes cost and ensures performance under variable load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "autoscale-10",
+            "question": "What is overprovisioning vs autoscaling?",
+            "answer": "Overprovisioning keeps excess capacity always, autoscaling adjusts dynamically.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

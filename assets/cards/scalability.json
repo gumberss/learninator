@@ -1,0 +1,75 @@
+{
+    "topicName": "Scalability",
+    "cards": [
+        {
+            "id": "scalability-1",
+            "question": "What is vertical scaling?",
+            "answer": "Increasing the resources (CPU, RAM) of a single machine.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "scalability-2",
+            "question": "What is horizontal scaling?",
+            "answer": "Adding more machines to distribute the load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "scalability-3",
+            "question": "Why is horizontal scaling preferred in distributed systems?",
+            "answer": "It allows near-infinite scaling and better fault tolerance.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "scalability-4",
+            "question": "What is scalability bottleneck?",
+            "answer": "A component that prevents the system from scaling further.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "scalability-5",
+            "question": "What is load distribution in scalable systems?",
+            "answer": "Evenly distributing requests across resources to avoid overload.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "scalability-6",
+            "question": "What is stateless architecture?",
+            "answer": "A system where each request is independent and does not rely on stored server state.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "scalability-7",
+            "question": "What is autoscaling?",
+            "answer": "Automatically adjusting compute resources based on load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "scalability-8",
+            "question": "What is elasticity in cloud systems?",
+            "answer": "The ability to scale resources up and down dynamically.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "scalability-9",
+            "question": "What is throughput?",
+            "answer": "The number of requests a system can handle per unit of time.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "scalability-10",
+            "question": "What is latency in distributed systems?",
+            "answer": "The time taken to process and respond to a request.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

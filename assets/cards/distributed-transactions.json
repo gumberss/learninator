@@ -1,0 +1,82 @@
+{
+    "topicName": "Distributed Transactions",
+    "cards": [
+        {
+            "id": "dist-tx-1",
+            "question": "What is a distributed transaction?",
+            "answer": "A transaction that spans multiple services or databases and must maintain consistency across them.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dist-tx-2",
+            "question": "What is the two-phase commit (2PC)?",
+            "answer": "A protocol where a coordinator ensures all participants agree before committing a transaction.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dist-tx-3",
+            "question": "What is the problem with 2PC?",
+            "answer": "It is slow and can block if the coordinator fails.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dist-tx-4",
+            "question": "What is saga pattern?",
+            "answer": "A pattern where long-running transactions are split into steps with compensating actions.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dist-tx-5",
+            "question": "What is a compensating transaction?",
+            "answer": "An operation that undoes the effect of a previous step in a saga.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dist-tx-6",
+            "question": "Why are distributed transactions hard?",
+            "answer": "Because network failures, latency, and partial failures make coordination difficult.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dist-tx-7",
+            "question": "What is eventual consistency in distributed transactions?",
+            "answer": "Systems eventually converge to a consistent state instead of being instantly consistent.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dist-tx-8",
+            "question": "What is idempotency in distributed transactions?",
+            "answer": "Ensuring repeated execution of a transaction step does not cause incorrect results.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dist-tx-9",
+            "question": "Where are distributed transactions used?",
+            "answer": "In payment systems, booking systems, and multi-service workflows.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dist-tx-10",
+            "question": "What is consistency vs availability tradeoff in transactions?",
+            "answer": "Strong consistency requires coordination, while availability favors responsiveness even with partial data.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dist-tx-11",
+            "question": "How do saga orchestration and choreography differ?",
+            "answer": "Orchestration uses a coordinator to direct each step. Choreography lets services react to events without a central coordinator, reducing coupling but making flows harder to trace.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

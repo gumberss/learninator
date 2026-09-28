@@ -1,0 +1,82 @@
+{
+    "topicName": "Caching",
+    "cards": [
+        {
+            "id": "caching-1",
+            "question": "What is caching?",
+            "answer": "Storing frequently accessed data in a faster storage layer.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-2",
+            "question": "What is cache-aside pattern?",
+            "answer": "Application loads data into cache on demand.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-3",
+            "question": "What is write-through caching?",
+            "answer": "Data is written to cache and database simultaneously.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-4",
+            "question": "What is write-back caching?",
+            "answer": "Data is written to cache first and persisted later.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-5",
+            "question": "What is cache invalidation?",
+            "answer": "Removing or updating stale cached data.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-6",
+            "question": "What is TTL?",
+            "answer": "Time-to-live before cached data expires.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-7",
+            "question": "What is cache hit?",
+            "answer": "When data is found in cache.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-8",
+            "question": "What is cache miss?",
+            "answer": "When data is not found in cache.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-9",
+            "question": "What are eviction policies?",
+            "answer": "Rules like LRU, LFU, FIFO to remove cache entries.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-10",
+            "question": "What is cache stampede?",
+            "answer": "When many requests rebuild an expired cache simultaneously.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-11",
+            "question": "What is cache coherency?",
+            "answer": "Keeping cached copies consistent with each other and with the source of truth. Common approaches include invalidation, versioning, and short TTLs.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "topicName": "Observability",
+    "cards": [
+        {
+            "id": "observability-1",
+            "question": "What is observability in system design?",
+            "answer": "Observability is the ability to understand the internal state of a system based on external outputs such as logs, metrics, and traces.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "observability-2",
+            "question": "What are the three pillars of observability?",
+            "answer": "Logs, metrics, and traces.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "observability-3",
+            "question": "What are logs used for?",
+            "answer": "Logs provide detailed event records for debugging and auditing system behavior.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "observability-4",
+            "question": "What are metrics in observability?",
+            "answer": "Metrics are numerical measurements over time, such as latency, throughput, and error rates.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "observability-5",
+            "question": "What is distributed tracing?",
+            "answer": "Tracing tracks requests across multiple services to understand system behavior end-to-end.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "observability-6",
+            "question": "Why is observability important?",
+            "answer": "It helps detect, diagnose, and resolve system issues quickly in complex distributed systems.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "observability-7",
+            "question": "What is a monitoring system?",
+            "answer": "A system that continuously collects and analyzes metrics and logs to detect anomalies.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "observability-8",
+            "question": "What is alerting in observability?",
+            "answer": "Alerting notifies engineers when system metrics exceed predefined thresholds.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "observability-9",
+            "question": "What is correlation between logs and traces?",
+            "answer": "It allows linking specific logs to trace spans for better debugging.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "observability-10",
+            "question": "What is telemetry data?",
+            "answer": "Telemetry is automatically collected data about system performance and behavior.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

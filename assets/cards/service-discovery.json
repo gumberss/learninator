@@ -1,0 +1,82 @@
+{
+    "topicName": "Service Discovery",
+    "cards": [
+        {
+            "id": "service-discovery-1",
+            "question": "What is service discovery?",
+            "answer": "A mechanism for automatically finding network locations of services.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "service-discovery-2",
+            "question": "What is client-side service discovery?",
+            "answer": "Clients determine which service instance to call.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "service-discovery-3",
+            "question": "What is server-side service discovery?",
+            "answer": "A load balancer routes requests to service instances.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "service-discovery-4",
+            "question": "What is a service registry?",
+            "answer": "A database of available service instances and their locations.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "service-discovery-5",
+            "question": "Why is service discovery needed?",
+            "answer": "Because services dynamically scale and change IPs.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "service-discovery-6",
+            "question": "What is health checking in service discovery?",
+            "answer": "Removing unhealthy services from routing decisions.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "service-discovery-7",
+            "question": "What is DNS-based service discovery?",
+            "answer": "Using DNS to map service names to IP addresses.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "service-discovery-8",
+            "question": "What is dynamic service registration?",
+            "answer": "Services automatically register and deregister themselves.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "service-discovery-9",
+            "question": "What is eventual consistency in service discovery?",
+            "answer": "Registry updates may take time to propagate.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "service-discovery-10",
+            "question": "What is the main challenge of service discovery?",
+            "answer": "Keeping service registry accurate and up to date.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "service-discovery-11",
+            "question": "How can health checks avoid removing healthy instances after brief failures?",
+            "answer": "Use realistic timeouts, distinguish readiness from liveness, and require multiple consecutive failures before removing an instance.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

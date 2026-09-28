@@ -1,0 +1,82 @@
+{
+    "topicName": "Security",
+    "cards": [
+        {
+            "id": "security-1",
+            "question": "What is authentication?",
+            "answer": "Authentication verifies the identity of a user or system.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-2",
+            "question": "What is authorization?",
+            "answer": "Authorization determines what actions an authenticated user is allowed to perform.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-3",
+            "question": "What is encryption?",
+            "answer": "Encryption is the process of converting data into a secure format that only authorized parties can read.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-4",
+            "question": "What is TLS?",
+            "answer": "TLS is a protocol that provides secure communication over a network.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-5",
+            "question": "What is OAuth?",
+            "answer": "OAuth is an authorization framework that allows third-party applications limited access to user resources.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-6",
+            "question": "What is JWT?",
+            "answer": "JWT (JSON Web Token) is a compact token format used for authentication and authorization.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-7",
+            "question": "What is hashing?",
+            "answer": "Hashing converts input data into a fixed-size string, typically used for password storage.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-8",
+            "question": "What is rate limiting in security?",
+            "answer": "It prevents abuse by limiting the number of requests a user can make.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-9",
+            "question": "What is SQL injection?",
+            "answer": "A security attack where malicious SQL code is injected into queries.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-10",
+            "question": "Why is security important in system design?",
+            "answer": "It protects data integrity, privacy, and prevents unauthorized access.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-11",
+            "question": "Why should production secrets be rotated?",
+            "answer": "Rotation limits how long leaked credentials remain useful. Safe rotation supports overlapping old and new credentials so clients can update without downtime.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

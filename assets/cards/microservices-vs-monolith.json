@@ -1,0 +1,75 @@
+{
+    "topicName": "Microservices vs Monolith",
+    "cards": [
+        {
+            "id": "microservices-1",
+            "question": "What is a monolithic architecture?",
+            "answer": "A system where all components are built and deployed as a single unit.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "microservices-2",
+            "question": "What are microservices?",
+            "answer": "An architecture where services are broken into independent deployable components.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "microservices-3",
+            "question": "Advantages of microservices?",
+            "answer": "Scalability, independent deployment, and better fault isolation.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "microservices-4",
+            "question": "Disadvantages of microservices?",
+            "answer": "Increased complexity, network overhead, and distributed debugging challenges.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "microservices-5",
+            "question": "When should you use monolith?",
+            "answer": "For small teams or simple applications with limited scaling needs.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "microservices-6",
+            "question": "What is service decomposition?",
+            "answer": "Splitting a system into independent services based on business capabilities.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "microservices-7",
+            "question": "What is inter-service communication?",
+            "answer": "Communication between services via HTTP, gRPC, or messaging systems.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "microservices-8",
+            "question": "What is data ownership in microservices?",
+            "answer": "Each service owns its own database.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "microservices-9",
+            "question": "What is monolith decomposition strategy?",
+            "answer": "Gradually splitting a monolith into services.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "microservices-10",
+            "question": "Why is microservices debugging harder?",
+            "answer": "Because failures span multiple distributed services.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

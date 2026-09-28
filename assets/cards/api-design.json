@@ -1,0 +1,82 @@
+{
+    "topicName": "API Design",
+    "cards": [
+        {
+            "id": "api-design-1",
+            "question": "What is REST API?",
+            "answer": "An architectural style using HTTP methods for resource-based communication.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "api-design-2",
+            "question": "What are HTTP methods used in APIs?",
+            "answer": "GET, POST, PUT, PATCH, DELETE.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "api-design-3",
+            "question": "What is RESTful design principle?",
+            "answer": "Resources are identified by URLs and manipulated via standard HTTP methods.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "api-design-4",
+            "question": "What is GraphQL?",
+            "answer": "A query language for APIs allowing clients to request specific data.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "api-design-5",
+            "question": "What is API versioning?",
+            "answer": "Maintaining multiple versions of an API to avoid breaking changes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "api-design-6",
+            "question": "What is pagination in APIs?",
+            "answer": "Breaking large datasets into smaller chunks for efficient retrieval.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "api-design-7",
+            "question": "What is idempotency in APIs?",
+            "answer": "Repeated requests produce the same result without side effects.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "api-design-8",
+            "question": "What is API gateway?",
+            "answer": "A server that acts as an entry point for routing API requests.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "api-design-9",
+            "question": "What is HATEOAS?",
+            "answer": "A REST constraint where responses include links to related actions.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "api-design-10",
+            "question": "What is backward compatibility in APIs?",
+            "answer": "Ensuring old clients continue to work after API changes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "api-design-11",
+            "question": "How can an API evolve without breaking existing clients?",
+            "answer": "Prefer additive changes, preserve existing semantics, version breaking changes, publish deprecation timelines, and monitor old-version usage before removal.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

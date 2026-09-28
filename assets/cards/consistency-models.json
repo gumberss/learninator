@@ -1,0 +1,82 @@
+{
+    "topicName": "Consistency Models",
+    "cards": [
+        {
+            "id": "consistency-1",
+            "question": "What is strong consistency?",
+            "answer": "All reads return the most recent write.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "consistency-2",
+            "question": "What is eventual consistency?",
+            "answer": "System becomes consistent over time.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "consistency-3",
+            "question": "What is causal consistency?",
+            "answer": "Operations that are causally related are seen in order.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "consistency-4",
+            "question": "What is read-after-write consistency?",
+            "answer": "A user can immediately read their own writes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "consistency-5",
+            "question": "What is session consistency?",
+            "answer": "Consistency guarantees within a user session.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "consistency-6",
+            "question": "What is monotonic reads?",
+            "answer": "Once a value is read, older values will never be seen again.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "consistency-7",
+            "question": "What is consistency vs availability tradeoff?",
+            "answer": "Systems often trade strict consistency for higher availability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "consistency-8",
+            "question": "Where is eventual consistency commonly used?",
+            "answer": "In distributed systems like social media feeds and caches.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "consistency-9",
+            "question": "Why is strong consistency harder in distributed systems?",
+            "answer": "Because it requires coordination across nodes, increasing latency.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "consistency-10",
+            "question": "What is consistency model selection based on?",
+            "answer": "Use case requirements for latency, availability, and correctness.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "consistency-11",
+            "question": "How does linearizability differ from serializability?",
+            "answer": "Linearizability preserves the real-time order of individual operations. Serializability makes concurrent transactions equivalent to some serial order but does not necessarily preserve real-time order.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

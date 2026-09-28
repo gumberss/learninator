@@ -1,0 +1,82 @@
+{
+    "topicName": "Replication",
+    "cards": [
+        {
+            "id": "replication-1",
+            "question": "What is database replication?",
+            "answer": "Copying data across multiple machines to improve availability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "replication-2",
+            "question": "What is master-slave replication?",
+            "answer": "One primary node handles writes and replicas handle reads.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "replication-3",
+            "question": "What is multi-master replication?",
+            "answer": "Multiple nodes can accept writes simultaneously.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "replication-4",
+            "question": "What is synchronous replication?",
+            "answer": "Data is replicated before confirming a write.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "replication-5",
+            "question": "What is asynchronous replication?",
+            "answer": "Data is replicated after confirming a write.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "replication-6",
+            "question": "What is replication lag?",
+            "answer": "The delay between writing data and it appearing on replicas.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "replication-7",
+            "question": "Why is replication important?",
+            "answer": "It improves fault tolerance and read scalability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "replication-8",
+            "question": "What happens when a primary node fails?",
+            "answer": "A replica is promoted to become the new primary.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "replication-9",
+            "question": "What is read replica?",
+            "answer": "A replica used specifically to handle read traffic.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "replication-10",
+            "question": "What is data consistency in replication?",
+            "answer": "Ensuring all replicas eventually reflect the same data.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "replication-11",
+            "question": "How can a system provide read-your-writes consistency when replicas lag?",
+            "answer": "Route that user's reads to the leader or to a replica known to have applied the user's latest write.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

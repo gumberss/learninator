@@ -1,0 +1,82 @@
+{
+    "topicName": "CDN / Edge Computing",
+    "cards": [
+        {
+            "id": "cdn-1",
+            "question": "What is a CDN?",
+            "answer": "A Content Delivery Network caches content closer to users to reduce latency.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-2",
+            "question": "How does a CDN work?",
+            "answer": "It stores cached copies of content in edge locations around the world.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-3",
+            "question": "What is edge computing?",
+            "answer": "Processing data closer to the source of generation rather than a central server.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-4",
+            "question": "Why use a CDN?",
+            "answer": "To reduce latency, improve performance, and reduce backend load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-5",
+            "question": "What is cache invalidation in CDNs?",
+            "answer": "Updating or removing outdated content from edge servers.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-6",
+            "question": "What are edge nodes?",
+            "answer": "Servers located geographically closer to users for faster response.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-7",
+            "question": "What content is best for CDN caching?",
+            "answer": "Static assets like images, videos, and CSS files.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-8",
+            "question": "What is origin server?",
+            "answer": "The main server where original content is stored.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-9",
+            "question": "What is geo-routing?",
+            "answer": "Directing users to the nearest edge location based on geography.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-10",
+            "question": "What is latency improvement in CDNs?",
+            "answer": "Reducing distance data travels between user and server.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-11",
+            "question": "What is an origin shield?",
+            "answer": "A shared cache layer between edge locations and the origin that consolidates cache misses, improves hit ratio, and protects the origin from request spikes.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

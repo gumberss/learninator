@@ -1,0 +1,75 @@
+{
+    "topicName": "Data Partitioning",
+    "cards": [
+        {
+            "id": "partitioning-1",
+            "question": "What is data partitioning?",
+            "answer": "Splitting a large dataset into smaller parts to improve scalability and performance.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "partitioning-2",
+            "question": "What is horizontal partitioning (sharding)?",
+            "answer": "Dividing rows of a table across multiple databases.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "partitioning-3",
+            "question": "What is vertical partitioning?",
+            "answer": "Splitting a table by columns into separate tables.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "partitioning-4",
+            "question": "What is a shard key?",
+            "answer": "A key used to determine how data is distributed across shards.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "partitioning-5",
+            "question": "What are common sharding strategies?",
+            "answer": "Hash-based, range-based, and directory-based sharding.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "partitioning-6",
+            "question": "What is rebalancing in sharding?",
+            "answer": "Redistributing data across shards when load becomes uneven.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "partitioning-7",
+            "question": "What is hotspotting in partitioning?",
+            "answer": "When one shard receives significantly more traffic than others.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "partitioning-8",
+            "question": "What is consistent hashing?",
+            "answer": "A hashing technique that minimizes data movement when nodes change.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "partitioning-9",
+            "question": "Why is partitioning important?",
+            "answer": "It improves scalability, performance, and manageability of large datasets.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "partitioning-10",
+            "question": "What problems does partitioning introduce?",
+            "answer": "Increased complexity, cross-shard queries, and consistency challenges.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

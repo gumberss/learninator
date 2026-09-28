@@ -1,0 +1,75 @@
+{
+    "topicName": "Capacity Planning",
+    "cards": [
+        {
+            "id": "capacity-1",
+            "question": "What is capacity planning?",
+            "answer": "Estimating the resources needed to handle expected system load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "capacity-2",
+            "question": "What metrics are used in capacity planning?",
+            "answer": "CPU usage, memory, throughput, latency, and request rate.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "capacity-3",
+            "question": "Why is capacity planning important?",
+            "answer": "To avoid system overload and ensure performance under peak load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "capacity-4",
+            "question": "What is peak load estimation?",
+            "answer": "Predicting the maximum expected traffic on a system.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "capacity-5",
+            "question": "What is headroom in capacity planning?",
+            "answer": "Extra capacity reserved for unexpected spikes in traffic.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "capacity-6",
+            "question": "What is load testing?",
+            "answer": "Simulating traffic to evaluate system performance under stress.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "capacity-7",
+            "question": "What is stress testing?",
+            "answer": "Testing system behavior beyond normal capacity limits.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "capacity-8",
+            "question": "What is capacity saturation?",
+            "answer": "When a system reaches its maximum handling capability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "capacity-9",
+            "question": "What is cost vs capacity tradeoff?",
+            "answer": "More capacity improves performance but increases infrastructure cost.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "capacity-10",
+            "question": "What is capacity forecasting?",
+            "answer": "Predicting future resource needs based on historical trends.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

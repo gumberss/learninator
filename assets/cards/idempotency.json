@@ -1,0 +1,75 @@
+{
+    "topicName": "Idempotency",
+    "cards": [
+        {
+            "id": "idempotency-1",
+            "question": "What is idempotency?",
+            "answer": "An operation that produces the same result even if executed multiple times.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "idempotency-2",
+            "question": "Why is idempotency important in APIs?",
+            "answer": "It prevents duplicate side effects from retries.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "idempotency-3",
+            "question": "Which HTTP methods are idempotent?",
+            "answer": "GET, PUT, DELETE are idempotent; POST is not by default.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "idempotency-4",
+            "question": "What is an idempotency key?",
+            "answer": "A unique key used to ensure repeated requests are not duplicated.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "idempotency-5",
+            "question": "Where is idempotency commonly used?",
+            "answer": "Payment systems and order processing systems.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "idempotency-6",
+            "question": "What problems does idempotency solve?",
+            "answer": "It avoids duplicate transactions caused by retries or network failures.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "idempotency-7",
+            "question": "How do you implement idempotency?",
+            "answer": "By storing request identifiers and responses.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "idempotency-8",
+            "question": "Is DELETE always idempotent?",
+            "answer": "Yes, deleting an already deleted resource has the same effect.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "idempotency-9",
+            "question": "What is retry safety?",
+            "answer": "Ensuring retries do not create duplicate effects.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "idempotency-10",
+            "question": "Why is POST non-idempotent by default?",
+            "answer": "Because it usually creates new resources each time it is called.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

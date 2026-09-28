@@ -1,0 +1,82 @@
+{
+    "topicName": "Stream Processing",
+    "cards": [
+        {
+            "id": "stream-1",
+            "question": "What is stream processing?",
+            "answer": "Stream processing is a paradigm where data is processed continuously as it is generated, rather than in batches. It enables real-time analytics and low-latency processing for event-driven systems.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "stream-2",
+            "question": "What is the difference between stream processing and batch processing?",
+            "answer": "Batch processing handles large volumes of stored data at intervals, while stream processing handles data in real time as events arrive.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "stream-3",
+            "question": "What are common stream processing systems?",
+            "answer": "Examples include Apache Kafka Streams, Apache Flink, and Apache Spark Streaming, which are used for processing real-time data pipelines.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "stream-4",
+            "question": "What is event time vs processing time?",
+            "answer": "Event time refers to when the event actually occurred, while processing time is when the system processes it. Event time is important for correctness in distributed systems.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "stream-5",
+            "question": "What is windowing in stream processing?",
+            "answer": "Windowing groups events into time-based or count-based windows so computations like aggregations can be performed over finite subsets of an infinite stream.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "stream-6",
+            "question": "What is stateful stream processing?",
+            "answer": "Stateful stream processing maintains intermediate state across events, allowing computations like running totals, session tracking, and joins over streams.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "stream-7",
+            "question": "What is stateless stream processing?",
+            "answer": "Stateless processing handles each event independently without storing any context between events.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "stream-8",
+            "question": "What is exactly-once processing in streams?",
+            "answer": "Exactly-once processing ensures that each event is processed only once, even in the presence of retries or failures, often requiring coordination between storage and processing layers.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "stream-9",
+            "question": "What is late data in stream processing?",
+            "answer": "Late data refers to events that arrive after their expected time window, requiring mechanisms like watermarks or buffering to handle them correctly.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "stream-10",
+            "question": "Why is stream processing important?",
+            "answer": "It enables real-time decision making, fraud detection, monitoring systems, and low-latency analytics in modern distributed architectures.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "stream-11",
+            "question": "How can a stateful stream processor recover after failure?",
+            "answer": "Restore a checkpoint or snapshot, then replay the durable event log from the recorded offset to rebuild current state.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

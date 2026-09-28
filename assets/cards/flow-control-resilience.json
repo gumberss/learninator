@@ -1,0 +1,705 @@
+{
+    "topicName": "Flow Control & Resilience",
+    "cards": [
+        {
+            "id": "flow-1",
+            "question": "What is rate limiting?",
+            "answer": "A technique to control how many requests a system accepts over time to prevent overload and ensure fair usage.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-2",
+            "question": "What is the Token Bucket algorithm?",
+            "answer": "A rate limiting algorithm where tokens are added at a fixed rate and consumed per request, allowing bursts up to the bucket size.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-3",
+            "question": "What is the Leaky Bucket algorithm?",
+            "answer": "A rate limiting algorithm that processes requests at a constant rate, smoothing bursts into a steady flow.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-4",
+            "question": "What is backpressure?",
+            "answer": "A mechanism where downstream systems signal upstream producers to slow down when they are overwhelmed.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-5",
+            "question": "What is exponential backoff?",
+            "answer": "A retry strategy where the delay between retries increases exponentially to reduce load on failing systems.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-6",
+            "question": "What is a circuit breaker?",
+            "answer": "A pattern that stops requests to a failing service temporarily to prevent cascading failures.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-7",
+            "question": "What are the states of a circuit breaker?",
+            "answer": "Closed (normal), Open (fail fast), and Half-open (test recovery).",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-8",
+            "question": "What is a retry storm?",
+            "answer": "A situation where many clients retry simultaneously, amplifying load and worsening outages.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-9",
+            "question": "What is jitter in retries?",
+            "answer": "Randomizing retry delays to avoid synchronized retry spikes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-10",
+            "question": "What is idempotency?",
+            "answer": "An operation that can be safely retried without causing unintended side effects.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-11",
+            "question": "What is an idempotency key?",
+            "answer": "A unique identifier used to ensure duplicate requests are processed only once.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-12",
+            "question": "What is a dead letter queue (DLQ)?",
+            "answer": "A queue where messages that cannot be processed successfully are sent for later inspection or retry.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-13",
+            "question": "What is load shedding?",
+            "answer": "Dropping low-priority requests when the system is overloaded to preserve critical functionality.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-14",
+            "question": "What is a timeout?",
+            "answer": "A limit on how long a system waits for a response before failing the request.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-15",
+            "question": "What is bulkhead isolation?",
+            "answer": "A pattern that isolates components so failures in one part do not affect others.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-16",
+            "question": "What is queue fairness?",
+            "answer": "Ensuring that all producers or consumers get a fair share of processing resources.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-17",
+            "question": "What is priority queueing?",
+            "answer": "Processing requests based on priority levels instead of arrival order.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-18",
+            "question": "What is graceful degradation?",
+            "answer": "Reducing functionality instead of failing completely when the system is under stress.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-19",
+            "question": "What is throttling?",
+            "answer": "Deliberately slowing down request processing to keep the system stable.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-20",
+            "question": "What is admission control?",
+            "answer": "Deciding whether to accept or reject incoming requests based on current system capacity.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-21",
+            "question": "What is coordinated omission and why is it dangerous?",
+            "answer": "A measurement bias where latency during outages is underreported because no requests are sent, hiding true system degradation.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-22",
+            "question": "Why can retries make a system outage worse?",
+            "answer": "Retries increase load on an already failing system, potentially causing cascading failures or retry storms.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-23",
+            "question": "What is hedged requests?",
+            "answer": "Sending duplicate requests after a delay to reduce tail latency, using the fastest response and cancelling others.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-24",
+            "question": "What is tail latency and why does it matter?",
+            "answer": "The slowest responses (e.g., p99) which heavily impact user experience and system reliability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-25",
+            "question": "What is retry budget?",
+            "answer": "A limit on how many retries are allowed relative to successful requests to prevent overload.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-26",
+            "question": "What is adaptive concurrency control?",
+            "answer": "Dynamically adjusting concurrency limits based on system health signals like latency or error rate.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-27",
+            "question": "What is load amplification?",
+            "answer": "When internal retries, fan-out, or cascading calls multiply the effective load beyond incoming traffic.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-28",
+            "question": "What is request collapsing?",
+            "answer": "Combining identical concurrent requests into one to reduce duplicate work.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-29",
+            "question": "What is admission control based on latency?",
+            "answer": "Rejecting new requests when latency exceeds thresholds to protect system stability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-30",
+            "question": "What is queue spillover?",
+            "answer": "Redirecting excess traffic to secondary queues or systems when primary capacity is exceeded.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-31",
+            "question": "What is brownout?",
+            "answer": "Dynamically disabling non-essential features to reduce load during high stress.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-32",
+            "question": "What is overload collapse?",
+            "answer": "A state where excessive load causes throughput to drop drastically instead of increasing.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-33",
+            "question": "What is retry jitter and why is it critical?",
+            "answer": "Randomizing retry timing to prevent synchronized retries that could overload systems.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-34",
+            "question": "What is service mesh rate limiting?",
+            "answer": "Applying rate limits at the network proxy layer to control traffic before it reaches services.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-35",
+            "question": "What is per-tenant rate limiting?",
+            "answer": "Applying limits individually to each customer to prevent noisy neighbor problems.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-36",
+            "question": "What is cascading failure?",
+            "answer": "A failure that propagates through dependent services, causing widespread outages.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-37",
+            "question": "What is priority inversion in queues?",
+            "answer": "A situation where low-priority tasks block higher-priority ones due to resource contention.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-38",
+            "question": "What is dynamic throttling?",
+            "answer": "Adjusting request limits in real time based on system load or health metrics.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-39",
+            "question": "What is fail-fast strategy?",
+            "answer": "Immediately rejecting requests when a dependency is known to be failing instead of waiting.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-40",
+            "question": "What is overload protection at the edge?",
+            "answer": "Handling rate limiting and rejection at gateways or CDNs to prevent internal system overload.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-41",
+            "question": "What is the difference between rate limiting and load shedding?",
+            "answer": "Rate limiting prevents excess requests from entering the system, while load shedding drops requests after they have entered when the system is already overloaded.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-42",
+            "question": "Why is rejecting requests sometimes better than queuing them?",
+            "answer": "Because excessive queuing increases latency and memory pressure, potentially leading to cascading failures.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-43",
+            "question": "What is the difference between backpressure and throttling?",
+            "answer": "Backpressure is feedback from downstream systems, while throttling is an enforced limit applied by the system or gateway.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-44",
+            "question": "Why can naive retries lead to higher tail latency?",
+            "answer": "Because retries increase load and contention, amplifying delays under stress conditions.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-45",
+            "question": "What is the difference between synchronous and asynchronous backpressure handling?",
+            "answer": "Synchronous blocks or slows the caller immediately, while asynchronous uses queues or buffers to absorb load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-46",
+            "question": "Why is FIFO queueing not always ideal in distributed systems?",
+            "answer": "Because it can cause head-of-line blocking and prevent priority or critical requests from being processed first.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-47",
+            "question": "What is the trade-off between latency and throughput in flow control?",
+            "answer": "Optimizing for throughput can increase latency, while optimizing for latency may reduce total system throughput.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-48",
+            "question": "Why is retry without idempotency dangerous?",
+            "answer": "It can cause duplicate side effects such as double payments or inconsistent state changes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-49",
+            "question": "What is the difference between fail-open and fail-closed behavior?",
+            "answer": "Fail-open allows requests through during failures, while fail-closed rejects them to protect system integrity.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-50",
+            "question": "Why is partial failure more dangerous than total failure?",
+            "answer": "Because it leads to inconsistent system states and harder-to-detect cascading issues.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-51",
+            "question": "What is graceful degradation in API design?",
+            "answer": "Returning reduced functionality or partial responses when full processing is not possible.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-52",
+            "question": "What is the difference between bounded and unbounded queues?",
+            "answer": "Bounded queues limit memory usage but may drop requests; unbounded queues risk memory exhaustion.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-53",
+            "question": "Why is circuit breaker state transition timing important?",
+            "answer": "Incorrect timing can either cause unnecessary outages or premature recovery attempts under unstable conditions.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-54",
+            "question": "What is the difference between retry and replay in distributed systems?",
+            "answer": "Retry resubmits a request after failure, while replay reprocesses previously recorded events or logs.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-55",
+            "question": "Why can aggressive rate limiting hurt user experience?",
+            "answer": "It can unnecessarily reject valid traffic during short bursts, reducing perceived system availability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-56",
+            "question": "What is head-of-line blocking and where does it commonly occur?",
+            "answer": "It happens when a slow request blocks others behind it, commonly in queues or single-threaded processing systems.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-57",
+            "question": "What is adaptive retry strategy?",
+            "answer": "A retry approach that adjusts delay and retry count based on system health signals.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-58",
+            "question": "What is the difference between client-side and server-side throttling?",
+            "answer": "Client-side throttling limits outgoing requests, while server-side throttling enforces limits on incoming traffic.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-59",
+            "question": "Why is observability critical in flow control systems?",
+            "answer": "Because without metrics like latency, error rate, and queue depth, it is impossible to tune or debug resilience mechanisms.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-60",
+            "question": "What is the difference between saturation and overload in system design?",
+            "answer": "Saturation is when resources are fully utilized, while overload is when demand exceeds the system's ability to maintain acceptable performance.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-61",
+            "question": "What is flow control in distributed systems?",
+            "answer": "A set of techniques used to regulate the rate of data or requests entering a system to prevent overload and ensure stability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-62",
+            "question": "What is the goal of resilience in system design?",
+            "answer": "To ensure a system continues operating correctly even under partial failures or high load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-63",
+            "question": "What is a distributed system failure?",
+            "answer": "Any condition where one or more components in a distributed system stop working correctly or fail to communicate.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-64",
+            "question": "What is latency in system performance?",
+            "answer": "The time it takes for a request to be processed and a response to be returned.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-65",
+            "question": "What is throughput?",
+            "answer": "The number of requests or operations a system can process per unit of time.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-66",
+            "question": "What is availability?",
+            "answer": "The percentage of time a system is operational and able to serve requests.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-67",
+            "question": "What is reliability in system design?",
+            "answer": "The probability that a system performs correctly over a given period of time.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-68",
+            "question": "What is scalability?",
+            "answer": "The ability of a system to handle increased load by adding resources or optimizing architecture.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-69",
+            "question": "What is fault tolerance?",
+            "answer": "The ability of a system to continue operating even when some components fail.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-70",
+            "question": "What is redundancy in distributed systems?",
+            "answer": "Duplicating critical components or data to prevent single points of failure.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-71",
+            "question": "What is a single point of failure?",
+            "answer": "A component whose failure would cause the entire system or service to fail.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-72",
+            "question": "What is consistency in distributed systems?",
+            "answer": "The guarantee that all nodes see the same data at the same time or within a defined delay.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-73",
+            "question": "What is eventual consistency?",
+            "answer": "A model where all replicas will converge to the same state over time, but not immediately.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-74",
+            "question": "What is availability vs consistency trade-off?",
+            "answer": "In distributed systems, improving availability can reduce consistency guarantees and vice versa.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-75",
+            "question": "What is partition tolerance?",
+            "answer": "The ability of a system to continue operating despite network failures that split communication between nodes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-76",
+            "question": "What is the CAP theorem?",
+            "answer": "A theorem stating that a distributed system can only guarantee two of consistency, availability, and partition tolerance at the same time.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-77",
+            "question": "What is a bottleneck in a system?",
+            "answer": "A component that limits overall system performance because it cannot handle the incoming load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-78",
+            "question": "What is graceful failure?",
+            "answer": "When a system degrades in a controlled way instead of crashing completely.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-79",
+            "question": "What is a retry mechanism?",
+            "answer": "A technique where a failed operation is attempted again automatically to handle transient failures.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-80",
+            "question": "Why do distributed systems require flow control?",
+            "answer": "Because uncontrolled traffic can overwhelm services, causing cascading failures and degraded performance.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-81",
+            "question": "How would you design rate limiting for a multi-tenant SaaS system?",
+            "answer": "You need per-tenant quotas, isolation, and possibly hierarchical limits (tenant + global) to prevent noisy neighbors.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-82",
+            "question": "What happens when your rate limiter becomes a bottleneck?",
+            "answer": "It can introduce latency, become a single point of failure, and require local caching or distributed implementations.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-83",
+            "question": "How would you handle traffic spikes during a flash sale or booking rush?",
+            "answer": "Use queueing, autoscaling, load shedding, and prioritization of critical flows.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-84",
+            "question": "How would you prevent cascading failures in a microservices architecture?",
+            "answer": "Use circuit breakers, timeouts, bulkheads, retries with limits, and graceful degradation.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-85",
+            "question": "How do you decide between synchronous and asynchronous processing?",
+            "answer": "Synchronous for user-critical low-latency operations, asynchronous for heavy or non-blocking workflows.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-86",
+            "question": "How would you design retries for a payment system?",
+            "answer": "Use idempotency keys, bounded retries, exponential backoff, and strict side-effect control.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-87",
+            "question": "What risks do retries introduce in distributed systems?",
+            "answer": "Duplicate processing, retry storms, increased load, and amplification of partial outages.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-88",
+            "question": "How would you design a system that prioritizes VIP users under load?",
+            "answer": "Use priority queues, weighted scheduling, and separate resource pools for VIP traffic.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-89",
+            "question": "How would you implement backpressure in a real-time API?",
+            "answer": "Use queue limits, 429 responses, adaptive concurrency, and upstream signaling to slow producers.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-90",
+            "question": "What trade-offs exist when using buffering queues in systems?",
+            "answer": "Buffers absorb spikes but increase latency and risk memory exhaustion.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-91",
+            "question": "How would you design a system to avoid retry storms during outages?",
+            "answer": "Use jitter, retry budgets, circuit breakers, and centralized coordination if needed.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-92",
+            "question": "How would you ensure fairness between tenants in a shared system?",
+            "answer": "Implement weighted scheduling, quotas, and per-tenant isolation to avoid noisy neighbor effects.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-93",
+            "question": "How would you design a fallback strategy for a critical service?",
+            "answer": "Use cached responses, degraded functionality, or alternative services when primary systems fail.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-94",
+            "question": "What signals would you use to trigger auto-scaling?",
+            "answer": "Latency, CPU usage, queue depth, error rate, and request throughput.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-95",
+            "question": "How would you handle partial outages in a distributed system?",
+            "answer": "Use circuit breakers, fallback paths, and isolate failing dependencies to prevent cascading failures.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-96",
+            "question": "How would you design a resilient booking system under high contention?",
+            "answer": "Use optimistic locking, queueing, idempotency, and careful inventory consistency strategies.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-97",
+            "question": "How do you decide when to drop traffic vs delay it?",
+            "answer": "Drop when latency sensitivity is high or system is saturated; delay when workload is bursty and can be buffered safely.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-98",
+            "question": "How would you design observability for flow control systems?",
+            "answer": "Track rate limits, rejections, queue depth, retry rates, latency percentiles, and saturation signals.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-99",
+            "question": "What happens when retries, queues, and rate limits interact badly?",
+            "answer": "They can amplify load, create hidden bottlenecks, and cause cascading system instability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-100",
+            "question": "How would you design graceful degradation for a high-traffic consumer app?",
+            "answer": "Disable non-critical features, serve cached data, reduce response richness, and prioritize core flows.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

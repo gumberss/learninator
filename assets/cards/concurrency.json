@@ -1,0 +1,75 @@
+{
+    "topicName": "Concurrency",
+    "cards": [
+        {
+            "id": "concurrency-1",
+            "question": "What is concurrency?",
+            "answer": "Concurrency is the ability of a system to handle multiple tasks at the same time, interleaving execution to improve efficiency.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "concurrency-2",
+            "question": "What is the difference between concurrency and parallelism?",
+            "answer": "Concurrency is dealing with multiple tasks at once, while parallelism is executing multiple tasks literally at the same time using multiple cores.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "concurrency-3",
+            "question": "What is a race condition?",
+            "answer": "A race condition occurs when multiple threads access shared data simultaneously and the result depends on execution order.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "concurrency-4",
+            "question": "What is a deadlock?",
+            "answer": "A deadlock happens when two or more processes wait indefinitely for resources held by each other.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "concurrency-5",
+            "question": "What is a mutex?",
+            "answer": "A mutex is a locking mechanism that ensures only one thread can access a critical section at a time.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "concurrency-6",
+            "question": "What is a semaphore?",
+            "answer": "A semaphore controls access to a shared resource by maintaining a counter for available permits.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "concurrency-7",
+            "question": "What is thread safety?",
+            "answer": "Thread safety ensures that shared data structures behave correctly when accessed by multiple threads.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "concurrency-8",
+            "question": "What is context switching?",
+            "answer": "Context switching is the process of storing and restoring CPU state when switching between threads.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "concurrency-9",
+            "question": "What is a thread pool?",
+            "answer": "A thread pool is a group of pre-created threads used to execute tasks efficiently without constant thread creation overhead.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "concurrency-10",
+            "question": "What is lock contention?",
+            "answer": "Lock contention happens when multiple threads compete for the same lock, reducing performance.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

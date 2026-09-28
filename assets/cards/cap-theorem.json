@@ -1,0 +1,82 @@
+{
+    "topicName": "CAP Theorem",
+    "cards": [
+        {
+            "id": "cap-1",
+            "question": "What is the CAP theorem?",
+            "answer": "A distributed system can only guarantee two of Consistency, Availability, and Partition tolerance at the same time.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cap-2",
+            "question": "What is consistency in CAP?",
+            "answer": "All nodes see the same data at the same time.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cap-3",
+            "question": "What is availability in CAP?",
+            "answer": "Every request receives a response, even if not the latest data.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cap-4",
+            "question": "What is partition tolerance?",
+            "answer": "System continues operating despite network failures.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cap-5",
+            "question": "Can a system avoid partition tolerance?",
+            "answer": "No, network partitions are inevitable in distributed systems.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cap-6",
+            "question": "What does CP system mean?",
+            "answer": "A system that prioritizes consistency and partition tolerance over availability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cap-7",
+            "question": "What does AP system mean?",
+            "answer": "A system that prioritizes availability and partition tolerance over consistency.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cap-8",
+            "question": "What is trade-off in CAP theorem?",
+            "answer": "You must sacrifice one guarantee during a network partition.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cap-9",
+            "question": "Why is CAP theorem important?",
+            "answer": "It helps design distributed systems with clear trade-offs.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cap-10",
+            "question": "Is CAP theorem always strict?",
+            "answer": "In practice, systems often balance trade-offs rather than strictly choose two.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cap-11",
+            "question": "What does PACELC add to the CAP theorem?",
+            "answer": "During a partition a system trades availability against consistency; otherwise it commonly trades latency against consistency.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

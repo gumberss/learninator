@@ -1,0 +1,82 @@
+{
+    "topicName": "Deployment Strategies",
+    "cards": [
+        {
+            "id": "deploy-1",
+            "question": "What is blue-green deployment?",
+            "answer": "Two identical environments where traffic switches from old to new version.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "deploy-2",
+            "question": "What is canary deployment?",
+            "answer": "Gradually rolling out a new version to a small subset of users first.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "deploy-3",
+            "question": "What is rolling deployment?",
+            "answer": "Updating instances one by one instead of all at once.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "deploy-4",
+            "question": "What is shadow deployment?",
+            "answer": "New version receives live traffic but responses are not returned to users.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "deploy-5",
+            "question": "What is rollback strategy?",
+            "answer": "Reverting to a previous stable version after a failed deployment.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "deploy-6",
+            "question": "Why are deployment strategies important?",
+            "answer": "They reduce risk during releases and ensure system stability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "deploy-7",
+            "question": "What is zero downtime deployment?",
+            "answer": "Deploying updates without interrupting service availability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "deploy-8",
+            "question": "What is feature toggle deployment?",
+            "answer": "Releasing code with features turned off until ready.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "deploy-9",
+            "question": "What is A/B testing in deployments?",
+            "answer": "Comparing two versions of a system by exposing them to different user groups.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "deploy-10",
+            "question": "What is deployment pipeline?",
+            "answer": "A series of automated steps to build, test, and deploy software.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "deploy-11",
+            "question": "How should an automated canary rollback be triggered?",
+            "answer": "Compare canary error rate, latency, saturation, and business metrics against the baseline, then roll back when predefined thresholds are exceeded for a sustained window.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

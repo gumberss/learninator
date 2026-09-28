@@ -1,0 +1,82 @@
+{
+    "topicName": "Configuration Management",
+    "cards": [
+        {
+            "id": "config-1",
+            "question": "What is configuration management?",
+            "answer": "Managing application settings separately from code.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "config-2",
+            "question": "Why separate config from code?",
+            "answer": "To allow changes without redeploying applications.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "config-3",
+            "question": "What is environment-based configuration?",
+            "answer": "Different configs for dev, staging, and production.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "config-4",
+            "question": "What is a config server?",
+            "answer": "A centralized service for managing application configurations.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "config-5",
+            "question": "What is feature flagging?",
+            "answer": "Toggling features on or off without redeploying code.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "config-6",
+            "question": "What is secret management?",
+            "answer": "Securely storing sensitive data like API keys and passwords.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "config-7",
+            "question": "What is configuration drift?",
+            "answer": "When system configuration becomes inconsistent across environments.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "config-8",
+            "question": "What is immutable configuration?",
+            "answer": "Configuration that cannot be changed after deployment.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "config-9",
+            "question": "Why use centralized config systems?",
+            "answer": "To ensure consistency and easier management across services.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "config-10",
+            "question": "What is versioned configuration?",
+            "answer": "Tracking changes to configuration over time for rollback.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "config-11",
+            "question": "Why should configuration be validated before it is applied?",
+            "answer": "Schema, range, and dependency validation prevents invalid settings from causing startup failures, outages, or data loss. Risky changes should also support rollback.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

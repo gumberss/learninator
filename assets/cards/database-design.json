@@ -1,0 +1,75 @@
+{
+    "topicName": "Database Design",
+    "cards": [
+        {
+            "id": "dbdesign-1",
+            "question": "What is normalization?",
+            "answer": "Organizing data to reduce redundancy.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-2",
+            "question": "What is denormalization?",
+            "answer": "Adding redundancy to improve read performance.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-3",
+            "question": "What is a relational database?",
+            "answer": "A database structured in tables with relationships.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-4",
+            "question": "What is a NoSQL database?",
+            "answer": "A non-relational database designed for scalability and flexibility.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-5",
+            "question": "What is a schema?",
+            "answer": "The structure of a database defining tables and fields.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-6",
+            "question": "What is indexing in databases?",
+            "answer": "A technique to speed up data retrieval.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-7",
+            "question": "What is a primary key?",
+            "answer": "A unique identifier for a record in a table.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-8",
+            "question": "What is a foreign key?",
+            "answer": "A field that links one table to another.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-9",
+            "question": "What is data consistency?",
+            "answer": "Ensuring data remains accurate and reliable across systems.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-10",
+            "question": "What is ACID compliance?",
+            "answer": "A set of properties ensuring reliable database transactions.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

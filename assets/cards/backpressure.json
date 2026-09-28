@@ -1,0 +1,82 @@
+{
+    "topicName": "Backpressure",
+    "cards": [
+        {
+            "id": "backpressure-1",
+            "question": "What is backpressure in distributed systems?",
+            "answer": "Backpressure is a mechanism that signals upstream components to slow down when downstream systems cannot handle the current load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "backpressure-2",
+            "question": "Why is backpressure important?",
+            "answer": "It prevents system overload, memory exhaustion, and cascading failures by controlling data flow rates.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "backpressure-3",
+            "question": "Where is backpressure commonly used?",
+            "answer": "It is used in streaming systems, message queues, and reactive programming frameworks.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "backpressure-4",
+            "question": "What happens without backpressure?",
+            "answer": "Systems can become overwhelmed, leading to high latency, crashes, or data loss due to resource exhaustion.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "backpressure-5",
+            "question": "How is backpressure implemented?",
+            "answer": "It can be implemented using buffering limits, flow control protocols, or acknowledgment-based systems.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "backpressure-6",
+            "question": "What is reactive backpressure?",
+            "answer": "Reactive backpressure is a model where consumers explicitly request data at a rate they can handle.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "backpressure-7",
+            "question": "What is queue-based backpressure?",
+            "answer": "When queues grow beyond a threshold, producers are slowed down or blocked.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "backpressure-8",
+            "question": "What is TCP backpressure analogy?",
+            "answer": "TCP flow control is similar to backpressure, where the receiver window limits sender speed.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "backpressure-9",
+            "question": "How does backpressure improve reliability?",
+            "answer": "It ensures systems degrade gracefully instead of failing under high load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "backpressure-10",
+            "question": "What is the tradeoff of backpressure?",
+            "answer": "It may increase latency but improves stability and prevents overload.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "backpressure-11",
+            "question": "When should a system shed load instead of buffering it?",
+            "answer": "Shed load when queues are full or delaying work would make it useless and threaten system stability. Buffer only within bounded capacity.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}
