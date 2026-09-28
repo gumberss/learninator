@@ -1,16 +1,14 @@
 # learninator
 
-A new Flutter project.
+## Main Screen presenting the catgories with the topics inside of them
 
-## Getting Started
+<img width="559" height="948" alt="image" src="https://github.com/user-attachments/assets/6b2df18b-a5fa-4104-b5f7-65797ee7d3e3" />
 
-This project is a starting point for a Flutter application.
+## Reviewing a topic
 
-A few resources to get you started if this is your first Flutter project:
+### Presenting the question 
+<img width="641" height="452" alt="image" src="https://github.com/user-attachments/assets/b54f2168-8389-4067-87f5-49d8b1eb725b" />
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Presenting the answer
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="621" height="586" alt="image" src="https://github.com/user-attachments/assets/d2f9022e-b65f-4807-91d7-76262f33897f" />
