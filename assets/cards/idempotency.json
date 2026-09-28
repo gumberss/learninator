@@ -70,6 +70,34 @@
             "answer": "Because it usually creates new resources each time it is called.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "idempotency-11",
+            "question": "What is the difference between safe and idempotent HTTP methods?",
+            "answer": "Safe methods (GET, HEAD, OPTIONS) do not change server state. Idempotent methods (safe ones plus PUT and DELETE) may change state, but repeating them has the same effect as doing it once.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "idempotency-12",
+            "question": "How should concurrent requests with the same idempotency key be handled?",
+            "answer": "Atomically claim the key, for example with a unique insert. The second request waits for the first result or receives an in-progress response instead of executing again.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "idempotency-13",
+            "question": "How long should idempotency keys be kept?",
+            "answer": "In a durable store, together with the saved response, for longer than the maximum client retry window. After that they can expire.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "idempotency-14",
+            "question": "How do message consumers become idempotent?",
+            "answer": "Record processed message IDs in a deduplication table within the same transaction as the side effect, or use naturally idempotent operations such as upserts and conditional updates.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

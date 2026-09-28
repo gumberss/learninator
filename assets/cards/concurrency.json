@@ -70,6 +70,41 @@
             "answer": "Lock contention happens when multiple threads compete for the same lock, reducing performance.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "concurrency-11",
+            "question": "What is the difference between optimistic and pessimistic locking?",
+            "answer": "Pessimistic locking locks data before using it. Optimistic locking proceeds without locks and checks a version at commit, retrying on conflict; it suits low-contention workloads.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "concurrency-12",
+            "question": "What is compare-and-swap (CAS)?",
+            "answer": "An atomic operation that updates a value only if it still equals an expected value. It is the building block of lock-free algorithms.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "concurrency-13",
+            "question": "What is a livelock?",
+            "answer": "Threads keep changing state in response to each other but none makes progress, like two people repeatedly stepping aside in the same direction.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "concurrency-14",
+            "question": "What is starvation?",
+            "answer": "A thread never gets the resource it needs because other threads are continually favored by the scheduler or lock.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "concurrency-15",
+            "question": "How can deadlocks be prevented?",
+            "answer": "Acquire locks in a consistent global order, use timeouts or try-lock, keep lock scopes small, and avoid holding one lock while waiting for another.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

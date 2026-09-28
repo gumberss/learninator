@@ -77,6 +77,27 @@
             "answer": "During a partition a system trades availability against consistency; otherwise it commonly trades latency against consistency.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "cap-12",
+            "question": "What are examples of CP and AP systems?",
+            "answer": "CP: ZooKeeper, etcd, and HBase refuse some requests during partitions to stay consistent. AP: Dynamo-style stores such as Cassandra and Riak keep serving and reconcile later. Many systems are tunable.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cap-13",
+            "question": "What does availability in CAP not mean?",
+            "answer": "It is not an uptime percentage. It means every request received by a non-failing node must get a non-error response, even during a partition.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cap-14",
+            "question": "Which consistency does the C in CAP refer to?",
+            "answer": "Linearizability: every read sees the most recent completed write. It is different from the C in ACID, which is about preserving database invariants.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

@@ -70,6 +70,34 @@
             "answer": "The time taken to process and respond to a request.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "scalability-11",
+            "question": "What is the difference between a performance problem and a scalability problem?",
+            "answer": "A performance problem makes the system slow for a single user. A scalability problem means it is fast for one user but slow under load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "scalability-12",
+            "question": "How does scaling reads differ from scaling writes?",
+            "answer": "Reads scale with caching and read replicas. Writes are harder and usually require partitioning data across multiple nodes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "scalability-13",
+            "question": "What is Amdahl's Law?",
+            "answer": "The speedup from adding parallel resources is limited by the part of the work that must run serially.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "scalability-14",
+            "question": "Why does local server state limit horizontal scaling?",
+            "answer": "Sessions or data stored on one server force sticky routing and are lost if it fails. Moving state to a shared store lets any instance handle any request.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

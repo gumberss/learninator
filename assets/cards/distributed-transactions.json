@@ -77,6 +77,34 @@
             "answer": "Orchestration uses a coordinator to direct each step. Choreography lets services react to events without a central coordinator, reducing coupling but making flows harder to trace.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "dist-tx-12",
+            "question": "What is the dual-write problem?",
+            "answer": "Updating a database and publishing a message as two separate operations can leave them inconsistent if one succeeds and the other fails.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dist-tx-13",
+            "question": "What is the transactional outbox pattern?",
+            "answer": "Write business data and an outbox event in the same local transaction. A separate relay publishes outbox events to the broker, solving the dual-write problem.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dist-tx-14",
+            "question": "What is Try-Confirm-Cancel (TCC)?",
+            "answer": "A business-level protocol where each service first reserves resources (Try), then either finalizes (Confirm) or releases them (Cancel). It avoids holding database locks like 2PC.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dist-tx-15",
+            "question": "What is three-phase commit?",
+            "answer": "An extension of 2PC with a pre-commit phase to reduce blocking when the coordinator fails. It is still unsafe under network partitions and is rarely used in practice.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

@@ -70,6 +70,34 @@
             "answer": "Predicting future resource needs based on historical trends.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "capacity-11",
+            "question": "What is Little's Law?",
+            "answer": "L = λ × W: the average number of requests in the system equals the arrival rate times the average time each spends there. It is used to size threads, connections, and concurrency.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "capacity-12",
+            "question": "What is back-of-the-envelope estimation?",
+            "answer": "Quick approximate calculations of requests per second, storage, and bandwidth from user counts and usage assumptions, used to check whether a design is feasible.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "capacity-13",
+            "question": "Why does latency rise sharply as utilization approaches 100%?",
+            "answer": "Queueing delay grows nonlinearly with utilization, so small load increases near saturation cause large waits. Systems are usually run with a target utilization well below the limit.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "capacity-14",
+            "question": "What is soak testing?",
+            "answer": "Running sustained realistic load for many hours to find memory leaks, resource exhaustion, and gradual performance degradation.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

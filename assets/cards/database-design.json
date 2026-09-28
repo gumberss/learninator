@@ -70,6 +70,41 @@
             "answer": "A set of properties ensuring reliable database transactions.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "dbdesign-11",
+            "question": "What are the main types of NoSQL databases?",
+            "answer": "Key-value (Redis, DynamoDB), document (MongoDB), wide-column (Cassandra), and graph (Neo4j).",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-12",
+            "question": "What are the first three normal forms?",
+            "answer": "1NF: atomic values and no repeating groups. 2NF: no attribute depends on only part of a composite key. 3NF: no attribute depends on another non-key attribute.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-13",
+            "question": "How do you choose between SQL and NoSQL?",
+            "answer": "SQL suits relational data, complex queries, and strong transactions. NoSQL suits flexible schemas, very high scale, and simple, well-known access patterns.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-14",
+            "question": "What is a composite key?",
+            "answer": "A primary key made of two or more columns that together uniquely identify a row.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-15",
+            "question": "What is a database schema migration?",
+            "answer": "A versioned, incremental change to the schema applied in a controlled way. Zero-downtime migrations use backward-compatible steps: add, migrate data, then remove the old structure.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

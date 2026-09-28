@@ -77,6 +77,34 @@
             "answer": "Prefer additive changes, preserve existing semantics, version breaking changes, publish deprecation timelines, and monitor old-version usage before removal.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "api-design-12",
+            "question": "What is gRPC and when is it a good fit?",
+            "answer": "An RPC framework using HTTP/2 and Protocol Buffers. It fits low-latency internal service-to-service calls that benefit from strict contracts, code generation, and streaming.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "api-design-13",
+            "question": "What is the difference between PUT and PATCH?",
+            "answer": "PUT replaces the entire resource with the request body. PATCH applies a partial modification to the resource.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "api-design-14",
+            "question": "How should an API report errors?",
+            "answer": "Use the correct HTTP status code plus a consistent machine-readable error body with a code, message, and details, for example the Problem Details format (RFC 9457).",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "api-design-15",
+            "question": "What is a webhook?",
+            "answer": "A server-initiated HTTP callback that notifies a client when an event happens, replacing repeated client polling. Receivers should verify signatures and handle retries idempotently.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

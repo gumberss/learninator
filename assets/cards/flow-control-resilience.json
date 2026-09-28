@@ -700,6 +700,27 @@
             "answer": "Disable non-critical features, serve cached data, reduce response richness, and prioritize core flows.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "flow-101",
+            "question": "What is the difference between a concurrency limit and a rate limit?",
+            "answer": "A rate limit caps requests per unit of time. A concurrency limit caps requests in flight at once, which automatically tightens when downstream latency rises.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-102",
+            "question": "What is deadline propagation?",
+            "answer": "Passing the remaining time budget along each downstream call, so services stop working on requests the original caller has already given up on.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "flow-103",
+            "question": "What is AIMD?",
+            "answer": "Additive Increase, Multiplicative Decrease: raise a limit slowly while things succeed and cut it sharply on overload. TCP congestion control and adaptive concurrency limiters use it.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

@@ -77,6 +77,27 @@
             "answer": "Inserts and deletes shift row positions between requests. Cursor pagination based on a stable, unique ordering avoids most of this drift.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "pagination-12",
+            "question": "How should a pagination cursor be designed?",
+            "answer": "As an opaque token, for example an encoded last sort key plus a unique ID as tiebreaker, so clients cannot depend on internals and ordering stays stable.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pagination-13",
+            "question": "Why is returning a total count expensive?",
+            "answer": "Counting a large filtered result set requires scanning it. Many APIs return a has-more flag or an estimated count instead.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pagination-14",
+            "question": "How does an API tell clients how to get the next page?",
+            "answer": "By returning a next cursor or next link in the response body or in a Link header, together with a flag showing whether more results exist.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

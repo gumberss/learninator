@@ -77,6 +77,27 @@
             "answer": "Schema, range, and dependency validation prevents invalid settings from causing startup failures, outages, or data loss. Risky changes should also support rollback.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "config-12",
+            "question": "What is dynamic configuration reload?",
+            "answer": "Applying configuration changes at runtime without restarting, usually by watching a config service. The new config should be validated and swapped in atomically.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "config-13",
+            "question": "Why should configuration changes be rolled out progressively?",
+            "answer": "Bad config changes are a leading cause of outages. Applying them to a small subset of instances or regions first, like a canary, limits the blast radius.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "config-14",
+            "question": "What is Infrastructure as Code?",
+            "answer": "Defining infrastructure in version-controlled declarative files, with tools such as Terraform, Bicep, or CloudFormation, for repeatable and reviewable environments.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

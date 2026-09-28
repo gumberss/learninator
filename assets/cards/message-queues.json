@@ -77,6 +77,34 @@
             "answer": "A separate queue for messages that still fail after retry limits, preventing poison messages from blocking processing and allowing investigation or replay.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "mq-12",
+            "question": "What is the difference between a queue and publish-subscribe?",
+            "answer": "In a queue, each message is consumed by one consumer, distributing work. In pub/sub, every subscriber receives its own copy of each message.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "mq-13",
+            "question": "How is message ordering usually guaranteed?",
+            "answer": "Only within a partition or message group. Using a partition key, such as an order ID, sends related messages to the same partition, which one consumer processes in order.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "mq-14",
+            "question": "What is a consumer group?",
+            "answer": "A set of consumers sharing one subscription. Partitions are divided among the members so they process messages in parallel without duplicating work.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "mq-15",
+            "question": "What is a visibility timeout?",
+            "answer": "The period a received message is hidden from other consumers. If it is not acknowledged before the timeout expires, it becomes visible again and is redelivered.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

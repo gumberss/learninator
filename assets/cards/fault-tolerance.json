@@ -77,6 +77,34 @@
             "answer": "Recovery Time Objective is the maximum acceptable restoration time. Recovery Point Objective is the maximum acceptable amount of data loss measured in time.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "fault-12",
+            "question": "What is the difference between active-active and active-passive?",
+            "answer": "In active-active, all nodes serve traffic simultaneously. In active-passive, a standby waits idle and takes over only when the primary fails.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "fault-13",
+            "question": "What is split-brain?",
+            "answer": "After a network partition, two nodes both believe they are the primary and accept conflicting writes. Quorums and fencing tokens prevent it.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "fault-14",
+            "question": "What is chaos engineering?",
+            "answer": "Deliberately injecting failures, such as killing instances or adding latency, in controlled experiments to verify that the system tolerates them.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "fault-15",
+            "question": "What is a single point of failure?",
+            "answer": "A component whose failure takes down the whole system because nothing can replace it. Redundancy removes it.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

@@ -70,6 +70,41 @@
             "answer": "Because failures span multiple distributed services.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "microservices-11",
+            "question": "What is the strangler fig pattern?",
+            "answer": "Incrementally replacing a monolith by routing individual features to new services until the old system can be retired.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "microservices-12",
+            "question": "What is a modular monolith?",
+            "answer": "A single deployable application with strong, enforced internal module boundaries. It keeps deployment simple while making a later split into services easier.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "microservices-13",
+            "question": "What is a distributed monolith?",
+            "answer": "Services so tightly coupled that they must change and deploy together. It has the complexity of microservices without their independence.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "microservices-14",
+            "question": "What is the Backend for Frontend (BFF) pattern?",
+            "answer": "A dedicated backend per client type, such as web or mobile, that aggregates calls to services and shapes responses for that client.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "microservices-15",
+            "question": "What is Conway's Law?",
+            "answer": "Systems mirror the communication structure of the organization that builds them, so service boundaries often follow team boundaries.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

@@ -77,6 +77,34 @@
             "answer": "A shared cache layer between edge locations and the origin that consolidates cache misses, improves hit ratio, and protects the origin from request spikes.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "cdn-12",
+            "question": "What is the difference between push and pull CDNs?",
+            "answer": "A pull CDN fetches content from the origin on the first cache miss. A push CDN has content uploaded to it proactively, which suits large, rarely changing files.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-13",
+            "question": "What is cache hit ratio in a CDN?",
+            "answer": "The percentage of requests served directly from edge caches. A higher ratio means lower latency for users and less load on the origin.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-14",
+            "question": "How can frequently updated assets be cached safely on a CDN?",
+            "answer": "Use versioned or fingerprinted URLs such as app.3f2a1c.js with long TTLs. A new version gets a new URL, so no purge is needed.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-15",
+            "question": "How does a CDN help against DDoS attacks?",
+            "answer": "It absorbs traffic across a large distributed edge network, filters malicious requests, and hides the origin server's address.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

@@ -77,6 +77,34 @@
             "answer": "Route that user's reads to the leader or to a replica known to have applied the user's latest write.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "replication-12",
+            "question": "What is leaderless replication?",
+            "answer": "Any replica can accept writes. Consistency relies on quorum reads and writes plus repair mechanisms, as in Dynamo-style databases like Cassandra.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "replication-13",
+            "question": "How are write conflicts resolved in multi-leader replication?",
+            "answer": "With last-write-wins timestamps, version vectors that detect concurrent writes, CRDTs that merge automatically, or application-specific merge logic.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "replication-14",
+            "question": "What is semi-synchronous replication?",
+            "answer": "The leader waits for at least one replica to acknowledge before committing, while others replicate asynchronously. It balances durability and latency.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "replication-15",
+            "question": "What are read repair and anti-entropy?",
+            "answer": "Read repair fixes stale replicas detected during a read. Anti-entropy is a background process, often using Merkle trees, that compares replicas and syncs differences.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

@@ -77,6 +77,34 @@
             "answer": "An index containing every column needed by a query, allowing the database to answer it without reading the base table. It improves reads at the cost of storage and write overhead.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "indexing-12",
+            "question": "What is the leftmost prefix rule?",
+            "answer": "A composite index on (a, b, c) can serve queries filtering on a, a+b, or a+b+c, but not on b or c alone.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "indexing-13",
+            "question": "What is index selectivity?",
+            "answer": "The ratio of distinct values to total rows. Highly selective columns narrow results the most and benefit most from indexes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "indexing-14",
+            "question": "What is an LSM tree?",
+            "answer": "A log-structured merge tree buffers writes in memory, flushes them to sorted immutable files, and compacts them in the background. It is write-optimized and used by Cassandra and RocksDB.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "indexing-15",
+            "question": "What is an inverted index?",
+            "answer": "A map from each term to the documents containing it. It powers full-text search engines such as Elasticsearch.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

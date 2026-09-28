@@ -77,6 +77,27 @@
             "answer": "Linearizability preserves the real-time order of individual operations. Serializability makes concurrent transactions equivalent to some serial order but does not necessarily preserve real-time order.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "consistency-12",
+            "question": "What are quorum reads and writes?",
+            "answer": "With N replicas, a write waits for W acknowledgements and a read queries R replicas. If R + W > N, every read overlaps at least one replica with the latest write.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "consistency-13",
+            "question": "What is monotonic writes consistency?",
+            "answer": "Writes from a single client are applied everywhere in the order the client issued them.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "consistency-14",
+            "question": "What is a CRDT?",
+            "answer": "A conflict-free replicated data type. Replicas can be updated independently and merged deterministically so they always converge, without coordination.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

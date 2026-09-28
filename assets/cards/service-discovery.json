@@ -77,6 +77,27 @@
             "answer": "Use realistic timeouts, distinguish readiness from liveness, and require multiple consecutive failures before removing an instance.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "service-discovery-12",
+            "question": "What are common service discovery tools?",
+            "answer": "Consul, etcd, ZooKeeper, Eureka, and Kubernetes Services with cluster DNS.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "service-discovery-13",
+            "question": "How do heartbeats and leases keep a registry accurate?",
+            "answer": "Instances periodically renew a lease with the registry. If heartbeats stop, the lease expires and the instance is removed automatically.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "service-discovery-14",
+            "question": "What is a service mesh?",
+            "answer": "An infrastructure layer of sidecar proxies, such as Istio or Linkerd, that handles discovery, load balancing, retries, and mTLS between services outside application code.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

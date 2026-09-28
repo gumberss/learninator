@@ -70,6 +70,34 @@
             "answer": "Increased complexity, cross-shard queries, and consistency challenges.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "partitioning-11",
+            "question": "What is the main weakness of range-based partitioning?",
+            "answer": "Sequential keys such as timestamps or auto-increment IDs send all new writes to the same partition, creating a hotspot.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "partitioning-12",
+            "question": "How are cross-shard queries handled?",
+            "answer": "With scatter-gather: the query is sent to every relevant shard and results are merged. It is slower, so common queries should be designed to hit a single shard.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "partitioning-13",
+            "question": "What are virtual nodes in consistent hashing?",
+            "answer": "Each physical node owns many points on the hash ring. This spreads data more evenly and makes rebalancing smoother when nodes join or leave.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "partitioning-14",
+            "question": "How can a single hot key be mitigated?",
+            "answer": "Split or salt the key across several partitions, cache it aggressively, or move it to dedicated capacity.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

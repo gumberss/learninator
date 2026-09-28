@@ -77,6 +77,27 @@
             "answer": "Compare canary error rate, latency, saturation, and business metrics against the baseline, then roll back when predefined thresholds are exceeded for a sustained window.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "deploy-12",
+            "question": "What is the expand-and-contract pattern?",
+            "answer": "Make a backward-compatible change first (expand), migrate clients and data, then remove the old version (contract). It enables zero-downtime schema and API changes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "deploy-13",
+            "question": "What is immutable infrastructure?",
+            "answer": "Servers are never modified after deployment. Every change builds a new image and replaces the old instances, which removes drift and simplifies rollback.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "deploy-14",
+            "question": "What is the difference between continuous delivery and continuous deployment?",
+            "answer": "Continuous delivery keeps every change releasable but a person approves production releases. Continuous deployment ships every change that passes the pipeline automatically.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

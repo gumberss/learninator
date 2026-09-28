@@ -77,6 +77,41 @@
             "answer": "Rotation limits how long leaked credentials remain useful. Safe rotation supports overlapping old and new credentials so clients can update without downtime.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "security-12",
+            "question": "What is the principle of least privilege?",
+            "answer": "Every user, service, and process gets only the permissions it needs for its task, limiting damage if it is compromised.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-13",
+            "question": "How should passwords be stored?",
+            "answer": "With a slow, salted password hashing algorithm such as Argon2id, bcrypt, or scrypt. Never store them in plain text or with fast hashes like SHA-256.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-14",
+            "question": "What is cross-site scripting (XSS)?",
+            "answer": "An attack that injects malicious scripts into pages viewed by other users. Output encoding and a Content Security Policy mitigate it.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-15",
+            "question": "What is cross-site request forgery (CSRF)?",
+            "answer": "An attack that tricks a logged-in user's browser into sending unwanted requests. SameSite cookies and anti-CSRF tokens mitigate it.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-16",
+            "question": "What is mutual TLS (mTLS)?",
+            "answer": "TLS where both client and server present certificates, so each side authenticates the other. It is common for service-to-service traffic in zero-trust networks.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

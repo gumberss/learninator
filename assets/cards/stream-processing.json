@@ -77,6 +77,34 @@
             "answer": "Restore a checkpoint or snapshot, then replay the durable event log from the recorded offset to rebuild current state.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "stream-12",
+            "question": "What is a watermark?",
+            "answer": "A marker of event-time progress saying no more events older than time T are expected. It tells the processor when a window can be closed and emitted.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "stream-13",
+            "question": "What are tumbling, sliding, and session windows?",
+            "answer": "Tumbling windows are fixed-size and non-overlapping. Sliding windows are fixed-size and overlap. Session windows group events per key until a gap of inactivity.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "stream-14",
+            "question": "What is the difference between Lambda and Kappa architectures?",
+            "answer": "Lambda runs separate batch and streaming pipelines and merges their results. Kappa uses a single streaming pipeline and reprocesses history by replaying the log.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "stream-15",
+            "question": "What is a stream-table join?",
+            "answer": "Enriching each event with the current value from a table kept as state, for example joining order events with the latest customer profile.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

@@ -70,6 +70,41 @@
             "answer": "Distributing traffic across multiple geographic regions.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "loadbalancing-11",
+            "question": "What is weighted round robin?",
+            "answer": "Round robin where servers with more capacity receive proportionally more requests based on an assigned weight.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "loadbalancing-12",
+            "question": "What is connection draining?",
+            "answer": "When removing an instance, the load balancer stops sending it new requests but lets in-flight requests finish before shutdown.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "loadbalancing-13",
+            "question": "What is TLS termination at the load balancer?",
+            "answer": "The load balancer decrypts HTTPS, offloading crypto work from backends and enabling L7 routing. Traffic to backends can be re-encrypted if required.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "loadbalancing-14",
+            "question": "How do you keep the load balancer from being a single point of failure?",
+            "answer": "Run redundant load balancers (active-passive with a floating IP, or active-active), use a managed or anycast load balancer, and spread DNS across several of them.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "loadbalancing-15",
+            "question": "What is the power of two choices?",
+            "answer": "Pick two servers at random and send the request to the less loaded one. It gives near-optimal balance with very little coordination.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

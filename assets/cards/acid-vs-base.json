@@ -77,6 +77,34 @@
             "answer": "They progressively prevent dirty reads, non-repeatable reads, and phantom reads. Serializable isolation provides the strongest standard guarantee but may reduce concurrency.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "acid-base-12",
+            "question": "What is a dirty read?",
+            "answer": "Reading data written by a transaction that has not committed yet. If that transaction rolls back, the reader has seen data that never officially existed.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "acid-base-13",
+            "question": "What is snapshot isolation?",
+            "answer": "Each transaction reads from a consistent snapshot taken when it starts. It prevents dirty and non-repeatable reads but still allows write skew.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "acid-base-14",
+            "question": "What is write skew?",
+            "answer": "Two concurrent transactions read overlapping data and write to different rows, and together they violate an invariant neither would break alone. Example: two on-call doctors both go off call at the same time.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "acid-base-15",
+            "question": "How is durability usually implemented?",
+            "answer": "With a write-ahead log that is flushed to stable storage before the commit is acknowledged, often combined with replication to other machines.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

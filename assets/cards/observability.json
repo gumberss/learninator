@@ -70,6 +70,48 @@
             "answer": "Telemetry is automatically collected data about system performance and behavior.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "observability-11",
+            "question": "What are the four golden signals?",
+            "answer": "Latency, traffic, errors, and saturation.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "observability-12",
+            "question": "What are the RED and USE methods?",
+            "answer": "RED (Rate, Errors, Duration) is for monitoring request-driven services. USE (Utilization, Saturation, Errors) is for monitoring resources such as CPU, disks, and queues.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "observability-13",
+            "question": "Why use latency percentiles instead of averages?",
+            "answer": "Averages hide the slow tail. Percentiles such as p95 and p99 show what the slowest users actually experience.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "observability-14",
+            "question": "What is structured logging?",
+            "answer": "Writing logs as key-value records, often JSON, with consistent fields such as request ID and user ID, so they can be filtered and aggregated reliably.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "observability-15",
+            "question": "What is metric cardinality and why does it matter?",
+            "answer": "The number of unique label combinations for a metric. High-cardinality labels such as user ID multiply time series and can explode storage and cost.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "observability-16",
+            "question": "What is the difference between head-based and tail-based trace sampling?",
+            "answer": "Head-based sampling decides at the start of a request whether to keep its trace. Tail-based sampling decides after completion, so it can keep all slow or failed traces.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

@@ -77,6 +77,27 @@
             "answer": "Shed load when queues are full or delaying work would make it useless and threaten system stability. Buffer only within bounded capacity.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "backpressure-12",
+            "question": "What is a bounded buffer?",
+            "answer": "A fixed-capacity queue that forces producers to wait, drop, or slow down when it is full, preventing unbounded memory growth.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "backpressure-13",
+            "question": "What can a system do when a buffer is full?",
+            "answer": "Block the producer, drop the newest items, drop the oldest items, sample, or reject the request with an error so the caller can back off.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "backpressure-14",
+            "question": "How do pull-based consumers provide natural backpressure?",
+            "answer": "Consumers fetch only as fast as they can process, as in Kafka. Unprocessed work accumulates as lag in a durable log instead of overwhelming the consumer.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

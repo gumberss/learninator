@@ -77,6 +77,34 @@
             "answer": "The speed at which a service consumes its allowed error budget. Burn-rate alerts detect both fast outages and slower reliability regressions relative to the SLO.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "slo-12",
+            "question": "How much downtime does 99.9% availability allow?",
+            "answer": "About 43 minutes per month, or about 8.8 hours per year. 99.99% allows about 4.3 minutes per month.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "slo-13",
+            "question": "How do dependencies affect overall availability?",
+            "answer": "Serial dependencies multiply: two 99.9% services in series give about 99.8%. Redundant parallel replicas raise availability: 1 - (1 - a)^n.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "slo-14",
+            "question": "Why should internal SLOs be stricter than the SLA?",
+            "answer": "The gap is a safety margin, so the team detects and fixes problems before breaking the contractual commitment.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "slo-15",
+            "question": "What should happen when the error budget is exhausted?",
+            "answer": "Pause risky releases and prioritize reliability work until the service is back within its SLO.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

@@ -77,6 +77,41 @@
             "answer": "Keeping cached copies consistent with each other and with the source of truth. Common approaches include invalidation, versioning, and short TTLs.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "caching-12",
+            "question": "What is read-through caching?",
+            "answer": "The cache sits in front of the data store and loads missing entries itself on a miss, so the application only talks to the cache.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-13",
+            "question": "How can a cache stampede be prevented?",
+            "answer": "Let one caller rebuild the entry using a lock or request coalescing, add jitter to TTLs, serve stale data while revalidating, or refresh hot keys early.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-14",
+            "question": "What is the difference between a local and a distributed cache?",
+            "answer": "A local in-process cache is fastest but separate per instance and can diverge. A distributed cache such as Redis is shared by all instances at the cost of a network hop.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-15",
+            "question": "What is cache penetration?",
+            "answer": "Repeated requests for keys that do not exist always miss the cache and hit the database. Negative caching or a Bloom filter mitigates it.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-16",
+            "question": "What is cache warming?",
+            "answer": "Preloading frequently accessed data before traffic arrives, so a new or restarted cache does not send a burst of misses to the database.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

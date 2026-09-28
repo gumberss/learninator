@@ -70,6 +70,34 @@
             "answer": "Overprovisioning keeps excess capacity always, autoscaling adjusts dynamically.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "autoscale-11",
+            "question": "What is scaling flapping?",
+            "answer": "Rapid repeated scale-out and scale-in caused by thresholds that are too close together or cooldowns that are too short. Hysteresis and stabilization windows prevent it.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "autoscale-12",
+            "question": "Why does instance warm-up time matter for autoscaling?",
+            "answer": "New instances need time to boot, load code, and warm caches before serving well. Scaling must trigger early enough, or use pre-warmed pools, to absorb spikes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "autoscale-13",
+            "question": "What is scheduled scaling?",
+            "answer": "Changing capacity at known times, such as business hours or planned events, based on predictable traffic patterns.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "autoscale-14",
+            "question": "Why is CPU not always a good autoscaling signal?",
+            "answer": "I/O-bound or queue-driven workloads can be overloaded while CPU stays low. Queue depth, request concurrency, or latency often reflect load better.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }
