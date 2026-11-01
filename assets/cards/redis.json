@@ -1,0 +1,145 @@
+{
+    "topicName": "Redis",
+    "cards": [
+        {
+            "id": "redis-1",
+            "question": "What is Redis commonly used for in system design?",
+            "answer": "Low-latency caching, sessions, counters, distributed locks, queues, streams, leaderboards, and other fast in-memory data access patterns.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-2",
+            "question": "What Redis data structures are useful in system design?",
+            "answer": "Strings, hashes, lists, sets, sorted sets, streams, bitmaps, and probabilistic structures each support different access patterns and memory tradeoffs.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-3",
+            "question": "How does Redis achieve low latency?",
+            "answer": "It keeps working data in memory and processes commands efficiently, avoiding disk seeks on the normal request path. Network cost and command complexity still matter.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-4",
+            "question": "How does Redis Cluster partition keys?",
+            "answer": "Redis Cluster maps keys to 16,384 hash slots and assigns slots to nodes. A key is routed by its slot rather than by querying every node.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-5",
+            "question": "What are Redis hash tags?",
+            "answer": "A substring inside braces in a key, such as user:{42}:profile, that controls the hash-slot calculation. Related keys can share a slot for multi-key operations.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-6",
+            "question": "What is a hot key in Redis?",
+            "answer": "A key receiving a disproportionate share of requests. It can overload one shard even when the cluster has spare capacity elsewhere.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-7",
+            "question": "How can a Redis hot key be mitigated?",
+            "answer": "Replicate or split the value across multiple keys, add client-side caching, reduce request frequency, or redesign the access pattern while preserving correctness.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-8",
+            "question": "How does Redis expiration work?",
+            "answer": "Keys can have TTLs and are removed lazily when accessed or by active expiration cycles. A TTL is not a guarantee that physical deletion occurs at the exact deadline.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-9",
+            "question": "What Redis eviction policies are used when memory is full?",
+            "answer": "Policies can reject writes or evict keys based on all keys or only keys with TTLs, using strategies such as LRU, LFU, or random eviction.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-10",
+            "question": "What is the difference between RDB and AOF persistence in Redis?",
+            "answer": "RDB writes point-in-time snapshots and can be compact and fast to restore. AOF logs write operations for finer durability but can be larger and require rewrite management.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-11",
+            "question": "How does Redis replication work?",
+            "answer": "A replica asynchronously follows a primary and replays the primary's data stream. Replication improves read scale and failover options but does not automatically provide synchronous durability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-12",
+            "question": "What is Redis Sentinel?",
+            "answer": "A monitoring and failover system for non-clustered Redis deployments. It detects primary failures, promotes replicas, and helps clients discover the current primary.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-13",
+            "question": "What is the difference between Redis Sentinel and Redis Cluster?",
+            "answer": "Sentinel provides monitoring and failover for a primary-replica group without sharding. Cluster combines sharding across hash slots with replica-based failover.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-14",
+            "question": "What are Redis transactions?",
+            "answer": "MULTI and EXEC queue commands and execute them together without interleaving commands from other clients. They do not roll back already executed commands after a runtime error.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-15",
+            "question": "When should Lua scripts or Redis functions be used?",
+            "answer": "Use server-side scripts or functions to make a small sequence of related operations atomic and reduce network round trips, while keeping execution short to avoid blocking other work.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-16",
+            "question": "What is a Redis distributed lock?",
+            "answer": "A coordination record with an owner token and bounded TTL that lets one process claim work. Correct release, expiration, retries, and fencing are needed for safety.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-17",
+            "question": "What is the difference between Redis Pub/Sub and Redis Streams?",
+            "answer": "Pub/Sub delivers transient messages to currently connected subscribers. Streams persist entries and support consumer groups, acknowledgements, and replay from an offset.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-18",
+            "question": "What is cache-aside with Redis?",
+            "answer": "The application reads Redis first, loads a miss from the source database, and writes the result into Redis with an expiration. Invalidation or versioning handles changes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-19",
+            "question": "What are Redis pipelining and batching used for?",
+            "answer": "They send multiple commands together to reduce network round trips. They improve throughput but do not automatically make the commands atomic.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "redis-20",
+            "question": "What failure tradeoffs come with using Redis as a primary data store?",
+            "answer": "Memory cost, eviction, persistence and replication lag, failover windows, and operational complexity must be managed. Durability requirements should determine the persistence and topology choices.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

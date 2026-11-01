@@ -81,6 +81,7 @@ A card is due when its next review date has passed. Cards you have never reviewe
 | Messaging & Streaming | Message Queues, Stream Processing, Backpressure |
 | Architecture & Operations | Microservices vs Monolith, Service Discovery, Configuration Management, Deployment Strategies |
 | Reliability & Security | Fault Tolerance, Observability, SLA SLO SLI, Security |
+| System Design | System Design Scenarios |
 
 Topics not listed in a category appear under **Other**. Categories are defined in [lib/domain/topic_categories.dart](lib/domain/topic_categories.dart).
 

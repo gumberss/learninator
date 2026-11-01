@@ -1,0 +1,145 @@
+{
+    "topicName": "ElasticSearch",
+    "cards": [
+        {
+            "id": "elasticsearch-1",
+            "question": "What is an Elasticsearch index?",
+            "answer": "A logical collection of JSON documents with related mappings and settings. It is divided into shards for distribution and parallel search.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-2",
+            "question": "What is an inverted index in Elasticsearch?",
+            "answer": "A structure that maps analyzed terms to documents containing them, enabling efficient full-text search without scanning every document.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-3",
+            "question": "What is the difference between text and keyword fields?",
+            "answer": "Text fields are analyzed for full-text search. Keyword fields are indexed as exact values for filtering, sorting, aggregations, and identifiers.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-4",
+            "question": "What is a primary shard in Elasticsearch?",
+            "answer": "A shard that owns one portion of an index's documents. The number of primary shards determines the initial partitioning and cannot be changed directly after index creation.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-5",
+            "question": "What are replica shards in Elasticsearch?",
+            "answer": "Copies of primary shards that provide failover and can serve search requests. Replicas improve read capacity but consume storage and replication bandwidth.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-6",
+            "question": "How does Elasticsearch route a document to a shard?",
+            "answer": "It hashes a routing value, normally the document ID, to select a shard. Custom routing can co-locate related documents but may create uneven load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-7",
+            "question": "What is a hot shard in Elasticsearch?",
+            "answer": "A shard receiving disproportionate indexing or search traffic, often due to skewed routing, a hot time range, or uneven data distribution. It can bottleneck a whole cluster.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-8",
+            "question": "What are doc values in Elasticsearch?",
+            "answer": "A column-oriented on-disk structure used for sorting, aggregations, and scripting without loading all field values from the inverted index into heap memory.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-9",
+            "question": "What is refresh in Elasticsearch?",
+            "answer": "Refresh makes recently indexed documents visible to search by opening new search segments. It provides near-real-time visibility, not immediate transactional read-after-write semantics.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-10",
+            "question": "What is the translog used for in Elasticsearch?",
+            "answer": "It records operations so acknowledged changes can be recovered before segments are fully committed and supports durability during recovery.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-11",
+            "question": "What is a segment in Elasticsearch?",
+            "answer": "An immutable Lucene data structure containing indexed documents. Updates and deletes create new segment state, and background merges combine smaller segments.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-12",
+            "question": "Why do segment merges matter in Elasticsearch?",
+            "answer": "Merges reduce the number of segments and reclaim space from deleted documents, but they consume disk I/O and CPU that must be balanced with indexing and search traffic.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-13",
+            "question": "What is the difference between a query and a filter in Elasticsearch?",
+            "answer": "Queries contribute relevance scoring for matching documents. Filters express yes-or-no conditions and are generally more cacheable and efficient for structured constraints.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-14",
+            "question": "How does Elasticsearch replication provide high availability?",
+            "answer": "Replica shards are placed on different nodes from their primaries so a node failure can be served by a copy, assuming the cluster has enough replicas and healthy placement.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-15",
+            "question": "What is an Elasticsearch cluster state?",
+            "answer": "Cluster metadata describing indices, mappings, settings, nodes, and shard allocation. It must be coordinated reliably because topology changes depend on it.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-16",
+            "question": "What are index aliases used for in Elasticsearch?",
+            "answer": "Aliases provide stable names for one or more indices, enabling zero-downtime reindexing, read/write routing, and controlled index rotation.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-17",
+            "question": "What is a safe Elasticsearch reindexing strategy?",
+            "answer": "Create a new index with the desired mapping, reindex data, validate it, then atomically switch an alias. This avoids changing incompatible mappings in place.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-18",
+            "question": "What is Index Lifecycle Management used for?",
+            "answer": "ILM automates phases such as rollover, retention, shrinking, freezing, and deletion so time-based data can be managed without unbounded index growth.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-19",
+            "question": "How should Elasticsearch shard counts be chosen?",
+            "answer": "Choose a practical shard size and count based on data volume, query and indexing parallelism, recovery time, and growth. Too many small shards add overhead; too few limit distribution.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "elasticsearch-20",
+            "question": "Why are documents often denormalized in Elasticsearch?",
+            "answer": "Search workloads favor reading complete documents without joins. Denormalization improves query latency but requires update fan-out or reindexing when related source data changes.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

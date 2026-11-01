@@ -10,9 +10,17 @@ const Map<String, List<String>> topicCategories = {
   ],
   'Data & Storage': [
     'Database Design',
+    'Database Taxonomies',
     'Data Partitioning',
     'Replication',
     'Indexing',
+  ],
+  'Databases': [
+    'DynamoDB',
+    'Redis',
+    'Postgres',
+    'Pinot',
+    'ElasticSearch',
   ],
   'Consistency & Transactions': [
     'Consistency Models',
@@ -43,6 +51,9 @@ const Map<String, List<String>> topicCategories = {
     'Observability',
     'SLA SLO SLI',
     'Security',
+  ],
+  'System Design': [
+    'System Design Scenarios',
   ],
 };
 

@@ -105,6 +105,97 @@
             "answer": "It absorbs traffic across a large distributed edge network, filters malicious requests, and hides the origin server's address.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "cdn-16",
+            "question": "What is a hierarchical CDN?",
+            "answer": "A CDN with multiple cache tiers, such as an edge point of presence, a regional cache or origin shield, and the origin server. A request moves up the hierarchy only when the current tier misses.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-17",
+            "question": "How does a cache miss flow through a hierarchical CDN?",
+            "answer": "The edge checks its local cache first. On a miss, it asks the regional cache or origin shield; only if that tier also misses does the request reach the origin. The response is then cached on the way back down.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-18",
+            "question": "What are the benefits of a hierarchical CDN?",
+            "answer": "It reduces origin traffic, consolidates misses, improves cache efficiency across nearby edge locations, and can lower latency while adding protection against origin request spikes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-19",
+            "question": "What are the tradeoffs of a hierarchical CDN?",
+            "answer": "Additional cache tiers can add latency on misses, increase configuration complexity, and make invalidation and observability harder because content may exist at multiple levels.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-20",
+            "question": "How is content invalidated in a hierarchical CDN?",
+            "answer": "The purge or version change must ensure stale copies are no longer served from every relevant tier. Versioned URLs simplify this by making new content use a new cache key instead of coordinating multi-tier deletion.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-21",
+            "question": "How does Cache-Control determine CDN behavior?",
+            "answer": "The origin sends Cache-Control directives with each response to tell browsers and shared caches whether content may be stored, how long it is fresh, and when it must be revalidated.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-22",
+            "question": "What is the difference between max-age and s-maxage?",
+            "answer": "max-age sets freshness for clients such as browsers. s-maxage overrides it for shared caches such as CDNs, allowing browser and CDN freshness policies to differ.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-23",
+            "question": "What does public mean in Cache-Control?",
+            "answer": "public allows a response to be stored by shared caches such as CDNs, even when other response properties might otherwise make shared caching conservative. It is appropriate only for content safe to share.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-24",
+            "question": "What is the difference between no-cache and no-store?",
+            "answer": "no-cache permits storage but requires validation with the origin before reuse. no-store forbids caches from storing the response at all, which is appropriate for sensitive or non-cacheable data.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-25",
+            "question": "What does private mean in Cache-Control?",
+            "answer": "private indicates that a response is intended for an individual client and must not be stored by shared caches such as a CDN. A browser may still store it according to the other directives.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-26",
+            "question": "When should immutable be used for a CDN response?",
+            "answer": "Use immutable for versioned or fingerprinted assets whose content never changes at the same URL. Long freshness can then be safe because a new version receives a new URL.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-27",
+            "question": "What is stale-while-revalidate in a CDN?",
+            "answer": "It allows a cache to serve a recently stale response while it revalidates the content in the background, reducing user latency at the cost of temporarily serving older data.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "cdn-28",
+            "question": "How should Cache-Control differ for static assets and personalized responses?",
+            "answer": "Fingerprint static assets and use public, long-lived freshness, often with immutable. Keep personalized or sensitive responses private or no-store, and use short freshness or revalidation for frequently changing shared content.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

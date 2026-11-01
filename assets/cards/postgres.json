@@ -1,0 +1,271 @@
+{
+    "topicName": "Postgres",
+    "cards": [
+        {
+            "id": "postgres-1",
+            "question": "What is MVCC in Postgres?",
+            "answer": "Multiversion concurrency control lets transactions see a consistent snapshot while writers create row versions instead of blocking every reader.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-2",
+            "question": "What is the Postgres write-ahead log?",
+            "answer": "The WAL records changes before data pages are flushed, enabling crash recovery and supporting physical replication from the log stream.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-3",
+            "question": "What is a B-tree index in Postgres?",
+            "answer": "A balanced tree index suited to equality, range, ordering, and prefix-like comparisons. It is the general-purpose default for many scalar columns.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-4",
+            "question": "When should a Postgres composite index be used?",
+            "answer": "Use it when queries commonly filter or sort by the same column sequence. The leading-column order matters because the planner cannot use all columns equally for every predicate.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-5",
+            "question": "What is a partial index in Postgres?",
+            "answer": "An index built only for rows matching a predicate, such as active records. It reduces index size and write cost when queries use the same condition.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-6",
+            "question": "What is a covering index in Postgres?",
+            "answer": "An index that includes the columns needed by a query so Postgres may perform an index-only scan, subject to visibility-map conditions.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-7",
+            "question": "How should EXPLAIN ANALYZE be used in Postgres?",
+            "answer": "Use it to compare the planner's estimated costs and rows with actual execution behavior, then inspect scans, joins, sorts, buffers, and timing before changing indexes or queries.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-8",
+            "question": "Why are VACUUM and autovacuum important in Postgres?",
+            "answer": "Updates and deletes leave dead row versions. Vacuum reclaims reusable space, updates visibility information, and prevents transaction ID wraparound; autovacuum automates this maintenance.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-9",
+            "question": "What is table partitioning in Postgres?",
+            "answer": "Splitting one logical table into child partitions by range, list, or hash so pruning can reduce scanned data and maintenance can target individual partitions.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-10",
+            "question": "What is partition pruning in Postgres?",
+            "answer": "The planner or executor skips partitions that cannot contain rows matching a query predicate, reducing I/O when the partition key is used effectively.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-11",
+            "question": "How does streaming replication work in Postgres?",
+            "answer": "A standby receives and replays WAL records from a primary. It can serve read traffic, but asynchronous replication means reads may lag behind recent writes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-12",
+            "question": "What is logical replication in Postgres?",
+            "answer": "It publishes row-level changes for selected tables through a logical decoding stream, allowing selective replication and integration across compatible versions or systems.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-13",
+            "question": "What is replication lag in Postgres?",
+            "answer": "The delay between a primary commit and a replica replaying the corresponding WAL. Lag affects read-after-write behavior and recovery objectives.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-14",
+            "question": "How is sharding commonly implemented with Postgres?",
+            "answer": "Applications can route tenants or key ranges to separate databases, or use extensions and distributed Postgres systems. Sharding adds routing, rebalancing, and cross-shard query complexity.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-15",
+            "question": "What are Postgres transaction isolation levels used for?",
+            "answer": "They control which concurrent changes a transaction may observe. Stronger isolation reduces anomalies but can increase conflicts, retries, or blocking.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-16",
+            "question": "How can Postgres deadlocks be prevented?",
+            "answer": "Keep transactions short, acquire locks in a consistent order, index foreign-key access paths, avoid unnecessary user interaction inside transactions, and retry aborted transactions safely.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-17",
+            "question": "Why is connection pooling important for Postgres?",
+            "answer": "Each backend connection consumes resources. A pool limits concurrency, reuses connections, and protects the database from a connection storm while requiring transaction state to be reset correctly.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-18",
+            "question": "When is JSONB useful in Postgres?",
+            "answer": "JSONB supports semi-structured data and can be indexed, but frequently queried fields should be modeled deliberately because flexible documents do not remove indexing and schema-design costs.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-19",
+            "question": "What is synchronous replication in Postgres?",
+            "answer": "The primary waits for configured standbys to confirm WAL receipt or flush before acknowledging a commit, improving durability at the cost of write latency and availability sensitivity.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-20",
+            "question": "How should a highly available Postgres architecture handle failover?",
+            "answer": "Use monitored primary and standby nodes, a controlled promotion mechanism, client endpoint discovery, fencing to prevent split brain, backups, and tested recovery procedures.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-21",
+            "question": "In PostgreSQL, what is the difference between table-level and row-level locks?",
+            "answer": "Table-level locks regulate operations on the entire table; row-level locks protect specific rows. Even table lock modes named ROW SHARE and ROW EXCLUSIVE are still table-level locks.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-22",
+            "question": "Which table lock does a regular SELECT acquire, and what can block it?",
+            "answer": "A regular SELECT acquires ACCESS SHARE. Only ACCESS EXCLUSIVE conflicts with this lock, so most write commands do not block regular reads.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-23",
+            "question": "When does PostgreSQL acquire ROW SHARE on a table?",
+            "answer": "A SELECT with FOR UPDATE, FOR NO KEY UPDATE, FOR SHARE, or FOR KEY SHARE acquires ROW SHARE on the referenced table. This mode conflicts with EXCLUSIVE and ACCESS EXCLUSIVE.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-24",
+            "question": "Which table lock do INSERT, UPDATE, DELETE, and MERGE typically acquire?",
+            "answer": "ROW EXCLUSIVE on the target table. Despite its name, this is a table-level lock; it conflicts with SHARE, SHARE UPDATE EXCLUSIVE, SHARE ROW EXCLUSIVE, EXCLUSIVE, and ACCESS EXCLUSIVE.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-25",
+            "question": "What is SHARE UPDATE EXCLUSIVE used for?",
+            "answer": "It protects a table against certain schema changes and concurrent maintenance operations. It is acquired by commands such as VACUUM (without FULL), ANALYZE, and CREATE INDEX CONCURRENTLY; it conflicts with itself and with SHARE, SHARE ROW EXCLUSIVE, EXCLUSIVE, and ACCESS EXCLUSIVE.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-26",
+            "question": "What does SHARE allow, and what does it block?",
+            "answer": "SHARE allows concurrent reads but protects against concurrent data changes. CREATE INDEX without CONCURRENTLY acquires this mode; it conflicts with ROW EXCLUSIVE, SHARE UPDATE EXCLUSIVE, SHARE ROW EXCLUSIVE, EXCLUSIVE, and ACCESS EXCLUSIVE.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-27",
+            "question": "What makes SHARE ROW EXCLUSIVE a more restrictive table lock?",
+            "answer": "It protects against concurrent data changes and is self-exclusive: only one session can hold it at a time. CREATE TRIGGER and some forms of ALTER TABLE acquire it.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-28",
+            "question": "What concurrent activity does EXCLUSIVE still allow on a table?",
+            "answer": "Only ACCESS SHARE, which allows regular reads. It conflicts with ROW SHARE, ROW EXCLUSIVE, SHARE UPDATE EXCLUSIVE, SHARE, SHARE ROW EXCLUSIVE, EXCLUSIVE, and ACCESS EXCLUSIVE.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-29",
+            "question": "What is the effect of ACCESS EXCLUSIVE?",
+            "answer": "It is the most restrictive mode: it conflicts with every other table lock and even blocks regular SELECT statements. DROP TABLE, TRUNCATE, and VACUUM FULL are examples of commands that acquire it.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-30",
+            "question": "How can you tell whether two table locks can coexist?",
+            "answer": "Check the lock conflict matrix: incompatible locks on the same table make one transaction wait for the other. Locks are normally held until the transaction ends; rolling back to a savepoint also releases locks acquired after it.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-31",
+            "question": "Do row-level locks block regular SELECT statements?",
+            "answer": "No. They affect only writers and other transactions trying to lock the same rows. Regular SELECT statements can still read them; row-level locks are released at transaction end or when rolling back to an earlier savepoint.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-32",
+            "question": "When should you use SELECT ... FOR UPDATE?",
+            "answer": "Use it when the selected rows must not be modified, deleted, or locked by another transaction until your transaction ends. It is the strongest row-level lock mode and conflicts with the other three modes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-33",
+            "question": "What is the difference between FOR UPDATE and FOR NO KEY UPDATE?",
+            "answer": "Both strongly lock the selected rows, but FOR NO KEY UPDATE is weaker: it does not prevent another transaction from acquiring FOR KEY SHARE on those rows. An UPDATE that does not change key columns typically acquires this mode.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-34",
+            "question": "What does SELECT ... FOR SHARE protect?",
+            "answer": "It acquires a shared lock on the selected rows. It blocks UPDATE, DELETE, FOR UPDATE, and FOR NO KEY UPDATE, but allows concurrent FOR SHARE and FOR KEY SHARE locks.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-35",
+            "question": "When is FOR KEY SHARE sufficient?",
+            "answer": "Use it when you need to prevent DELETE or UPDATE operations that change key values without blocking updates that leave the key unchanged. It also allows concurrent FOR NO KEY UPDATE, FOR SHARE, and FOR KEY SHARE locks.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-36",
+            "question": "How can you reduce the risk of deadlocks when using locks?",
+            "answer": "Keep transactions short and acquire locks in a consistent order across transactions. PostgreSQL detects deadlocks and aborts one of the involved transactions; the application should be prepared to retry aborted operations.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-37",
+            "question": "What is an exclusion constraint in PostgreSQL?",
+            "answer": "A rule that prevents two rows from simultaneously satisfying a combination of operators. It is useful for preventing overlaps, such as bookings for the same room during the same time period: EXCLUDE USING gist (room WITH =, during WITH &&).",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "postgres-38",
+            "question": "What is a GiST index used for in PostgreSQL?",
+            "answer": "GiST (Generalized Search Tree) is an extensible index structure for specialized types and operators, such as spatial and range searches. It is also used by exclusion constraints; combining equality on scalar types with GiST operators may require the btree_gist extension.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

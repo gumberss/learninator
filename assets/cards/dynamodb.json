@@ -1,0 +1,145 @@
+{
+    "topicName": "DynamoDB",
+    "cards": [
+        {
+            "id": "dynamodb-1",
+            "question": "What is the partition key in DynamoDB?",
+            "answer": "The attribute used to determine an item's physical partition. It should have high cardinality and an even access distribution to avoid hot partitions.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-2",
+            "question": "What is a composite primary key in DynamoDB?",
+            "answer": "A partition key combined with a sort key. Items with the same partition key form an item collection ordered by sort key.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-3",
+            "question": "How does a sort key support DynamoDB access patterns?",
+            "answer": "It supports ordered queries within a partition key, including equality, range, prefix, and begins-with conditions.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-4",
+            "question": "What is a hot partition in DynamoDB?",
+            "answer": "A physical partition receiving disproportionate traffic or data because its key distribution is uneven. It can throttle requests even when total table capacity is available.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-5",
+            "question": "How can a DynamoDB hot partition be mitigated?",
+            "answer": "Choose a higher-cardinality key, distribute writes with write sharding, use a suitable composite key, and avoid concentrating traffic on one popular item.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-6",
+            "question": "What is a Global Secondary Index in DynamoDB?",
+            "answer": "An index with a key schema different from the base table. It can be queried across all partition keys and has its own read and write capacity behavior.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-7",
+            "question": "What is a Local Secondary Index in DynamoDB?",
+            "answer": "An index that shares the base table's partition key but uses a different sort key. It must be defined when the table is created and is limited to the item collection.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-8",
+            "question": "When should a DynamoDB query be preferred over a scan?",
+            "answer": "Use a query when the access pattern can specify a partition key. A scan examines the table or index broadly and is more expensive and less predictable at scale.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-9",
+            "question": "What is single-table design in DynamoDB?",
+            "answer": "Modeling multiple entity types in one table so related data can be retrieved by the same key design and query patterns, reducing cross-entity joins.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-10",
+            "question": "What consistency options does DynamoDB provide?",
+            "answer": "Eventually consistent reads usually cost less, while strongly consistent reads reflect successful writes before the read and are available only in supported regions and access paths.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-11",
+            "question": "How does DynamoDB replication work across regions?",
+            "answer": "Global tables replicate writes between regions and let applications read and write locally. Multi-region conflicts require an application-level conflict strategy.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-12",
+            "question": "What are DynamoDB conditional writes used for?",
+            "answer": "They make a write succeed only when an expression is true, enabling optimistic concurrency control, uniqueness checks, and safe state transitions.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-13",
+            "question": "What are DynamoDB transactions useful for?",
+            "answer": "They provide all-or-nothing reads and writes across multiple items or tables when a business operation needs atomicity beyond one item.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-14",
+            "question": "What is DynamoDB Streams used for?",
+            "answer": "It captures ordered, item-level changes for a table so consumers can build projections, trigger workflows, audit changes, or replicate data.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-15",
+            "question": "How does DynamoDB TTL work?",
+            "answer": "A configured epoch-seconds attribute marks items for asynchronous background deletion. Expiration is not an exact deletion deadline, so expired items can remain temporarily.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-16",
+            "question": "What is adaptive capacity in DynamoDB?",
+            "answer": "A service behavior that helps allocate available throughput toward unevenly accessed partitions, but it does not make a fundamentally poor key design safe from sustained hot-key traffic.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-17",
+            "question": "How should pagination be implemented for DynamoDB queries?",
+            "answer": "Return the LastEvaluatedKey as a continuation token and send it as ExclusiveStartKey for the next page rather than using offsets.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-18",
+            "question": "What is write sharding in DynamoDB?",
+            "answer": "Adding a shard suffix or bucket to a logical key so high-volume writes spread across multiple physical partitions, then querying or aggregating those shards when reading.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-19",
+            "question": "What is the difference between provisioned and on-demand capacity in DynamoDB?",
+            "answer": "Provisioned capacity reserves configured read and write units with optional autoscaling. On-demand capacity automatically handles variable traffic and charges per request.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dynamodb-20",
+            "question": "How do you design a DynamoDB table from access patterns?",
+            "answer": "List the required reads and writes first, then choose partition and sort keys and indexes that answer those patterns directly without scans or relational joins.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

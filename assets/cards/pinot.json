@@ -1,0 +1,145 @@
+{
+    "topicName": "Pinot",
+    "cards": [
+        {
+            "id": "pinot-1",
+            "question": "What is Apache Pinot designed for?",
+            "answer": "Low-latency analytical queries on large event and time-series datasets, especially dashboards and user-facing analytics with high query concurrency.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-2",
+            "question": "What are the main components of a Pinot cluster?",
+            "answer": "Controllers manage metadata and segment assignment, brokers route queries, servers store and scan segments, and minions run background tasks such as segment merging.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-3",
+            "question": "What is a segment in Pinot?",
+            "answer": "A self-contained, immutable unit of table data with columnar indexes and metadata. Segments are assigned to servers and are the basic unit of storage and movement.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-4",
+            "question": "What is the difference between offline and real-time Pinot tables?",
+            "answer": "Offline tables query batch-built segments. Real-time tables consume streaming data and create consuming segments, often with a hybrid table exposing both historical and recent data.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-5",
+            "question": "How does a Pinot broker route a query?",
+            "answer": "The broker identifies segments that may contain matching data, sends subqueries to the responsible servers, and merges their partial results into the client response.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-6",
+            "question": "What is partitioning in Pinot?",
+            "answer": "Partitioning groups rows by a chosen key so query routing can target fewer servers or segments. The partition function should match important filters and distribute data evenly.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-7",
+            "question": "What are Pinot replicas used for?",
+            "answer": "Replicas store copies of segments on different servers to improve availability and query throughput. Brokers can route around an unavailable replica.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-8",
+            "question": "What is a star-tree index in Pinot?",
+            "answer": "A pre-aggregation structure that accelerates common group-by and aggregation queries by storing rolled-up combinations of dimensions and metrics.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-9",
+            "question": "What is an inverted index in Pinot?",
+            "answer": "An index mapping values to matching document or row identifiers, allowing selective filters to avoid scanning every row in a segment.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-10",
+            "question": "What are range indexes in Pinot useful for?",
+            "answer": "They accelerate range predicates on numeric or comparable values by organizing values into searchable ranges instead of evaluating every row.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-11",
+            "question": "What is a Pinot consuming segment?",
+            "answer": "An in-progress segment receiving streaming rows before it is sealed and converted into an immutable completed segment for long-term querying.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-12",
+            "question": "How does Pinot support exactly-once or deduplicated ingestion?",
+            "answer": "Correctness depends on the ingestion connector, stream offsets, primary-key configuration, and upsert strategy. The design must define replay and duplicate handling explicitly.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-13",
+            "question": "What are Pinot upsert tables used for?",
+            "answer": "They keep the latest or selected version of a row by primary key, which is useful for mutable entity views but adds indexing, memory, and ingestion complexity.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-14",
+            "question": "What is deep storage in Pinot?",
+            "answer": "Durable shared storage for segment files, such as object storage. Servers can download segments from it after restart or reassignment instead of relying only on local disks.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-15",
+            "question": "How does Pinot handle late-arriving events?",
+            "answer": "The ingestion design can allow lateness, route events using event time, and use upserts or correction jobs when historical aggregates must be revised.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-16",
+            "question": "What is a Pinot hybrid table?",
+            "answer": "A logical table that queries offline segments for historical data and real-time segments for recent data, presenting one access path across both stores.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-17",
+            "question": "How should Pinot data be modeled for query performance?",
+            "answer": "Choose dimensions and metrics based on filters and aggregations, keep frequently filtered columns indexed, partition on selective high-value access paths, and avoid unnecessary high-cardinality indexes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-18",
+            "question": "What happens when a Pinot server fails?",
+            "answer": "Queries can use another replica if available, while the controller rebalances or reassigned segments. Without enough replicas, availability or query completeness can degrade.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-19",
+            "question": "What is a Pinot tenant?",
+            "answer": "A logical resource grouping used to isolate or assign broker and server capacity, helping multiple workloads share a cluster with separate placement policies.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "pinot-20",
+            "question": "What are the main Pinot scaling dimensions?",
+            "answer": "Scale brokers for query concurrency, servers for segment storage and scan capacity, replicas for availability and read throughput, and ingestion resources for stream volume.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

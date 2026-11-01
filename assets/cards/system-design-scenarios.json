@@ -1,0 +1,355 @@
+{
+    "topicName": "System Design Scenarios",
+    "cards": [
+        {
+            "id": "sysdesign-1",
+            "question": "A query fetches one user by user_id. It is fast with a small table but gets slower as the table grows. The query plan shows a full table scan. What should you change?",
+            "answer": "Add an index on user_id, then verify the query plan uses it. The scan is doing work proportional to the table size to find one row.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-2",
+            "question": "Your product catalog changes infrequently, but thousands of users repeatedly request the same popular product details. The database spends much of its time serving those repeated reads. What is a good first step?",
+            "answer": "Cache product details with an expiration or invalidation strategy. This reduces repeated database reads for data that rarely changes.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-3",
+            "question": "An order request writes to the database, then synchronously sends a confirmation email. Email delivery is slow, so order requests time out even though the order was saved. How could you decouple the work?",
+            "answer": "After saving the order, enqueue an email task for a worker to send asynchronously. The order response no longer has to wait for email delivery; make the task retryable and safe to process more than once.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-4",
+            "question": "During traffic spikes, the database rejects connections. Each application instance opens a new database connection for every incoming request. What should you introduce?",
+            "answer": "Use connection pooling to reuse connections and cap the number of concurrent database connections. Set the cap with the database's capacity and the combined pool sizes across all application instances in mind.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-5",
+            "question": "An API endpoint returns every matching record, sometimes tens of thousands in one response. Responses are slow and consume a lot of memory. What should the API do instead?",
+            "answer": "Return a bounded page of results and let clients request subsequent pages. Prefer cursor-based pagination for large or frequently changing datasets so traversal does not depend on large offsets.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-6",
+            "question": "A query filters orders by customer_id and sorts them by created_at. The query plan scans many rows and then sorts them. What index could help?",
+            "answer": "Consider a composite index on (customer_id, created_at), with sort direction and included columns chosen for the actual query. Verify with the query plan that it reduces scanning or sorting; indexes add storage and write cost.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-7",
+            "question": "A service retries a failing dependency immediately, and the dependency gets even more overloaded as requests pile up. What should the retry policy do?",
+            "answer": "Use a small bounded number of retries with exponential backoff and jitter, and retry only transient failures. A retry budget or circuit breaker can prevent retries from adding load while the dependency is unhealthy.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-8",
+            "question": "A payment request times out, so the client retries it. The first request may have succeeded, and the retry risks charging the customer twice. What should the payment API support?",
+            "answer": "Accept an idempotency key for each logical payment operation. Persist the key with the result and return that result for duplicate requests, while ensuring the key is scoped and retained for an appropriate period.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-9",
+            "question": "An application reads from an asynchronous database replica to reduce primary load, but users sometimes do not see their own recent updates. What is a targeted fix for read-after-write behavior?",
+            "answer": "Route a user's reads to the primary for a short period after a write, or until the replica has caught up. This preserves read-after-write behavior without sending every read to the primary.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-10",
+            "question": "One tenant generates far more traffic than others. Its database shard is overloaded while other shards are mostly idle. What problem does this indicate, and what should you investigate?",
+            "answer": "This is a hot partition: the shard key concentrates too much load on one shard. Revisit the partition key or distribute that tenant's data and traffic across multiple partitions, accounting for the added routing and query complexity.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-11",
+            "question": "A report endpoint performs a multi-table aggregation on every request, but the underlying data changes only once an hour. The query is slow and consuming production database capacity. What design fits this access pattern?",
+            "answer": "Precompute the aggregation into a summary table or materialized view and refresh it when source data changes or on a schedule. The report becomes faster at the cost of storage, refresh work, and some data staleness.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-12",
+            "question": "A user search applies a leading-wildcard filter such as name LIKE '%son%'. A normal B-tree index is not helping. What should you consider?",
+            "answer": "Use a search-specific index or text-search service that supports substring or full-text queries. First confirm the required matching semantics; a regular B-tree generally cannot efficiently seek to an arbitrary substring.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-13",
+            "question": "A product page makes six sequential service calls to assemble independent sections. Each call takes 100 ms, so the page takes about 600 ms. What change can reduce latency?",
+            "answer": "Fetch independent sections concurrently, or use a backend-for-frontend to aggregate them in parallel. Set an overall deadline and handle optional sections gracefully so one slow dependency does not stall the whole page.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-14",
+            "question": "A page makes dozens of tiny API requests to render one screen, and network round trips dominate its load time. How could you reduce the request overhead?",
+            "answer": "Provide a purpose-built aggregated endpoint or backend-for-frontend that returns the data needed for the screen in fewer round trips. Keep the response bounded and avoid coupling the endpoint to unrelated data.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-15",
+            "question": "A service accepts uploads of multi-gigabyte files, but uploads time out when routed through the application server. How can the upload path be changed?",
+            "answer": "Have the application authorize the upload and issue a short-lived, scoped pre-signed URL so the client uploads directly to object storage. Validate completion and content before making the object available.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-16",
+            "question": "Users download the same large images from servers in one region, and distant users experience high latency. What should serve these files closer to users?",
+            "answer": "Put a CDN in front of object storage or the origin server, with appropriate cache headers and invalidation/versioning. This reduces distance and origin load for cacheable content.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-17",
+            "question": "A sudden burst of requests overwhelms a service, but the burst is short and can be processed with some delay. What component can absorb the burst?",
+            "answer": "Place a durable message queue between request intake and workers, then process at a controlled rate. Bound queue growth, monitor age and depth, and define behavior when capacity is exhausted.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-18",
+            "question": "A worker crashes after performing an operation but before acknowledging its queue message. The message is delivered again, causing duplicate effects. What should the consumer do?",
+            "answer": "Make processing idempotent, for example by recording a unique message or operation ID with the effect and ignoring duplicates. Acknowledge only after durable processing, while recognizing that redelivery is normal in at-least-once systems.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-19",
+            "question": "A few malformed messages repeatedly fail and block a queue partition, preventing later messages from being processed. What should the consumer system do?",
+            "answer": "Apply a bounded retry policy, then route repeatedly failing messages to a dead-letter queue with error details for investigation and controlled replay. Avoid silently discarding them.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-20",
+            "question": "A queue's message count keeps rising because producers publish faster than workers can process. What should you measure and adjust first?",
+            "answer": "Measure arrival rate, completion rate, queue age, and worker utilization. Add worker capacity only if the downstream dependency can handle it; otherwise apply producer backpressure or rate limits to prevent an unbounded backlog.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-21",
+            "question": "A service continues sending requests to a dependency that is timing out, tying up threads until the service also fails. What resilience control should stop calls temporarily?",
+            "answer": "Use a circuit breaker that opens after a failure threshold, rejects or fails fast for a cooldown period, then allows limited probe requests. Pair it with deadlines and fallbacks appropriate to the operation.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-22",
+            "question": "A slow downstream call can occupy an application request indefinitely, even after the client has disconnected. What should bound how long the work waits?",
+            "answer": "Propagate an end-to-end deadline or timeout through the call chain and cancel work when the remaining budget expires. Set downstream timeouts below the overall request deadline so there is time to return a response.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-23",
+            "question": "A service has a fixed number of worker threads. When downstream calls slow down, all threads become occupied and new requests stop being served. What should you add?",
+            "answer": "Use bounded concurrency and admission control so the service rejects or queues excess work instead of accumulating unbounded in-flight requests. Also apply deadlines and isolate slow dependencies with separate bulkheads.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-24",
+            "question": "A single slow dependency causes unrelated features in the same service to become unavailable because they share all workers and connections. What pattern can limit the blast radius?",
+            "answer": "Use bulkheads: separate concurrency limits, worker pools, or connection pools for independent dependencies or workloads. A failure in one pool then cannot consume all capacity needed by others.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-25",
+            "question": "An autoscaled service adds instances based on CPU, but its workers are overwhelmed by queued I/O-bound jobs while CPU remains low. What signal should drive scaling?",
+            "answer": "Scale workers using queue depth or oldest-message age together with processing rate and downstream capacity. CPU alone misses I/O-bound backlog, and scaling must not overload the dependency being called.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-26",
+            "question": "A service adds and removes instances repeatedly around a CPU threshold, causing unstable capacity. What autoscaling controls help?",
+            "answer": "Use separate scale-out and scale-in thresholds (hysteresis), stabilization windows, and cooldowns. This prevents small metric fluctuations from triggering rapid reversals.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-27",
+            "question": "One customer can send unlimited requests and starve other customers sharing the same API. What control should protect the shared service?",
+            "answer": "Apply per-tenant rate limits or quotas, using a token bucket or similar policy, and return a clear throttling response. Choose limits that protect capacity while allowing expected bursts.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-28",
+            "question": "A system is nearing capacity, and new low-priority analytics requests are delaying payment and checkout traffic. How can critical work be protected?",
+            "answer": "Use priority-aware admission control or separate capacity pools so critical traffic retains reserved capacity. Shed or defer lower-priority work when limits are reached rather than letting it consume all resources.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-29",
+            "question": "A key-value store is receiving many simultaneous cache misses for the same popular key, causing every request to query the database. What should prevent this stampede?",
+            "answer": "Coalesce concurrent misses so one request loads the value while others wait for that result. Add expiration jitter or a short stale-while-revalidate window when acceptable, and bound waiters and backend concurrency.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-30",
+            "question": "A cached account balance can change after a purchase, and users must not see an old balance after the write completes. How should this value be handled?",
+            "answer": "Treat the database as the source of truth and invalidate or update the cache as part of a reliable write flow. For strict read-after-write behavior, read the balance from the primary or use a version-aware strategy until cache state is current.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-31",
+            "question": "A relational database row is updated frequently, and readers block behind writers because the transaction holds locks while making remote API calls. What should change?",
+            "answer": "Keep the database transaction short: perform remote calls outside it and avoid user or network waits while locks are held. Use a deliberate state transition or outbox workflow if the database update and external action must be coordinated.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-32",
+            "question": "An application updates an order in a database and publishes an event. A crash between those steps leaves the database changed but no event published. How can this dual-write gap be addressed?",
+            "answer": "Use the transactional outbox pattern: write the order change and an outbox record in the same database transaction, then publish outbox records asynchronously. Make consumers idempotent because publishing may be retried.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-33",
+            "question": "A distributed workflow reserves inventory, charges a card, and creates a shipment across separate services. A later step fails, and no single database transaction can cover all services. What pattern fits?",
+            "answer": "Use a saga: coordinate local transactions and define compensating actions, such as releasing inventory or refunding a charge, for failures. Make each step retry-safe and track workflow state for recovery.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-34",
+            "question": "A user can submit two simultaneous requests to reserve the last item in stock, overselling inventory. What should enforce the invariant?",
+            "answer": "Make the reservation an atomic conditional database operation, such as decrementing stock only when available quantity is positive, or use an appropriately isolated transaction with locking. Do not rely on a separate read followed by an unconditional write.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-35",
+            "question": "A service needs to find all records for one tenant, but its composite index starts with status and the query filters only by tenant_id. The database scans many rows. What should you adjust?",
+            "answer": "Create or redesign a composite index with tenant_id as a leading column for this access pattern, subject to the database's index rules. Verify with the query plan and consider the added write and storage cost.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-36",
+            "question": "A single database table contains years of time-series records, but most queries request only the last day. Old data must remain available for audits. What storage strategy can reduce routine query work?",
+            "answer": "Partition the table by time and ensure queries filter on the partition key so the database can prune irrelevant partitions. Retain older partitions for audit needs and plan archival or retention separately.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-37",
+            "question": "A service stores user-uploaded files as database blobs, making database backups and replication large and slow. The files are retrieved by ID and do not need transactional joins. Where should they go?",
+            "answer": "Store file contents in object storage and keep metadata and object keys in the database. Use access controls and lifecycle policies, and account for the fact that file storage and database updates are not one atomic transaction.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-38",
+            "question": "A service stores sessions only in process memory. Users lose sessions whenever an instance restarts or a load balancer routes them to another instance. What should make session state shared?",
+            "answer": "Store sessions in a shared low-latency store, or use securely signed stateless tokens if revocation and size requirements permit. Shared storage avoids sticky-session dependence and survives individual instance restarts.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-39",
+            "question": "A login endpoint allows unlimited password attempts, and attackers can target many accounts. What controls should reduce brute-force risk without relying on one IP limit?",
+            "answer": "Use layered rate limits keyed by account and source, progressive delays or temporary lockouts with care, and monitoring for distributed attempts. Avoid permanent lockouts that let attackers deny service to victims.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-40",
+            "question": "A public API is receiving a burst of requests from one client, and its expensive endpoint threatens overall availability. What should the API gateway enforce?",
+            "answer": "Enforce authenticated per-client quotas and burst limits at the gateway, with bounded concurrency for expensive operations. Return a retryable throttling response and monitor legitimate clients to tune limits.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-41",
+            "question": "A user sees duplicate notifications because a queue redelivers messages and notification workers send before recording completion. How can delivery be made effectively once from the user's perspective?",
+            "answer": "Give each logical notification a stable idempotency key and record its delivery state durably before or atomically with sending when the provider supports it. If the external send and local write cannot be atomic, use retries plus deduplication and accept that exactly-once delivery cannot be guaranteed end to end.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-42",
+            "question": "A dashboard needs near-real-time counts from millions of incoming events, but querying the raw event table for every page view is too slow. What architecture fits?",
+            "answer": "Aggregate events continuously or in short windows into a query-friendly summary store, then serve dashboard reads from those aggregates. Track freshness and use raw-event queries for drill-down rather than every summary request.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-43",
+            "question": "A service must notify subscribers when a resource changes, but subscribers may be offline and need to process updates later. Why is a durable event stream or queue a better fit than a synchronous callback alone?",
+            "answer": "A durable broker retains events for later delivery and supports retries or consumer offsets, so a temporary subscriber outage need not lose the notification. Define retention, ordering, and duplicate handling for the required delivery behavior.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-44",
+            "question": "A service has one database primary that is overloaded by read traffic, while writes are moderate and most reads can tolerate brief staleness. What should you consider?",
+            "answer": "Add read replicas and route eligible reads to them, while keeping writes on the primary. Document and handle replication lag, especially for read-after-write flows, and confirm that reads are actually the bottleneck.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-45",
+            "question": "A service operates in multiple regions, and users must continue making local writes during a network partition. The data can tolerate temporary conflicts. What replication approach should you consider?",
+            "answer": "Use multi-region asynchronous replication with conflict resolution designed for the data, such as versioning or application-level merge rules. This improves local availability but means reads may be stale and conflicting writes need explicit handling.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-46",
+            "question": "A release introduces a schema change, but old and new application instances run simultaneously during a rolling deployment. How should the schema change be rolled out safely?",
+            "answer": "Use expand-and-contract: first add the backward-compatible schema, deploy code that can work with both forms, migrate data, then remove the old schema only after old code is gone.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-47",
+            "question": "A new application version is deployed to every instance at once, and a hidden bug causes a broad outage. What rollout strategy can limit exposure?",
+            "answer": "Use a canary rollout: send a small share of traffic to the new version, compare error, latency, and business metrics against the baseline, and increase traffic only while healthy. Keep rollback automated or fast.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-48",
+            "question": "A service reports only average latency, which looks healthy even though a small fraction of requests take several seconds. What should its dashboard track?",
+            "answer": "Track latency percentiles such as p50, p95, and p99, segmented by operation or dependency, alongside request rate and error rate. Tail latency reveals slow requests hidden by averages.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-49",
+            "question": "A database migration is needed on a large, actively used table, but one long-running migration would hold locks and disrupt requests. How should the change be applied?",
+            "answer": "Use an online, incremental migration: introduce compatible schema changes, backfill in bounded batches with progress tracking, verify data, switch reads or writes, then remove old structures separately. Use database-specific online migration options where available.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "sysdesign-50",
+            "question": "A service uses one shared cache for all tenants, and a tenant can cause high memory usage that evicts everyone else's hot data. What should protect other tenants?",
+            "answer": "Apply per-tenant quotas or separate cache namespaces and eviction policies so one tenant cannot consume all cache capacity. Monitor per-tenant usage and ensure cache keys include tenant identity to prevent data leakage.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

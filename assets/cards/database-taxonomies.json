@@ -1,0 +1,96 @@
+{
+    "topicName": "Database Taxonomies",
+    "cards": [
+        {
+            "id": "dbtaxonomy-1",
+            "question": "What does a database taxonomy classify?",
+            "answer": "It groups database systems along different axes, such as data model, workload, storage layout, and deployment architecture. These axes overlap: one database can fit several categories at once. For example, PostgreSQL is relational and commonly used for OLTP, while ClickHouse is column-oriented and commonly used for OLAP.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbtaxonomy-2",
+            "question": "How do OLTP and OLAP databases differ?",
+            "answer": "Online transaction processing (OLTP) systems handle many short, concurrent reads and writes for application workflows; PostgreSQL and MySQL are common examples. Online analytical processing (OLAP) systems scan and aggregate large datasets for reporting and analysis; BigQuery, Snowflake, and ClickHouse are examples.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbtaxonomy-3",
+            "question": "What is an HTAP database?",
+            "answer": "Hybrid transactional and analytical processing (HTAP) supports operational transactions and analytical queries on the same data platform, aiming to reduce the delay and duplication involved in separate systems. TiDB with TiFlash is one example, using columnar replicas to serve analytical queries.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbtaxonomy-4",
+            "question": "What is a key-value database best suited for?",
+            "answer": "It stores values retrieved by unique keys, making it useful for simple lookups such as sessions, caches, and preferences. Redis and Amazon DynamoDB are common examples. Rich queries over fields inside values are usually limited or secondary.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbtaxonomy-5",
+            "question": "What is a document database?",
+            "answer": "It stores self-describing documents, commonly JSON-like objects, and often supports queries over document fields. MongoDB and Couchbase are examples. It suits records whose structure varies or evolves, but schema flexibility does not remove the need for data validation.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbtaxonomy-6",
+            "question": "What is a wide-column database?",
+            "answer": "It organizes data into rows with flexible, potentially sparse column families and is designed for high-volume distributed workloads. Apache Cassandra and HBase are examples. Data modeling is typically driven by known query patterns rather than arbitrary joins.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbtaxonomy-7",
+            "question": "When is a graph database useful?",
+            "answer": "A graph database represents entities as nodes and relationships as edges, often with properties on both. Neo4j and Amazon Neptune are examples. Graph databases are useful when traversing relationships, such as social connections or dependency networks, is central to queries.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbtaxonomy-8",
+            "question": "What is a time-series database optimized for?",
+            "answer": "It is optimized for timestamped measurements or events, often with high ingest rates, time-window queries, retention policies, and downsampling. InfluxDB and TimescaleDB are examples; common data includes metrics, telemetry, and sensor readings.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbtaxonomy-9",
+            "question": "How does a search database find text efficiently?",
+            "answer": "It commonly builds an inverted index that maps terms to the documents containing them, enabling ranked full-text search. Elasticsearch and OpenSearch are examples. Search indexes are often derived from a primary database and may be eventually consistent with it.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbtaxonomy-10",
+            "question": "What is a vector database used for?",
+            "answer": "It stores vector embeddings and supports nearest-neighbor search by similarity, often using approximate search indexes. Milvus and Weaviate are examples. Vector databases are commonly used for semantic retrieval and recommendation, and may still need metadata filters or a separate source of truth.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbtaxonomy-11",
+            "question": "What is the difference between row-oriented and column-oriented storage?",
+            "answer": "Row-oriented storage keeps a record's fields together and is often effective for retrieving or updating whole records; PostgreSQL is a common example. Column-oriented storage groups values by column and can reduce I/O for analytical scans that read a few columns across many rows; ClickHouse is an example.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbtaxonomy-12",
+            "question": "What is a distributed SQL database?",
+            "answer": "It presents a relational, SQL interface while distributing data and query processing across multiple machines. CockroachDB and TiDB are examples. Systems differ in transaction guarantees, consistency, scaling behavior, and operational tradeoffs, so the label alone does not guarantee a particular feature set.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbtaxonomy-13",
+            "question": "What defines an in-memory database?",
+            "answer": "It keeps some or all working data in memory to reduce access latency. Redis is a common example. In-memory describes a storage and performance characteristic, not a data model; durability depends on mechanisms such as persistence logs, snapshots, or replication.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

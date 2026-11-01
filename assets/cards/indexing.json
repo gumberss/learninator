@@ -105,6 +105,13 @@
             "answer": "A map from each term to the documents containing it. It powers full-text search engines such as Elasticsearch.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "indexing-16",
+            "question": "Why can a database request get slower as the amount of data grows?",
+            "answer": "If a query scans many rows, joins or sorts large intermediate results, or lacks a suitable index, its work can grow with the dataset. Larger indexes and working sets can also exceed memory and cause more disk I/O, while stale statistics or changed data distributions can lead to worse query plans. A selective indexed lookup may remain fast as a table grows, so inspect the query plan and actual row counts, reads, and latency before changing indexes or partitioning.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

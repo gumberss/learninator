@@ -98,6 +98,13 @@
             "answer": "Record processed message IDs in a deduplication table within the same transaction as the side effect, or use naturally idempotent operations such as upserts and conditional updates.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "idempotency-15",
+            "question": "How can you prevent processing the same idempotency key twice in PostgreSQL?",
+            "answer": "Create a UNIQUE constraint on idempotency_key and use INSERT ... ON CONFLICT (idempotency_key) DO NOTHING. Keep the insert and its associated side effect in the same transaction; with RETURNING, no returned row indicates that the key already existed. Store the original response with the key if retries should return it.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

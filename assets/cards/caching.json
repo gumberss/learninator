@@ -18,14 +18,14 @@
         {
             "id": "caching-3",
             "question": "What is write-through caching?",
-            "answer": "Data is written to cache and database simultaneously.",
+            "answer": "Writes go through the cache and are synchronously persisted to the backing store before success is acknowledged. This keeps the cache populated for subsequent reads but adds backing-store latency to writes. Cache and database updates are not automatically atomic; partial failures still need handling.",
             "questionImage": "",
             "answerImage": ""
         },
         {
             "id": "caching-4",
             "question": "What is write-back caching?",
-            "answer": "Data is written to cache first and persisted later.",
+            "answer": "Also called write-behind: acknowledge a write after updating the cache, then persist it to the backing store asynchronously. This lowers write latency and can batch updates, but the backing store temporarily lags. Unflushed writes can be lost if the cache fails unless pending updates are durably recorded; retries and ordering also need handling.",
             "questionImage": "",
             "answerImage": ""
         },
@@ -110,6 +110,188 @@
             "id": "caching-16",
             "question": "What is cache warming?",
             "answer": "Preloading frequently accessed data before traffic arrives, so a new or restarted cache does not send a burst of misses to the database.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-17",
+            "question": "What is lazy expiration?",
+            "answer": "An expired item is removed or treated as missing when it is accessed, rather than being deleted exactly at its expiration time. A background process may also clean up expired items later.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-18",
+            "question": "How does Redis handle TTL expiration?",
+            "answer": "Redis stores an expiration time and can remove expired keys lazily when accessed, while also performing active background expiration. Expiration is not an exact-time deletion guarantee.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-19",
+            "question": "How does DynamoDB TTL expiration work?",
+            "answer": "DynamoDB uses a configured item attribute containing epoch seconds and deletes expired items asynchronously in the background. TTL is useful for lifecycle cleanup, but deletion is not immediate or exact.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-20",
+            "question": "What is the difference between Redis TTL and DynamoDB TTL?",
+            "answer": "Redis TTL is designed for fast cache-key expiration and combines lazy and active expiration. DynamoDB TTL is asynchronous background deletion for database items, so expired items can remain for some time and should not be treated as immediately absent.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-21",
+            "question": "How does manual expiration through a scheduled job work?",
+            "answer": "Store an expiration timestamp, periodically find records whose timestamp has passed, and delete or archive them in batches. The job provides explicit control but adds scheduling, query, retry, and idempotency concerns.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-22",
+            "question": "When should you use lazy expiration versus a cleanup job?",
+            "answer": "Use lazy expiration when expired data can be ignored on access and occasional physical leftovers are acceptable. Use a cleanup job when storage reclamation, strict lifecycle control, auditing, or processing expired records requires proactive action.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-23",
+            "question": "What is single-flight (Request coalescing) on a cache miss?",
+            "answer": "The first miss for a key starts one backend query; concurrent reads of that key wait on the same in-flight result in the application instead of issuing their own queries. Populate the cache and share the result with all waiters. In-process single-flight only coordinates one app instance; coordinating across instances requires a distributed mechanism.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-24",
+            "question": "What is refresh-ahead caching?",
+            "answer": "When a hot key is close to expiring, refresh it in the background while continuing to serve the current cached copy. Replace it and reset its TTL when the refresh succeeds. Readers avoid a miss if the refresh completes before expiration; slow or failed refreshes can still cause misses unless serving stale data is allowed. Coalesce refreshes so only one runs per key.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-25",
+            "question": "Why add jitter to cache TTLs?",
+            "answer": "Randomize each entry's TTL independently, for example 60 seconds +/- 10% gives 54-66 seconds. Keys cached together, such as after a deploy, then expire at different times instead of causing a synchronized burst of backend queries. Jitter spreads expirations across keys; single-flight handles concurrent misses for the same key.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-26",
+            "question": "How does an application implement per-key single-flight (Request coalescing)?",
+            "answer": "Keep a map from cache key to an in-flight future or promise. Atomically create or join the entry: its owner loads the data and populates the cache, while joiners await the same result. Remove the entry on success or failure. Different keys can load concurrently, and the key must include every input that changes the result, such as tenant or query parameters.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-27",
+            "question": "Why recheck the cache after becoming the single-flight (Request coalescing) owner or acquiring a rebuild lock?",
+            "answer": "Another loader may have filled the cache between the original miss and acquiring ownership. Recheck before querying the backend; if the value is now present, return it to the waiters. This avoids a redundant load caused by a race, especially when using distributed rebuild locks.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-28",
+            "question": "What should single-flight (Request coalescing) do when the backend query fails?",
+            "answer": "Complete the shared result with an error and remove the in-flight entry so later requests can try again. Never leave waiters attached to an unresolved operation. Use bounded retries with backoff and jitter, or briefly cache eligible failures, so all released waiters do not immediately create another retry burst.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-29",
+            "question": "How should timeouts and cancellation work for single-flight (Request coalescing) waiters?",
+            "answer": "Each reader needs its own waiting deadline; a reader that times out or disconnects should normally stop waiting without canceling the shared load for everyone else. Give the shared backend operation its own bounded timeout and ensure its completion cleans up the in-flight entry.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-30",
+            "question": "Does single-flight (Request coalescing) eliminate overload or just move some of it?",
+            "answer": "It reduces backend queries but leaves waiting readers in the application, consuming memory, connections, and deadline budget. Bound waiters and concurrent loads, apply admission control, or serve an acceptable stale copy. Prefer asynchronous waiting instead of blocking a thread per reader. Misses for many different keys still create many loads.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-31",
+            "question": "If 100 reads miss the same key across 10 app instances, does local single-flight (Request coalescing) guarantee one query?",
+            "answer": "No. For an overlapping burst, each instance with a miss can run its own load, so up to 10 queries may run. Cross-instance coalescing requires shared coordination, such as a per-key distributed lease plus cache rechecks. Lease expiration and owner failure must be handled; an expired lease can permit overlapping loaders, so a lock alone is not an exactly-once guarantee.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-32",
+            "question": "What triggers refresh-ahead, and how do you prevent duplicate refreshes?",
+            "answer": "Track an entry's expiration and whether it is hot. A read near expiration can start a background refresh and immediately return the current copy, or a scheduler can refresh known hot keys. Guard refreshes with per-key single-flight. A read-triggered refresh needs a read before expiration; a scheduler consumes work even without a current reader.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-33",
+            "question": "How should you choose the refresh-ahead window?",
+            "answer": "Allow enough time for backend tail latency, queueing, and a safety margin, while avoiding unnecessarily frequent refreshes. For a 60-second TTL and a 5-second window, start a refresh when 5 seconds or less remain. Use the entry's actual expiration after TTL jitter, and tune the window from measured latency; it cannot guarantee completion during an outage.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-34",
+            "question": "How does refresh-ahead differ from stale-while-revalidate?",
+            "answer": "Refresh-ahead starts refreshing before the current entry expires. Stale-while-revalidate permits serving an expired copy for a bounded period while refreshing it. They can be combined using a freshness deadline and a later hard serving deadline. After the hard deadline, readers must wait for fresh data or receive an error rather than keep receiving stale data indefinitely.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-35",
+            "question": "What should happen if a refresh-ahead operation fails?",
+            "answer": "Keep the existing copy while it is still valid, release refresh ownership, and retry with bounded backoff. Do not reset its freshness deadline as though new data was loaded. After expiration, either serve stale within an explicit grace period or use the miss path. Limit retries so every read does not trigger another failing refresh.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-36",
+            "question": "When is refresh-ahead useful, and what does it cost?",
+            "answer": "It is useful for repeatedly read hot keys when miss latency is expensive and some data staleness is acceptable. It adds background backend traffic and may refresh values that nobody reads again. Restrict it to hot entries and respect freshness requirements; refreshing early does not make cached data instantly consistent with source updates.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-37",
+            "question": "How do you calculate a TTL with symmetric jitter?",
+            "answer": "Use TTL = baseTTL * (1 + randomOffset), drawing randomOffset uniformly from -jitterFraction to +jitterFraction. With baseTTL = 60 seconds and jitterFraction = 0.10, TTL ranges from 54 to 66 seconds and averages 60 seconds. Keep the minimum positive. If 60 seconds is a strict freshness limit, use downward-only jitter instead of allowing 66 seconds.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-38",
+            "question": "When should a cache sample TTL jitter?",
+            "answer": "Sample independently for each successful cache insertion or refresh, then store that expiration. One random TTL reused for an entire batch still makes the batch expire together. Ordinary cache hits should not redraw or extend the TTL unless sliding expiration is deliberately part of the policy.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-39",
+            "question": "What problems does TTL jitter not solve?",
+            "answer": "It spreads expirations across keys but does not stop many readers from missing one hot key simultaneously, or prevent cold-start misses when the cache is empty. It also does not cap total backend work. Use single-flight for same-key bursts, cache warming for predictable cold starts, and concurrency limits for aggregate load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-40",
+            "question": "How do single-flight (Request coalescing), refresh-ahead, and TTL jitter work together?",
+            "answer": "Give each cache write an independently jittered TTL. As a hot entry approaches its actual expiration, coalesce one background refresh while readers use the current copy. If the entry expires before refresh completes, join that per-key load, or serve bounded stale data if allowed. Jitter spreads work across keys, refresh-ahead reduces misses, and single-flight deduplicates overlapping loads for one key.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-41",
+            "question": "How can you verify that cache stampede protections are working?",
+            "answer": "Measure backend loads per key, coalesced waiters and wait latency, refresh duration and failures, stale responses, and expiration distribution. Test concurrent misses for one key, a batch cached together, slow or failed refreshes, and multiple app instances. Expect fewer same-key loads and smoother expiration-driven traffic without unbounded waits or stale data beyond the allowed deadline.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "caching-42",
+            "question": "What is write-around caching?",
+            "answer": "Writes bypass the cache and go directly to the backing store; a later read miss loads the value into cache. This avoids filling the cache with data that may never be read, but the first read pays miss latency. Invalidate or otherwise reconcile any existing cached copy after a write so readers do not keep receiving the old value; concurrent reads and writes still need consistency handling.",
             "questionImage": "",
             "answerImage": ""
         }

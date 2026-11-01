@@ -105,6 +105,76 @@
             "answer": "A versioned, incremental change to the schema applied in a controlled way. Zero-downtime migrations use backward-compatible steps: add, migrate data, then remove the old structure.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "dbdesign-16",
+            "question": "What is change data capture (CDC)?",
+            "answer": "A pattern for capturing inserts, updates, and deletes from a source database and publishing them as change events for downstream systems such as search indexes, caches, warehouses, and services.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-17",
+            "question": "How does log-based CDC work?",
+            "answer": "A connector reads the database's transaction log, such as a WAL or binlog, and converts committed row changes into events. It avoids adding triggers to application tables but requires access to and correct handling of the log.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-18",
+            "question": "How does trigger-based CDC work?",
+            "answer": "Database triggers write change records to an audit or change table whenever rows change. It is explicit and widely applicable, but adds write overhead and can couple capture behavior to transaction performance.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-19",
+            "question": "How does timestamp or version polling implement CDC?",
+            "answer": "A worker repeatedly queries rows whose updated-at timestamp or monotonically increasing version is greater than its last checkpoint. It is simple, but deletes, clock changes, missed updates, and polling load need careful handling.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-20",
+            "question": "Why is a snapshot often combined with CDC?",
+            "answer": "A snapshot establishes the existing state, then CDC applies changes that occur after a consistent position. The consumer needs a checkpoint or log position to avoid gaps and duplicate effects during the handoff.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-21",
+            "question": "What delivery guarantee does CDC usually provide?",
+            "answer": "Most CDC pipelines provide at-least-once delivery, so consumers must tolerate duplicates through idempotent writes, event keys, upserts, or deduplication. Exactly-once behavior requires stronger end-to-end coordination.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-22",
+            "question": "How should CDC consumers handle ordering?",
+            "answer": "Partition events by an appropriate key and include commit position or version metadata. Consumers should define whether ordering is required per row, aggregate, partition, or globally, since global order is expensive to provide.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-23",
+            "question": "What are the main CDC design tradeoffs?",
+            "answer": "Log-based CDC usually has low application impact and good fidelity but needs connector and log management. Triggers are explicit but add write overhead, while polling is simple but can miss deletes or create query load.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-24",
+            "question": "What is a database connection pool?",
+            "answer": "A reusable set of open database connections managed by an application or pooler. Requests borrow a connection for database work and return it to the pool, avoiding the cost of opening a new connection for every request.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "dbdesign-25",
+            "question": "Why should a database connection pool have a maximum size?",
+            "answer": "Each active connection consumes database and application resources, and too many concurrent queries can overload the database, increase contention, and worsen latency. A pool cap limits concurrency and protects the database; size it to the database's capacity and workload, and account for the combined pool sizes across all application instances.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

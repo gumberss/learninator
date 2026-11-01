@@ -105,6 +105,13 @@
             "answer": "A server-initiated HTTP callback that notifies a client when an event happens, replacing repeated client polling. Receivers should verify signatures and handle retries idempotently.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "api-design-16",
+            "question": "How do REST and gRPC differ, and when would you choose each?",
+            "answer": "REST commonly exposes resources over HTTP with broadly supported, human-readable JSON, making it a good fit for public APIs and browser clients. gRPC uses generated Protocol Buffers contracts over HTTP/2, often reducing payload and supporting efficient streaming between services. Choose based on client compatibility, tooling, performance needs, and operational constraints; neither is universally faster or better.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }
