@@ -210,6 +210,76 @@
             "answer": "Threat modeling systematically identifies a system's assets, trust boundaries, likely threats, and weaknesses, then prioritizes mitigations based on risk. It should be revisited as the system changes.",
             "questionImage": "",
             "answerImage": ""
+        },
+        {
+            "id": "security-31",
+            "question": "What is OWASP Top 10:2025 A01, Broken Access Control?",
+            "answer": "Broken access control lets users perform actions or access data beyond their permissions. Enforce authorization on the server for every request and resource, deny by default, and test both horizontal and vertical access boundaries.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-32",
+            "question": "What is OWASP Top 10:2025 A02, Security Misconfiguration?",
+            "answer": "Security misconfiguration includes insecure defaults, unnecessary features, overly broad permissions, and missing or unsafe settings. Use hardened, repeatable configurations; remove unused components; and continuously verify settings across environments.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-33",
+            "question": "What is OWASP Top 10:2025 A03, Software Supply Chain Failures?",
+            "answer": "Software supply chain failures arise when an application's dependencies, build tools, or delivery processes are compromised or insufficiently controlled. Inventory and assess dependencies, use trusted sources, protect build pipelines, and verify artifacts before release.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-34",
+            "question": "What is OWASP Top 10:2025 A04, Cryptographic Failures?",
+            "answer": "Cryptographic failures expose sensitive data when it is not protected appropriately, or when cryptography and keys are handled incorrectly. Classify data, use well-maintained standard algorithms and protocols, and manage keys securely throughout their lifecycle.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-35",
+            "question": "What is OWASP Top 10:2025 A05, Injection?",
+            "answer": "Injection occurs when untrusted input is interpreted as part of a command or query. Use parameterized queries and safe APIs, validate input, and apply context-appropriate output encoding rather than relying on ad hoc filtering.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-36",
+            "question": "What is OWASP Top 10:2025 A06, Insecure Design?",
+            "answer": "Insecure design means security risks were not adequately addressed in the application's requirements, architecture, or workflows. Identify abuse cases and trust boundaries during design, define security requirements, and use threat modeling to guide controls.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-37",
+            "question": "What is OWASP Top 10:2025 A07, Authentication Failures?",
+            "answer": "Authentication failures weaken confidence that a user or system is who it claims to be, for example through weak credential handling or inadequate protections against account compromise. Use established identity systems, protect credentials, support MFA, and monitor suspicious authentication activity.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-38",
+            "question": "What is OWASP - Software or Data Integrity Failures?",
+            "answer": "Integrity failures occur when software or data is trusted without verifying its origin or that it has not been altered. Verify signatures or other trusted integrity checks for updates and artifacts, and protect critical data changes with appropriate authorization and validation.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-39",
+            "question": "What is OWASP Top 10:2025 A09, Security Logging and Alerting Failures?",
+            "answer": "Logging and alerting failures make it difficult to detect, investigate, or respond to security events. Record useful security events, protect logs from tampering, avoid logging secrets, and alert on signals that have a defined response process.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "security-40",
+            "question": "What is OWASP Top 10:2025 A10, Mishandling of Exceptional Conditions?",
+            "answer": "Mishandling exceptional conditions includes unsafe behavior during errors, resource exhaustion, or unexpected states, such as failing open or exposing sensitive details. Handle errors consistently, fail safely, set resource limits, and test failure paths.",
+            "questionImage": "",
+            "answerImage": ""
         }
     ]
 }

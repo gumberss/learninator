@@ -1,0 +1,215 @@
+{
+    "topicName": "Machine Learning",
+    "cards": [
+        {
+            "id": "machine-learning-1",
+            "question": "What is machine learning?",
+            "answer": "Machine learning is a field of AI in which systems learn patterns from data to make predictions or decisions, rather than relying only on explicitly programmed rules.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-2",
+            "question": "How do supervised, unsupervised, and reinforcement learning differ?",
+            "answer": "Supervised learning learns from labeled examples; unsupervised learning finds structure in unlabeled data; reinforcement learning learns a policy from actions, rewards, and interaction with an environment.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-3",
+            "question": "Why split data into training, validation, and test sets?",
+            "answer": "The training set fits model parameters, the validation set guides model and hyperparameter choices, and the test set estimates performance on unseen data after those choices are complete.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-4",
+            "question": "What is deep learning, and how does it differ from traditional machine learning?",
+            "answer": "Deep learning uses neural networks with multiple layers to learn representations from data. It can reduce the need for manual feature engineering, but often requires more data and compute and can be harder to interpret.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-5",
+            "question": "What is a neural network?",
+            "answer": "A neural network is a model made of connected computational units arranged in layers. It transforms inputs through learned weights and nonlinear functions to produce predictions or representations.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-6",
+            "question": "What is an embedding in machine learning?",
+            "answer": "An embedding is a dense numeric representation of an item, such as text or an image, where useful similarities can be reflected by distances or directions in the vector space.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-7",
+            "question": "What is a large language model (LLM)?",
+            "answer": "An LLM is a neural language model trained on large collections of text to predict and generate token sequences. It can perform many language tasks, but its output is not automatically factual or reliable.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-8",
+            "question": "What is a token, and why does an LLM's context window matter?",
+            "answer": "A token is a unit of text processed by a language model; it may be a word, part of a word, or punctuation. The context window limits how many input and output tokens the model can handle in one request, affecting how much conversation or source material fits.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-9",
+            "question": "Why can an LLM hallucinate, and how can an application reduce the risk?",
+            "answer": "An LLM generates likely text rather than verifying every claim against reality. Ground answers in trusted sources, request citations where appropriate, validate structured output, and provide a safe fallback when evidence is insufficient.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-10",
+            "question": "What is retrieval-augmented generation (RAG)?",
+            "answer": "RAG retrieves relevant information from an external data source and includes it in the model's prompt so the model can answer using that context. A typical pipeline ingests and chunks documents, indexes them, retrieves candidates for a query, and generates a grounded response.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-11",
+            "question": "What is a vector database, and how is it used in RAG?",
+            "answer": "A vector database stores embeddings and supports similarity search. In RAG, it can find document chunks whose embeddings are close to the query embedding, often alongside metadata filters and traditional keyword search.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-12",
+            "question": "How can you improve retrieval quality in a RAG system?",
+            "answer": "Evaluate retrieval separately from generation. Tune document parsing and chunking, use suitable embeddings, apply metadata filters or hybrid search, rerank candidates when useful, and measure whether retrieved passages contain the answer.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-13",
+            "question": "What does AI backend engineering involve?",
+            "answer": "AI backend engineering builds the services around models: request handling, model and tool integration, data retrieval, identity and access control, validation, observability, and operational safeguards.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-14",
+            "question": "How should an AI backend handle slow model responses?",
+            "answer": "Set timeouts and concurrency limits, stream output when it improves user experience, and use bounded retries only for appropriate transient failures. Track end-to-end and per-stage latency so slow retrieval or tools can be distinguished from model latency.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-15",
+            "question": "Why should an AI backend validate model output?",
+            "answer": "Model output is not guaranteed to match a requested schema or business rules. Parse and validate it at the service boundary, reject or safely repair invalid output, and never treat generated text as authorization or trusted executable input.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-16",
+            "question": "What is an AI agent, and what is tool calling?",
+            "answer": "An AI agent uses a model to choose steps toward a goal, potentially in a loop. With tool calling, the model requests a named operation and supplies arguments; the application validates and executes the operation, then returns its result to the model.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-17",
+            "question": "How should an application safely execute an LLM tool call?",
+            "answer": "Treat the model's tool request as untrusted input. Allow only explicitly registered tools, validate arguments against schemas and business rules, enforce the user's permissions server-side, limit side effects, and record the action for auditing.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-18",
+            "question": "When is a deterministic workflow preferable to an autonomous agent?",
+            "answer": "Use a deterministic workflow when steps and decision rules are known and predictable. It is easier to test and control; use an agent where model-driven choices add value, with bounded steps, permissions, and clear stopping conditions.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-19",
+            "question": "What is agent orchestration?",
+            "answer": "Agent orchestration coordinates model calls, tools, workflows, and sometimes multiple agents. It manages state, routing, retries, timeouts, permissions, and completion criteria so the overall process remains understandable and bounded.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-20",
+            "question": "What are the trade-offs of using multiple agents?",
+            "answer": "Multiple agents can divide work by role or run independent analysis, but add latency, cost, coordination complexity, and more failure points. Use them only when their benefits can be measured against a simpler single-agent or workflow design.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-21",
+            "question": "What is memory in an AI application?",
+            "answer": "Memory is information retained or retrieved across turns to support continuity. It may include recent conversation context, summarized history, or persistent user-approved facts; define what is stored, for how long, and how users can inspect or remove it.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-22",
+            "question": "What is the Model Context Protocol (MCP)?",
+            "answer": "MCP is an open protocol for connecting AI applications to external capabilities and context through servers that can expose tools, resources, and prompts. It standardizes integration, but each connection still needs appropriate authentication, authorization, and input validation.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-23",
+            "question": "How should an application govern AI memory and MCP integrations?",
+            "answer": "Minimize retained data, scope access to the user and task, set retention and deletion rules, and obtain consent where needed. For MCP servers, review their provenance and permissions, expose only necessary capabilities, and log sensitive actions.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-24",
+            "question": "How do you evaluate an AI application's quality before release?",
+            "answer": "Build a representative, versioned dataset of inputs and expected properties, then run repeatable evaluations for task success, correctness, groundedness, safety, and format. Include edge cases and compare changes against a baseline.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-25",
+            "question": "How can you evaluate a RAG answer for groundedness?",
+            "answer": "Check whether the retrieved context contains evidence for the answer's claims and whether the answer stays within that evidence. Combine automated checks with human review for high-impact use cases, and test retrieval quality separately.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-26",
+            "question": "What does reliability mean for an AI application?",
+            "answer": "Reliability means the application behaves acceptably despite model variability and dependency failures. Define measurable quality and availability targets, set timeouts and limits, handle invalid output, and provide fallbacks or human escalation for uncertain or high-impact cases.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-27",
+            "question": "What should you monitor for an AI feature in production?",
+            "answer": "Monitor service availability, latency, errors, token use, cost, and dependency health alongside quality signals such as task success, feedback, and evaluation results. Protect user data in telemetry and alert on actionable thresholds.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-28",
+            "question": "How can a production AI system control cost and latency?",
+            "answer": "Choose a model appropriate to the task, constrain unnecessary context and output, cache safe repeatable work, batch where suitable, and set budgets and concurrency limits. Measure the quality and latency impact before trading down model capability.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-29",
+            "question": "How should teams release changes to prompts, models, or retrieval in production?",
+            "answer": "Version prompts, model settings, and retrieval configuration; evaluate changes against a fixed test set; then roll out gradually with monitoring and a rollback path. Track which versions produced each response so regressions can be investigated.",
+            "questionImage": "",
+            "answerImage": ""
+        },
+        {
+            "id": "machine-learning-30",
+            "question": "What should happen when a production AI request is unsafe, unsupported, or uncertain?",
+            "answer": "The system should avoid inventing certainty: refuse or narrow unsafe requests, ask for clarification when key information is missing, or provide a useful fallback such as a human handoff. Make the behavior explicit and test it as part of the product.",
+            "questionImage": "",
+            "answerImage": ""
+        }
+    ]
+}

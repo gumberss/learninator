@@ -55,6 +55,9 @@ const Map<String, List<String>> topicCategories = {
   'System Design': [
     'System Design Scenarios',
   ],
+  'AI & Machine Learning': [
+    'Machine Learning',
+  ],
 };
 
 const otherCategoryName = 'Other';

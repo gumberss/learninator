@@ -6,7 +6,7 @@ It runs on Android and in the browser, and stores all progress locally on the de
 
 ## Features
 
-- **500+ system design cards** across 31 topics, from caching and replication to SLOs and security.
+- **800+ system design and AI cards** across 39 topics, from caching and replication to machine learning and production AI.
 - **Categories and topics**: topics are grouped into broader categories so you can study a whole area or a single subject.
 - **Review all topics**: one tap to review every card that is due, across the entire deck.
 - **Due counters**: every category and topic shows how many cards are waiting for review.
@@ -82,6 +82,7 @@ A card is due when its next review date has passed. Cards you have never reviewe
 | Architecture & Operations | Microservices vs Monolith, Service Discovery, Configuration Management, Deployment Strategies |
 | Reliability & Security | Fault Tolerance, Observability, SLA SLO SLI, Security |
 | System Design | System Design Scenarios |
+| AI & Machine Learning | Machine Learning |
 
 Topics not listed in a category appear under **Other**. Categories are defined in [lib/domain/topic_categories.dart](lib/domain/topic_categories.dart).
 
